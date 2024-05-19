@@ -10,6 +10,7 @@ button{
     border: 2px solid var(--color-principal, #4BA8FF);
     color: var(--color-text_alt, #F0F8FF);
     font-size: var(--XXS, 24px);
+    transition: transform 0.3s cubic-bezier(0.08,0.82,0.17,1);
     cursor: pointer;
     width: auto;
 }
@@ -17,8 +18,8 @@ button{
 button:hover{
     border-radius: var(--XUS, 8px);
     background: var(--color-principal, #4BA8FF);
+    transform: scale(1.1);
 
-    /* Glow/Primary */
     box-shadow: 0px 4px var(--XXXS, 16px) 0px var(--color-principal-glow, #7ABFFF);
 }
 
@@ -27,6 +28,7 @@ button:active{
     border: 2px solid var(--color-principal, #4BA8FF);
     background: var(--color-principal-claro, #CAE6FF);
     color: var(--color-text, #051C32);
+    transform: scale(0.9);
 }
 
 button:succes{
