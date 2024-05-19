@@ -1,13 +1,221 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin: 64px;
+  font-family: Nunito, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+h1{
+  font-family: Kodchasan;
+  font-size: var(--XXXL, 96px);
+  font-style: normal;
+  font-weight: var(--Weight-Bold, 700);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h1::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+h2{
+  font-family: Kodchasan;
+  font-size: var(--L, 64px);
+  font-style: normal;
+  font-weight: var(--Weight-Bold, 700);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h2::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+h3{
+  font-family: Kodchasan;
+  font-size: var(--M, 48px);
+  font-style: normal;
+  font-weight: var(--Weight-Bold, 700);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h3::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+h4{
+  font-family: Kodchasan;
+  font-size: var(--S, 36px);
+  font-style: normal;
+  font-weight: var(--Weight-Bold, 700);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h4::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+h5{
+  font-family: Kodchasan;
+  font-size: var(--XS, 32px);
+  font-style: normal;
+  font-weight: var(--Weight-Bold, 700);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h5::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+h6{
+  font-family: Kodchasan;
+  font-size: var(--XXS, 24px);
+  font-style: normal;
+  font-weight: var(--Weight-Bold, 700);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h6::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+h7{
+  font-family: Kodchasan;
+  font-size: var(--XXS, 24px);
+  font-style: normal;
+  font-weight: var(--Weight-Bold, 700);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h7::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t1{
+  font-family: Nunito;
+  font-size: var(--L, 64px);
+  font-style: normal;
+  font-weight: var(--Weight-Regular, 500);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+t1::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t2{
+  font-family: Nunito;
+  font-size: var(--M, 48px);
+  font-style: normal;
+  font-weight: var(--Weight-Regular, 500);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+t2::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t3{
+  font-family: Nunito;
+  font-size: var(--S, 36px);
+  font-style: normal;
+  font-weight: var(--Weight-Regular, 500);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+t3::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t4{
+  font-family: Nunito;
+  font-size: var(--XS, 32px);
+  font-style: normal;
+  font-weight: var(--Weight-Regular, 500);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+t4::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t5{
+  font-family: Nunito;
+  font-size: var(--XXS, 24px);
+  font-style: normal;
+  font-weight: var(--Weight-Regular, 500);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+t5::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t6::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t6{
+  font-family: Nunito;
+  font-size: var(--XXXS, 16px);
+  font-style: normal;
+  font-weight: var(--Weight-Regular, 500);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+t7::selection{
+  background-color: #00BB9A;
+  color: #F0F8FF;
+}
+
+t7{
+  font-family: Nunito;
+  font-size: var(--US, 12px);
+  font-style: normal;
+  font-weight: var(--Weight-Regular, 500);
+  line-height: normal;
+  padding: 0;
+  margin: 0;
 }

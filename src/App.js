@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Boton from "./componentes/boton/boton.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+          <h1>Componentes</h1>
+          <br/>
+          <br/>
+          <h3>Botón</h3>
+          <br/>
+          <Boton estilo={"secondary"} text={"Botón"} showIcon1={true} icon1={"fa-solid fa-right-to-bracket fa-fw"}
+                 showIcon2={true} icon2={"fa-solid fa-right-to-bracket fa-fw"} handleClick={clicksito}/>
+          <br/>
+          <h3>Input</h3>
+          <br/>
+      </div>
   );
+}
+
+function clicksito(){
+    window.alert("Hola");
 }
 
 export default App;
