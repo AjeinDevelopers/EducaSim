@@ -1,8 +1,33 @@
+.primary{
+  --color-principal: #4BA8FF;
+  --color-principal-claro: #CAE6FF;
+  --color-principal-glow: #7ABFFF;
+  --color-text: #051C32;
+  --color-text_alt: #F0F8FF;
+}
+
+.secondary{
+  --color-principal: #00BB9A;
+  --color-principal-claro: #75E8D3;
+  --color-principal-glow: #20CDAE;
+  --color-text: #051C32;
+  --color-text_alt: #F0F8FF;
+}
+
+.monocrome{
+  --color-principal: #051C32;
+  --color-principal-claro: #80A3C2;
+  --color-principal-glow: rgba(25, 53, 79, 0.40);
+  --color-text: #051C32;
+  --color-text_alt: #F0F8FF;
+}
+
 body {
   margin: 64px;
   font-family: Nunito, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text, #051C32);
 }
 
 code {
