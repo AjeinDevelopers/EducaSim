@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    width: 521px;
+    padding: var(--US, 12px) var(--XXXS, 16px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--US, 12px);
+}
+
+.label-container{
+    display: flex;
+    width: 100%;
+    min-height: var(--XXS, 24px);
+    align-items: center;
+    align-self: stretch;
+}
+
+.label{
+    leading-trim: both;
+    width: 100%;
+    text-edge: cap;
+}
+
+input{
+    display: flex;
+    padding: var(--XXXS, 16px);
+    padding-right: 48px;
+    border: 2px solid var(--Color-Principales-Fuertes-Primary, #4BA8FF);
+    align-items: center;
+    gap: var(--US, 12px);
+    align-self: stretch;
+    border-radius: var(--US, 12px);
+    background: var(--Color-Principales-Fuertes-Background, #F0F8FF);
+    color: var(--Color-Principales-Fuertes-Text, #051C32);
+    font-family: Nunito;
+    font-size: var(--XXS, 24px);
+    font-style: normal;
+    font-weight: var(--Weight-Regular, 500);
+    margin: 0;
+    line-height: normal;
+    width: 100%;
+    outline: none;
+}
+
+input:hover{
+    background: var(--Color-Principales-Claros-Primary, #CAE6FF);
+}
+
+input:active, input:focus{
+    border: 2px solid var(--Color-Principales-Fuertes-Primary, #4BA8FF);
+    background: var(--Color-Principales-Fuertes-Background, #F0F8FF);
+    box-shadow: 0px 4px var(--XXXS, 16px) 0px #7ABFFF;
+}
+
+.input-container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-size: 24px;
+}
+
+#icon-input{
+    position: absolute;
+    display: flex;
+    top: 22px;
+    right: 16px;
+    user-select: none;
+    cursor: pointer;
+}

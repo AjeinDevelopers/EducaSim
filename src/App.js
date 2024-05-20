@@ -1,25 +1,22 @@
 import './App.css';
 import Boton from "./componentes/boton/boton.jsx";
+import Input from "./componentes/input/input.jsx"
 
 function App() {
   return (
       <div className="App">
           <h1>Componentes</h1>
-          <br/>
-          <br/>
           <h3>Botón</h3>
-          <br/>
           <Boton estilo={"secondary"} text={"Botón"} showIcon1={true} icon1={"fa-solid fa-right-to-bracket fa-fw"}
                  showIcon2={true} icon2={"fa-solid fa-right-to-bracket fa-fw"} handleClick={clicksito}/>
-          <br/>
           <h3>Input</h3>
-          <br/>
+          <Input type={"password"} required={true} label={"Hola"} showIcon1={true} icon1={"fa-solid fa-eye fa-fw"} />
       </div>
   );
 }
 
 function clicksito(){
-    window.alert("Hola");
+    console.log("boton click");
 }
 
 export default App;
