@@ -17,7 +17,6 @@ button:hover{
     border-radius: var(--XUS, 8px);
     background: var(--color-principal, #4BA8FF);
     transform: scale(1.1);
-
     box-shadow: 0px 4px var(--XXXS, 16px) 0px var(--color-principal-glow, #7ABFFF);
 }
 

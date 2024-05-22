@@ -17,9 +17,7 @@ container{
 }
 
 .label{
-    leading-trim: both;
     width: 100%;
-    text-edge: cap;
 }
 
 input{

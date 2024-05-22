@@ -1,23 +1,33 @@
 import './App.css';
-import Boton from "./componentes/boton/boton.jsx";
-import InputPassword from "./componentes/input/inputPassword.jsx"
-import InputText from "./componentes/input/inputText.jsx";
-import PromoHeader from "./modelos/header/PromoHeader.jsx";
+import { 
+    BrowserRouter as Router, Routes, 
+    Route 
+} from "react-router-dom"; 
+import Home from './pages/PromoPage/Home.js';
+import Nosotros from './pages/PromoPage/Nosotros.js'
+import NotFound from './pages/404.js';
 
 function App() {
   return (
-      <div className="App">
-          <h1>Componentes</h1>
-          <h3>Botón</h3>
-          <Boton estilo={"secondary"} text={"Botón"} showIcon1={true} icon1={"fa-solid fa-right-to-bracket fa-fw"}
-                 showIcon2={true} icon2={"fa-solid fa-right-to-bracket fa-fw"} handleClick={clicksito}/>
-          <h3>Input</h3>
-          <InputPassword estilo={"primary"} type={"password"} required={true} label={"Hola"} showIcon1={true} mensaje={"probando"}
-                         name={"password"} id={"user-password"} showMessage={true}/>
-          <InputText estilo={"primary"} type={"password"} required={true} label={"Hola"} showIcon1={true} mensaje={"probando"}
-                     name={"campito"} id={"campito"} icon1 = "fa-solid fa-right-to-bracket fa-fw" showMessage={true} />
-          <PromoHeader/>
-      </div>
+      <>
+        <Router>
+            <Routes>
+                <Route 
+                    exact
+                    path = '/'
+                    element={<Home />}
+                />
+                <Route 
+                    path='/nosotros'
+                    element = {<Nosotros />}
+                />
+                <Route 
+                    path='*'
+                    element = {<NotFound />}
+                />
+            </Routes>
+        </Router>
+      </>
   );
 }
 

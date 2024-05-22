@@ -1,8 +1,8 @@
 header{
     display: flex;
-    width: 100%;
+    width: 98%;
     min-height: var(--XL, 72px);
-    padding: var(--XXXS, 16px) var(--XXS, 24px);
+    padding: 1%;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -19,4 +19,20 @@ header{
 
 .brand{
     color: var(--color-principal, #4BA8FF);
+}
+
+a{
+    color: var(--color-text, #051C32);
+}
+
+a:hover{
+    color: var(--color-principal, #4BA8FF);
+}
+
+a:active{
+    color: var(--color-principal, #4BA8FF);
+}
+
+.activeStyle{
+    color: #4BA8FF;
 }
