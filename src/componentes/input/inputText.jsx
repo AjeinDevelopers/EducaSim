@@ -1,7 +1,7 @@
 import React from 'react';
 import './input.css'
 
-export default function InputPassword(props){
+export default function InputText(props){
 
     return(
         <container className={props.estilo}>

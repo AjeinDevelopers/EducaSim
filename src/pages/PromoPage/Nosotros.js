@@ -5,7 +5,7 @@ export default function Nosotros (){
     return(
         <>
             <PromoHeader />
-            
+            <t5>adadas</t5>
         </>
     )
 }

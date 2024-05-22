@@ -6,6 +6,7 @@ import {
 import Home from './pages/PromoPage/Home.js';
 import Nosotros from './pages/PromoPage/Nosotros.js'
 import NotFound from './pages/404.js';
+import Playground from './pages/Playground.js';
 
 function App() {
   return (
@@ -21,9 +22,18 @@ function App() {
                     path='/nosotros'
                     element = {<Nosotros />}
                 />
+
+
                 <Route 
                     path='*'
                     element = {<NotFound />}
+                />
+
+
+
+                <Route 
+                    path='/play'
+                    element = {<Playground />}
                 />
             </Routes>
         </Router>

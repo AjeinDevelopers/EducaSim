@@ -5,7 +5,8 @@ import Boton from '../boton/boton';
 export default function Multiboton(){
     return(
         <div>
-            
+            <Boton />
+            <Boton />
         </div>
     )
 }
