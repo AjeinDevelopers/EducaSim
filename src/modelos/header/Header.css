@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    width: 100%;
+    min-height: var(--XL, 72px);
+    padding: var(--XXXS, 16px) var(--XXS, 24px);
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    margin: 0;
+}
+
+.link-container{
+    display: flex;
+    padding: 0px var(--XUS, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--XXXS, 16px);
+}
+
+.brand{
+    color: var(--color-principal, #4BA8FF);
+}

@@ -2,6 +2,7 @@ import './App.css';
 import Boton from "./componentes/boton/boton.jsx";
 import InputPassword from "./componentes/input/inputPassword.jsx"
 import InputText from "./componentes/input/inputText.jsx";
+import PromoHeader from "./modelos/header/PromoHeader.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
                          name={"password"} id={"user-password"} showMessage={true}/>
           <InputText estilo={"primary"} type={"password"} required={true} label={"Hola"} showIcon1={true} mensaje={"probando"}
                      name={"campito"} id={"campito"} icon1 = "fa-solid fa-right-to-bracket fa-fw" showMessage={true} />
+          <PromoHeader/>
       </div>
   );
 }
