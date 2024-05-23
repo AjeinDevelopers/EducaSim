@@ -17,7 +17,8 @@ export default function InputPassword(props){
             <input-container className={props.estilo}>
                 <input type={passwordShown ? 'text' : 'password'}
                        name={props.name}
-                       id={props.id}/>
+                       id={props.id}
+                        required={props.required}/>
                 {props.showIcon1 &&
                     <div onClick={visibility} className={props.estilo}>
                         {passwordShown && <i className={'fa-solid fa-eye-slash fa-fw'} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
