@@ -54,6 +54,18 @@
   --XUS: 8px;
 }
 
+.error{
+  --color-text: var(--color-error, #FF0000);
+  --color-principal: var(--color-error, #FF0000);
+  --color-principal-glow: var(--color-error-glow, #FF6969);
+}
+
+.success{
+  --color-text: var(--color-success, #A2D219);
+  --color-principal: var(--color-success, #A2D219);
+  --color-principal-glow: var(--color-success-glow, #B9ED4B);
+}
+
 body {
   font-family: Nunito, sans-serif;
   -webkit-font-smoothing: antialiased;

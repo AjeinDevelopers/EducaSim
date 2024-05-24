@@ -18,7 +18,7 @@ export default function InputEmail(props){
 
         if (newEmail.trim() === '') {
             setError("El correo no puede estar vacio");
-            props.onEmailError("El correo no puede estar vacio");
+            props.EmailError(true);
             setEstilo("error");
             setIsEmail(false);
             return;
@@ -26,11 +26,11 @@ export default function InputEmail(props){
 
         if (!EMAIL_REGEX.test(newEmail)) {
             setError("Correo inválido");
-            props.onEmailError("Correo inválido");
+            props.EmailError(true);
             setEstilo("error");
             setIsEmail(false);
         } else {
-            props.onEmailError("");
+            props.EmailError(false);
             setIsEmail(true);
             setEstilo("success");
         }
@@ -43,11 +43,11 @@ export default function InputEmail(props){
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
             </div>
             <input-container className={props.estilo}>
-                <input type={props.type}
+                <input type= "email"
                        name={props.name}
                        id={props.id}
-                       {...(props.type === 'email' ? { onChange: handleEmail } : {})}
-                        required={props.required}/>
+                       {...(props.register ? {onChange: handleEmail} : {})}
+                       required={props.required}/>
                 {props.showIcon1 && <i className={props.icon1} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
             </input-container>
             {!isEmail &&
