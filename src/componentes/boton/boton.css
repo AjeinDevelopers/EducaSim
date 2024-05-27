@@ -27,8 +27,3 @@ button:active{
     color: var(--color-text, #051C32);
     transform: scale(0.9);
 }
-
-button:succes{
-    border-radius: var(--XUS, 8px);
-    background: var(--Color-Estados-Fuertes-xito, #A2D219);
-}

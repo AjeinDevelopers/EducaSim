@@ -4,3 +4,7 @@
     align-items: flex-start;
     border-radius: var(--US, 8px);
 }
+
+boton{
+    border-radius: 0;
+}

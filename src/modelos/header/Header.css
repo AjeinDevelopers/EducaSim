@@ -23,14 +23,22 @@ header{
 
 a{
     color: var(--color-text, #051C32);
+    transition: color 0.5s cubic-bezier(0.08,0.82,0.17,1);
+    transition: transform 0.5s cubic-bezier(0.08,0.82,0.17,1);
 }
 
 a:hover{
     color: var(--color-principal, #4BA8FF);
+    transform: scale(1.1);
 }
 
 a:active{
     color: var(--color-principal, #4BA8FF);
+    transform: scale(0.9);
+}
+
+a:active{
+    color: var(--color-secondary, #00BB9A);
 }
 
 .activeStyle{

@@ -21,7 +21,6 @@
   --color-text: #051C32;
   --color-text_alt: #F0F8FF;
 }
-
 .small{
   --XXXL: 80px;
   --XXL: 72px;
@@ -64,6 +63,14 @@
   --color-text: var(--color-success, #A2D219);
   --color-principal: var(--color-success, #A2D219);
   --color-principal-glow: var(--color-success-glow, #B9ED4B);
+}
+
+.disabled{
+  --color-principal: #5D7F9F;
+  --color-principal-claro: #ACCCE9;
+  --color-principal-glow: #80A3C2;
+  --color-text: #051C32;
+  --color-text_alt: #F0F8FF;
 }
 
 body {
