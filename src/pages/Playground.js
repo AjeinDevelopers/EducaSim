@@ -4,7 +4,7 @@ import PromoHeader from "../modelos/header/PromoHeader.jsx";
 import InputPassword from "../componentes/input/inputPassword.jsx";
 import InputEmail from "../componentes/input/inputEmail.jsx";
 import {useState} from "react";
-import Multiboton from "../componentes/multiboton/multiboton";
+import MultiLinks from "../componentes/multiboton/multiLinks";
 
 export default function Playground (){
 
@@ -37,7 +37,8 @@ export default function Playground (){
                 <InputPassword label={"Contraseña"} PasswordError={handlePasswordError} required={true} register = {true}/>
                 <Boton size = {"small"} estilo={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
                        icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
-                <Multiboton />
+                <MultiLinks text1={"hola"} text2={"hola"} text3={"hola"} show1={true} show2={true} showIcon1={false} showIcon2={false}
+                            to1={"/play"} to2={"/"}/>
             </form>
 
 

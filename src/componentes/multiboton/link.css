@@ -1,0 +1,32 @@
+.multiboton{
+    display: flex;
+    padding: var(--XXXS, 16px);
+    align-items: center;
+    gap: var(--US, 12px);
+    background: var(--color-principal-claro, #CAE6FF);
+    color: var(--color-text, #051C32);
+    font-size: var(--XXS, 24px);
+    cursor: pointer;
+    width: auto;
+    border: 0;
+    border-radius: 0;
+}
+
+.multiboton:hover{
+    background: var(--color-principal, #4BA8FF);
+    box-shadow: none;
+    transform: none;
+    color: var(--color-text_alt, #F0F8FF);
+}
+
+.multiboton:active{
+    background: #ACCCE9;
+    color: var(--color-text, #051C32);
+    transform: none;
+    border: 0;
+}
+
+.activeNav{
+    background: #ACCCE9;
+    color: var(--color-text, #051C32);
+}
