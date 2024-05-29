@@ -16,7 +16,6 @@ export default function Input(props){
             props.InputError(true);
             setLleno(false);
             setEstilo("error");
-            return;
         }else {
             props.InputError(false);
             setLleno(true);
@@ -32,7 +31,7 @@ export default function Input(props){
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
             </div>
             <input-container className={props.estilo}>
-                <input type= "email"
+                <input type= "text"
                        name={props.name}
                        id={props.id}
                        onChange={handleInput}

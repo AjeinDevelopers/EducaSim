@@ -4,7 +4,7 @@ import PromoHeader from "../modelos/header/PromoHeader.jsx";
 import InputPassword from "../componentes/input/inputPassword.jsx";
 import InputEmail from "../componentes/input/inputEmail.jsx";
 import Input from "../componentes/input/input.jsx"
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import MultiLinks from "../componentes/multiboton/multiLinks";
 
 export default function Playground (){
@@ -14,40 +14,26 @@ export default function Playground (){
     const [passError, setPassError] = useState(true);
     const [inputError, setInputError] = useState(true);
 
-    const handleEmailError = (error) => {
-        setEmailError(error);
-        if(passError === false){
-            if(inputError === false){
-                if(emailError === false){
-                    setSendForm(true);
-                    console.log("Entra email");
-                }
-            }
+    useEffect(() => {
+        if(!emailError && !passError && !inputError){
+            setSendForm(true);
+            console.log("Entra al if error");
+        }else{
+            setSendForm(false);
+            console.log("Entra al else");
         }
+    }, [emailError, passError, inputError]);
+
+    let handleEmailError = (error) => {
+        setEmailError(error);
     }
 
-    const handlePasswordError = (error) => {
+    let handlePasswordError = (error) => {
         setPassError(error);
-        if(passError === false){
-            if(inputError === false){
-                if(emailError === false){
-                    setSendForm(true);
-                    console.log("Entra email");
-                }
-            }
-        }
     };
 
-    const handleInputError = (error) => {
+    let handleInputError = (error) => {
         setInputError(error);
-        if(passError === false){
-            if(inputError === false){
-                if(emailError === false){
-                    setSendForm(true);
-                    console.log("Entra email");
-                }
-            }
-        }
     };
 
     return(
@@ -65,13 +51,6 @@ export default function Playground (){
                             to1={"/play"} to2={"/"}/>
                 <Input estilo = {"primary"} label = {"Hola buenas"} required = {true} InputError={handleInputError}/>
             </form>
-
-            {!emailError === false && <p>jsjsjsjsj</p>}
-            {!passError === false  && <p>help</p>}
-            {!inputError === false  && <p>jugo de manzana</p>}
-            {sendForm === true  && <p>siss</p>}
-
-
         </div>
     )
 }
