@@ -1,0 +1,9 @@
+#Pill-Container{
+    display: flex;
+    padding: var(--XXXS, 16px);
+    align-items: center;
+    gap: var(--US, 12px); 
+    border-radius: var(--L, 64px);
+    background: var(--color-principal, #4BA8FF);
+    color: var(--color-text-alt, #F0F8FF);
+}

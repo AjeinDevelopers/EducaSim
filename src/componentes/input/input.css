@@ -1,4 +1,4 @@
-#container{
+#Input-container{
     display: flex;
     width: 100%;
     padding: var(--US, 12px) var(--XXXS, 16px);

@@ -11,7 +11,7 @@ export default function PromoHeader() {
           <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to="/" ><t6>Inicio</t6></NavLink>
           <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} activeClassName = {"activeStyle"} to='/nosotros'><t6>Sobre Nosotros</t6></NavLink>
         </nav>
-        <Boton size = {"small"} estilo={"secondary"} text={"Iniciar Sesión"} showIcon2={true} icon2={"fa-solid fa-right-to-bracket fa-fw"} handleClick={click}/>
+        <Boton size = {"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true} icon2={"fa-solid fa-right-to-bracket fa-fw"} handleClick={click}/>
     </header>
   );
 }

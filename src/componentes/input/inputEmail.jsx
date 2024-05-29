@@ -37,7 +37,7 @@ export default function InputEmail(props){
     }, [props.EmailError]);
 
     return(
-        <div id={"container"} className={estilo}>
+        <div id={"Input-container"} className={estilo}>
             <div className={"label-container"}>
                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}

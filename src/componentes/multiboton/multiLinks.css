@@ -1,8 +1,9 @@
-.container{
+.multi-links-container{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
+    flex-direction: row;
     border-radius: var(--US, 8px);
 }
 
