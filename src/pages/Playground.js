@@ -7,6 +7,7 @@ import Input from "../componentes/input/input.jsx"
 import {useState, useEffect} from "react";
 import MultiLinks from "../componentes/multiboton/multiLinks";
 import Pill from "../componentes/pill/pill.jsx";
+import Selector from "../componentes/selector/Selector.jsx";
 //import Dropdown from "../componentes/dropdown/dropdown";
 
 export default function Playground (){
@@ -53,7 +54,7 @@ export default function Playground (){
                     <Boton size = {"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
                         icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
                 </form>
-
+                <Selector text={"sisiisis"} />
                 <Pill text={"Holaaa"} size={"small"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
             </div>
         </div>
