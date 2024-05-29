@@ -302,4 +302,5 @@ t7{
 
 div{
   display: flex;
+  color: var(--color-text, #051C32);
 }
