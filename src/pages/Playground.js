@@ -54,7 +54,6 @@ export default function Playground (){
                     <Boton size = {"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
                         icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
                 </form>
-                <Selector text={"sisiisis"} />
                 <Pill text={"Holaaa"} size={"small"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
             </div>
         </div>

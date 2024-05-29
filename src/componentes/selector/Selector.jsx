@@ -1,11 +1,12 @@
 import React from 'react';
-import {useState, useCallback} from 'react';
+//import {useState} from 'react';
 import "./selector.css";
 
 
 function selector(props){
 
-    const [activado, ssetActivado] = useState(false);
+    //const [activado, ssetActivado] = useState(false);
+    const hola = false;
 
 
     return(
