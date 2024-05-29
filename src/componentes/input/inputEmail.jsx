@@ -16,7 +16,7 @@ export default function InputEmail(props){
     const handleEmail = useCallback((event) => {
         const newEmail = event.target.value;
 
-        if (newEmail.trim() === '') {
+        if (newEmail.trim() === '' && props.required) {
             setError("El correo no puede estar vacio");
             props.EmailError(true);
             setEstilo("error");
@@ -24,7 +24,7 @@ export default function InputEmail(props){
             return;
         }
 
-        if (!EMAIL_REGEX.test(newEmail)) {
+        if (!EMAIL_REGEX.test(newEmail) && props.register) {
             setError("Correo inválido");
             props.EmailError(true);
             setEstilo("error");
@@ -34,10 +34,10 @@ export default function InputEmail(props){
             setIsEmail(true);
             setEstilo("success");
         }
-    }, [props.onEmailError]);
+    }, [props.EmailError]);
 
     return(
-        <container className={estilo}>
+        <div id={"container"} className={estilo}>
             <div className={"label-container"}>
                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
@@ -55,7 +55,7 @@ export default function InputEmail(props){
                     <t6 className={"label"}>{errorcito}</t6>
                 </div>
             }
-        </container>
+        </div>
 
     )
 }

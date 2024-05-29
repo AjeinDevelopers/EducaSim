@@ -20,7 +20,7 @@ export default function InputPassword(props){
     const handlePassword = useCallback((event) => {
         const newEmail = event.target.value;
 
-        if (newEmail.trim() === '') {
+        if (newEmail.trim() === '' && props.required) {
             setError("La contraseña no puede estar vacia");
             props.PasswordError(true);
             setEstilo("error");
@@ -28,7 +28,7 @@ export default function InputPassword(props){
             return;
         }
 
-        if (!PASSWORD_REGEX.test(newEmail)) {
+        if (!PASSWORD_REGEX.test(newEmail) && props.register) {
             setError("La contraseña debe tener al minimo 8 caracteres, una letra mayúscula, una letra minúscula, un número y un caracter especial");
             props.PasswordError(true);
             setEstilo("error");
@@ -38,10 +38,10 @@ export default function InputPassword(props){
             setIsPassword(true);
             setEstilo("success");
         }
-    }, [props.onPasswordError]);
+    }, [props.PasswordError]);
 
     return(
-        <container className={estilo}>
+        <div id={"container"} className={estilo}>
             <div className={"label-container"}>
                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
@@ -63,7 +63,7 @@ export default function InputPassword(props){
                     <t6 className={"label"}>{errorcito}</t6>
                 </div>
             }
-        </container>
+        </div>
 
     )
 }
