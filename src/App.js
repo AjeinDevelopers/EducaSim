@@ -7,6 +7,7 @@ import Home from './pages/PromoPage/Home.js';
 import Nosotros from './pages/PromoPage/Nosotros.js'
 import NotFound from './pages/404.js';
 import Playground from './pages/Playground.js';
+import InicioAlumn from './pages/InicioCuentas/InicioAlumn.js'
 import React from "react";
 
 function App() {
@@ -35,7 +36,11 @@ function App() {
                       path='/play'
                       element={<Playground/>}
                   />
-              </Routes>
+                  <Route
+                        path='/login_alumno'
+                        element={<InicioAlumn/>}
+                  />             
+                   </Routes>
           </Router>
       </>
   );
