@@ -1,0 +1,35 @@
+input[type="radio"]{
+    display: none;
+}
+
+label[id="label-radio"]:before{
+  content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--color-principal, #4BA8FF);
+}
+
+label[id="label-radio"]{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: var(--US, 12px);
+    align-items: center;
+    width: 100%;
+    border: 2px solid var(--color-principal, #4BA8FF);
+    border-radius: var(--US, 12px);
+    padding: var(--XXXS, 12px) var(--XXS, 16px);
+}
+
+input[type="radio"]:checked + label[id="label-radio"]:before{
+    background: var(--color-principal, #4BA8FF);
+}
+
+input[type="radio"]:checked + label[id="label-radio"]{
+    background: var(--color-principal-claro, #CAE6FF);
+}
+
+.rad-container{
+    width: 100%;
+}

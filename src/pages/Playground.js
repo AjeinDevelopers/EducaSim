@@ -7,15 +7,23 @@ import Input from "../componentes/input/input.jsx"
 import {useState, useEffect} from "react";
 import MultiLinks from "../componentes/multiboton/multiLinks";
 import Pill from "../componentes/pill/pill.jsx";
-import Selector from "../componentes/selector/Selector.jsx";
+import RadButtonGroup from "../componentes/radbutton/RadButtonGroup.jsx";
 //import Dropdown from "../componentes/dropdown/dropdown";
 
 export default function Playground (){
 
     const [sendForm, setSendForm] = useState(false);
-    const [emailError, setEmailError] = useState(false);
-    const [passError, setPassError] = useState(false);
+    const [emailError, setEmailError] = useState(true);
+    const [passError, setPassError] = useState(true);
     const [inputError, setInputError] = useState(true);
+
+    const items = [
+        {value: 'male', label: 'Male'},
+        {value: 'female', label: 'Female'},
+        {value: 'other', label: 'Other'},
+    ];
+
+    const [value, setValue] = useState(null);
 
     useEffect(() => {
         if(!emailError && !passError && !inputError){
@@ -26,6 +34,10 @@ export default function Playground (){
             console.log("Entra al else");
         }
     }, [emailError, passError, inputError]);
+
+    let handleValue = (value) => {
+        setValue(value);
+    }
 
     let handleEmailError = (error) => {
         setEmailError(error);
@@ -49,12 +61,13 @@ export default function Playground (){
                     <MultiLinks text1={"hola"} text2={"hola"} text3={"hola"} show1={true} show2={true} showIcon1={false} showIcon2={false}
                                 to1={"/play"} to2={"/"}/>
                     <Input Style={"primary"} label = {"Hola buenas"} required = {true} InputError={handleInputError}/>
-                    <InputEmail label={"Correo"} EmailError={handleEmailError} required={true} register ={true}/>
-                    <InputPassword label={"Contraseña"} PasswordError={handlePasswordError} required={true} register = {true}/>
+                    <InputEmail Style={"primary"}  label={"Correo"} EmailError={handleEmailError} required={true} register ={true}/>
+                    <InputPassword Style={"primary"} label={"Contraseña"} PasswordError={handlePasswordError} required={true} register = {true}/>
                     <Boton size = {"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
                         icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
                 </form>
                 <Pill text={"Holaaa"} size={"small"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
+                <RadButtonGroup items={items} onChange={handleValue}/>
             </div>
         </div>
 

@@ -5,12 +5,12 @@ export default function InputPassword(props){
 
     const [passwordShown, setPasswordShown] = useState(false);
     const visibility = () => {
-        setPasswordShown(passwordShown ? false : true);
+        setPasswordShown(!passwordShown);
     };
 
     const [isPassword, setIsPassword] = useState(true);
     const [errorcito, setError] = useState("");
-    const [estilo, setEstilo] = useState(props.estilo);
+    const [estilo, setEstilo] = useState(props.Style);
 
     const PASSWORD_REGEX = new RegExp(
         /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,20}$/
@@ -36,7 +36,7 @@ export default function InputPassword(props){
         } else {
             props.PasswordError(false);
             setIsPassword(true);
-            setEstilo("success");
+            setEstilo(props.Style);
         }
     }, [props.PasswordError]);
 

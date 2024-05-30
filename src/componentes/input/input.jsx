@@ -36,7 +36,7 @@ import './input.css'
 
 export default function Input(props){
 
-    const [lleno, setLleno] = useState(false);
+    const [lleno, setLleno] = useState(true);
     const [error, setError] = useState("");
     const [estilo, setEstilo] = useState(props.Style);
 

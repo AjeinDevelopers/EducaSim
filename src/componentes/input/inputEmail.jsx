@@ -6,7 +6,7 @@ export default function InputEmail(props){
 
     const [isEmail, setIsEmail] = useState(true);
     const [errorcito, setError] = useState("");
-    const [estilo, setEstilo] = useState(props.estilo);
+    const [estilo, setEstilo] = useState(props.Style);
 
     const EMAIL_REGEX = new RegExp(
         /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
@@ -32,7 +32,7 @@ export default function InputEmail(props){
         } else {
             props.EmailError(false);
             setIsEmail(true);
-            setEstilo("success");
+            setEstilo(props.Style);
         }
     }, [props.EmailError]);
 
