@@ -8,7 +8,7 @@ import {useState, useEffect} from "react";
 import MultiLinks from "../componentes/multiboton/multiLinks";
 import Pill from "../componentes/pill/pill.jsx";
 import RadButtonGroup from "../componentes/radbutton/RadButtonGroup.jsx";
-//import Dropdown from "../componentes/dropdown/dropdown";
+import Dropdown from "../componentes/dropdown/dropdown";
 
 export default function Playground (){
 
@@ -18,9 +18,9 @@ export default function Playground (){
     const [inputError, setInputError] = useState(true);
 
     const items = [
-        {value: 'male', label: 'Male'},
-        {value: 'female', label: 'Female'},
-        {value: 'other', label: 'Other'},
+        {value: 'opc1', label: 'Opc1'},
+        {value: 'opc2', label: 'Opc2'},
+        {value: 'opc3', label: 'Opc3'},
     ];
 
     const [value, setValue] = useState(null);
@@ -67,7 +67,9 @@ export default function Playground (){
                         icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
                 </form>
                 <Pill text={"Holaaa"} size={"small"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
-                <RadButtonGroup items={items} onChange={handleValue}/>
+                <RadButtonGroup items={items} size={"small"} onChange={handleValue}/>
+
+                <Dropdown label={"Hola"} items={items} />
             </div>
         </div>
 

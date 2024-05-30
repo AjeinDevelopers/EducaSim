@@ -13,7 +13,11 @@ export default function Dropdown(props) {
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
             </div>
             <select name={props.name} id={props.id} style={estilo}>
-
+                {props.items.map(item =>{
+                    return(
+                        <option value={item.value}>{item.label}</option>
+                    );
+                })}
             </select>
         </div>
     )

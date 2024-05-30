@@ -15,7 +15,7 @@ export default function RadButtonGroup(props){
         <>
             {props.items.map(item => {
                 return (
-                    <div className={"rad-container"}>
+                    <div className={props.size + " rad-container"}>
                         <input id={item.value} name={item.name} value={item.value} checked={value === item.value}
                                onChange={e => setValue(e.target.value)} type="radio"/>
                         <label htmlFor={item.value} id={"label-radio"}>
