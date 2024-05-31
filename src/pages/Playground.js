@@ -24,6 +24,7 @@ export default function Playground (){
     ];
 
     const [value, setValue] = useState(null);
+    const [selector, setSelector] = useState(null);
 
     useEffect(() => {
         if(!emailError && !passError && !inputError){
@@ -51,6 +52,10 @@ export default function Playground (){
         setInputError(error);
     };
 
+    let handleSelector = (value) => {
+        setSelector(value);
+    }
+
     return(
 
         <div style={{width: "80%", display: "flex", flexDirection: "column", alignItems: "center"}}>
@@ -67,10 +72,9 @@ export default function Playground (){
                         icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
                 </form>
                 <Pill text={"Holaaa"} size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
-                <Dropdown label={"Hola"} items={items} size={"Large"}/>
+                <Dropdown label={"Hola"} items={items} size={"Large"} onChange={handleSelector}/>
                 <RadButtonGroup items={items} size={"large"} onChange={handleValue}/>
-
-
+                <t5>{selector}</t5>
             </div>
         </div>
 
