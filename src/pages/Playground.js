@@ -16,6 +16,8 @@ export default function Playground (){
     const [emailError, setEmailError] = useState(true);
     const [passError, setPassError] = useState(true);
     const [inputError, setInputError] = useState(true);
+    const [dropdownError, setDropdownError] = useState(true);
+    const [radButtonError, setRadButtonError] = useState(true);
 
     const items = [
         {value: 'opc1', label: 'Opc1'},
@@ -27,14 +29,12 @@ export default function Playground (){
     const [selector, setSelector] = useState(null);
 
     useEffect(() => {
-        if(!emailError && !passError && !inputError){
+        if(!emailError && !passError && !inputError && !dropdownError && !radButtonError){
             setSendForm(true);
-            console.log("Entra al if error");
         }else{
             setSendForm(false);
-            console.log("Entra al else");
         }
-    }, [emailError, passError, inputError]);
+    }, [emailError, passError, inputError, dropdownError, radButtonError]);
 
     let handleValue = (value) => {
         setValue(value);
@@ -44,9 +44,17 @@ export default function Playground (){
         setEmailError(error);
     }
 
+    let handleRadButtonError = (error) => {
+        setRadButtonError(error);
+    }
+
     let handlePasswordError = (error) => {
         setPassError(error);
     };
+
+    let handleDropdownError = (error) => {
+        setDropdownError(error);
+    }
 
     let handleInputError = (error) => {
         setInputError(error);
@@ -70,11 +78,11 @@ export default function Playground (){
                     <InputPassword Style={"primary"} label={"Contraseña"} PasswordError={handlePasswordError} required={true} register = {true}/>
                     <Boton size = {"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
                         icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
+                    <Dropdown label={"Hola"} items={items} size={"Large"} required={true} DropdownError={handleDropdownError} onChange={handleSelector}/>
+                    <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
+                                    label={"hola"} required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 </form>
-                <Pill text={"Holaaa"} size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
-                <Dropdown label={"Hola"} items={items} size={"Large"} onChange={handleSelector}/>
-                <RadButtonGroup items={items} size={"large"} onChange={handleValue}/>
-                <t5>{selector}</t5>
+                <Pill text={"Holaaa"}size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
             </div>
         </div>
 

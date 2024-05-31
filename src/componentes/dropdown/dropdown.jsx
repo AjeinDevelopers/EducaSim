@@ -9,12 +9,22 @@ export default function Dropdown(props) {
 
     useEffect(() => {
         props.onChange(valor);
+        if(props.required) {
+            if (valor === null) {
+                setEstilo(setEstilo("error"));
+                props.DropdownError(true);
+            } else {
+                setEstilo(props.estilo);
+                props.DropdownError(false);
+            }
+        }
     }, [valor]);
 
 
 
+
     return(
-        <div className={props.size + " " + estilo} id={"container"}>
+        <div className={props.size + " " + estilo} id={"container"} aria-required={props.required}>
             <div className={"label-container"}>
                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
