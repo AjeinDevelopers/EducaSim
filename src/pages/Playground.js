@@ -9,6 +9,7 @@ import MultiLinks from "../componentes/multiboton/multiLinks";
 import Pill from "../componentes/pill/pill.jsx";
 import RadButtonGroup from "../componentes/radbutton/RadButtonGroup.jsx";
 import Dropdown from "../componentes/dropdown/dropdown";
+import Card from "../modelos/card/card";
 
 export default function Playground (){
 
@@ -83,6 +84,10 @@ export default function Playground (){
                                     label={"hola"} required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 </form>
                 <Pill text={"Holaaa"}size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
+
+                <Card direction={"vertical"} width={"304px"} header={"Holaa"} link={true} actions={true} adicional={true}
+                      bt1={"Hola"} bt2={"Hola"} score={"10.0"} date={"10/10/2021"} img={"si"}
+                      text={"Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"}/>
             </div>
         </div>
 
