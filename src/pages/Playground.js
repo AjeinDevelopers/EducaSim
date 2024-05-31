@@ -67,9 +67,9 @@ export default function Playground (){
 
     return(
 
-        <div style={{width: "80%", display: "flex", flexDirection: "column", alignItems: "center"}}>
+        <>
             <PromoHeader />
-            <div style={{width: "100%", flexDirection: "column", alignItems:"center", gap:"24px"}}>
+            <div style={{width: "calc(100% - (var(--XXS, 24px) * 2))", padding: "48px 0px" , flexDirection: "column", alignItems:"center", gap:"24px"}}>
                 <form style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px"}}
                     action={""} method={"get"}>
                     <MultiLinks text1={"hola"} text2={"hola"} text3={"hola"} show1={true} show2={true} showIcon1={false} showIcon2={false}
@@ -89,7 +89,7 @@ export default function Playground (){
                       bt1={"Hola"} bt2={"Hola"} score={"10.0"} date={"10/10/2021"} img={"si"}
                       text={"Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"}/>
             </div>
-        </div>
+        </>
 
     )
 }
