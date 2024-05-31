@@ -12,6 +12,7 @@ import Dropdown from "../componentes/dropdown/dropdown";
 import Card from "../modelos/card/card";
 import FooterPromo from "../modelos/footer/FooterPromo";
 import FooterApp from "../modelos/footer/FooterApp";
+import Pregunta from "../modelos/pregunta/pregunta";
 
 export default function Playground (){
 
@@ -78,8 +79,7 @@ export default function Playground (){
                 alignItems: "center",
                 gap: "24px"
             }}>
-                <form
-                    style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px"}}
+                <form style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px"}}
                     action={""} method={"get"}>
                     <MultiLinks text1={"hola"} text2={"hola"} text3={"hola"} show1={true} show2={true} showIcon1={false}
                                 showIcon2={false}
@@ -97,6 +97,7 @@ export default function Playground (){
                     <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"hola"} required={true} onChange={handleValue}
                                     RadButtonError={handleRadButtonError}/>
+                    <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
                 </form>
                 <Pill text={"Holaaa"} size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
 
@@ -107,6 +108,8 @@ export default function Playground (){
 
 
             </div>
+
+
             <FooterPromo/>
             <FooterApp/>
         </>

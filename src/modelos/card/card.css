@@ -59,14 +59,16 @@
     gap: var(--XUS, 8px);
 }
 
-.img{
+.img-card{
     border-radius: var(--US, 12px);
     overflow: hidden;
-    object-fit: fill;
+
 }
 
-#img{
+#img-card{
     width: 100%;
     height: 100%;
     border-radius: var(--US, 12px);
+    object-fit: fill;
+    background: var(--color-principal-claro, #CAE6FF);
 }

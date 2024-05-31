@@ -16,8 +16,8 @@ export default function Card(props) {
 
     return(
       <div className={"card-container " + props.direction} style={{width: props.width, minWidth: props.direction === "vertical" ? "256px" : "496px" }}>
-          <div className={"img"} style={{width: props.direction === "vertical" ? '100%' : "45%" }}>
-                <img id={"img"} src={img} alt={props.alt} onError = {() => setImg(noImg)}/>
+          <div className={"img-card"} style={{width: props.direction === "vertical" ? '100%' : "45%" }}>
+                <img id={"img-card"} src={img} alt={props.alt} onError = {() => setImg(noImg)}/>
           </div>
           <div className={"content"} style={{width: props.direction === "vertical" ? 'calc(100% - (2*var(--US, 12px)))' : "calc(55%-(2*var(--US, 12px)))", height: props.direction === "vertical" ? "" : "100%" }}>
               <h5>{props.header}</h5>
