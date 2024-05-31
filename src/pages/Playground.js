@@ -66,10 +66,11 @@ export default function Playground (){
                     <Boton size = {"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
                         icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
                 </form>
-                <Pill text={"Holaaa"} size={"small"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
-                <RadButtonGroup items={items} size={"small"} onChange={handleValue}/>
+                <Pill text={"Holaaa"} size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
+                <Dropdown label={"Hola"} items={items} size={"Large"}/>
+                <RadButtonGroup items={items} size={"large"} onChange={handleValue}/>
 
-                <Dropdown label={"Hola"} items={items} />
+
             </div>
         </div>
 
