@@ -10,6 +10,8 @@ import Pill from "../componentes/pill/pill.jsx";
 import RadButtonGroup from "../componentes/radbutton/RadButtonGroup.jsx";
 import Dropdown from "../componentes/dropdown/dropdown";
 import Card from "../modelos/card/card";
+import FooterPromo from "../modelos/footer/FooterPromo";
+import FooterApp from "../modelos/footer/FooterApp";
 
 export default function Playground (){
 
@@ -68,27 +70,45 @@ export default function Playground (){
     return(
 
         <>
-            <PromoHeader />
-            <div style={{width: "calc(100% - (var(--XXS, 24px) * 2))", padding: "48px 0px" , flexDirection: "column", alignItems:"center", gap:"24px"}}>
-                <form style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px"}}
+            <PromoHeader/>
+            <div style={{
+                width: "calc(100% - (var(--XXS, 24px) * 2))",
+                padding: "48px 0px",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "24px"
+            }}>
+                <form
+                    style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px"}}
                     action={""} method={"get"}>
-                    <MultiLinks text1={"hola"} text2={"hola"} text3={"hola"} show1={true} show2={true} showIcon1={false} showIcon2={false}
+                    <MultiLinks text1={"hola"} text2={"hola"} text3={"hola"} show1={true} show2={true} showIcon1={false}
+                                showIcon2={false}
                                 to1={"/play"} to2={"/"}/>
-                    <Input Style={"primary"} label = {"Hola buenas"} required = {true} InputError={handleInputError}/>
-                    <InputEmail Style={"primary"}  label={"Correo"} EmailError={handleEmailError} required={true} register ={true}/>
-                    <InputPassword Style={"primary"} label={"Contraseña"} PasswordError={handlePasswordError} required={true} register = {true}/>
-                    <Boton size = {"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
-                        icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
-                    <Dropdown label={"Hola"} items={items} size={"Large"} required={true} DropdownError={handleDropdownError} onChange={handleSelector}/>
+                    <Input Style={"primary"} label={"Hola buenas"} required={true} InputError={handleInputError}/>
+                    <InputEmail Style={"primary"} label={"Correo"} EmailError={handleEmailError} required={true}
+                                register={true}/>
+                    <InputPassword Style={"primary"} label={"Contraseña"} PasswordError={handlePasswordError}
+                                   required={true} register={true}/>
+                    <Boton size={"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
+                           icon2={"fa-solid fa-right-to-bracket fa-fw"}
+                           method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />
+                    <Dropdown label={"Hola"} items={items} size={"Large"} required={true}
+                              DropdownError={handleDropdownError} onChange={handleSelector}/>
                     <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
-                                    label={"hola"} required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                    label={"hola"} required={true} onChange={handleValue}
+                                    RadButtonError={handleRadButtonError}/>
                 </form>
-                <Pill text={"Holaaa"}size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
+                <Pill text={"Holaaa"} size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
 
-                <Card direction={"vertical"} width={"304px"} header={"Holaa"} link={true} actions={true} adicional={true}
+                <Card direction={"vertical"} width={"304px"} header={"Holaa"} link={true} actions={true}
+                      adicional={true}
                       bt1={"Hola"} bt2={"Hola"} score={"10.0"} date={"10/10/2021"} img={"si"}
                       text={"Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"}/>
+
+
             </div>
+            <FooterPromo/>
+            <FooterApp/>
         </>
 
     )

@@ -1,0 +1,72 @@
+footer[id="promo"]{
+    display: flex;
+    width: calc(100% - 2 * var(--XXS, 24px));
+    padding: var(--M, 48px) var(--XXS, 24px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--XS, 32px);
+    background: var(--color-text, #051C32);
+    color: var(--color-text_alt, #F0F8FFFF)
+}
+
+.brand-container{
+    display: flex;
+    gap: var(--XXXS, 16px);
+    align-items: center;
+    flex-direction: row;
+}
+
+div[id="link-menu"]{
+    display: flex;
+    padding-left: var(--XXXL, 96px);
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+a[id="footer"]{
+    color: var(--color-text_alt, #F0F8FFFF);
+    font-size: var(--XXXS, 16px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+a[id="footer"]:hover{
+    font-weight: 800;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: var(--XS, 32px);
+}
+
+#empresa{
+    align-items: flex-start;
+}
+
+#producto{
+    align-items: center;
+}
+
+#contacto{
+    align-items: flex-end;
+}
+
+.contacto-container{
+    display: flex;
+    align-items: center;
+    gap: var(--US, 12px);
+}
+
+footer[id="app"]{
+    display: flex;
+    width: calc(100% - 2 * var(--XXS, 24px));
+    padding: var(--XXS, 24px);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-text, #051C32);
+    color: var(--color-text_alt, #F0F8FFFF)
+}

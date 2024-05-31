@@ -3,7 +3,7 @@ import "./card.css";
 import {Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 import Boton from "../../componentes/boton/boton";
-import noImg from '../../resources/common/noimg.svg';
+import noImg from '../../assets/common/noimg.svg';
 
 export default function Card(props) {
 
