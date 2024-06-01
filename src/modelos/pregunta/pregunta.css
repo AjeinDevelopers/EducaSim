@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: var(--XXS, 24px);
+    gap: var(--XXXS, 16px);
     align-self: stretch;
     width: calc(100% - var(--US, 12px) * 2);
 }

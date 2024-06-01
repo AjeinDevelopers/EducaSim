@@ -13,6 +13,7 @@ import Card from "../modelos/card/card";
 import FooterPromo from "../modelos/footer/FooterPromo";
 import FooterApp from "../modelos/footer/FooterApp";
 import Pregunta from "../modelos/pregunta/pregunta";
+import HeaderApp from "../modelos/header/HeaderApp.jsx";
 
 export default function Playground (){
 
@@ -72,6 +73,7 @@ export default function Playground (){
 
         <>
             <PromoHeader/>
+            <HeaderApp/>
             <div style={{
                 width: "calc(100% - (var(--XXS, 24px) * 2))",
                 padding: "48px 0px",
@@ -94,7 +96,7 @@ export default function Playground (){
                            method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />
                     <Dropdown label={"Hola"} items={items} size={"Large"} required={true}
                               DropdownError={handleDropdownError} onChange={handleSelector}/>
-                    <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
+                    <RadButtonGroup items={items} size={"large"} estilo={"primary"}
                                     label={"hola"} required={true} onChange={handleValue}
                                     RadButtonError={handleRadButtonError}/>
                     <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
