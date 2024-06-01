@@ -8,6 +8,9 @@ import Nosotros from './pages/PromoPage/Nosotros.js'
 import NotFound from './pages/404.js';
 import Playground from './pages/Playground.js';
 import InicioAlumn from './pages/InicioCuentas/InicioAlumn.js'
+import InicioProfe from './pages/InicioCuentas/InicioProfe.js'
+import InicioPadre from './pages/InicioCuentas/InicioPadre.js'
+import RegistroAlum from './pages/CuentaConf/RegistroAlum.js';
 import React from "react";
 
 function App() {
@@ -39,7 +42,19 @@ function App() {
                   <Route
                         path='/login_alumno'
                         element={<InicioAlumn/>}
-                  />             
+                  />   
+                    <Route
+                        path='/login_profesor'
+                        element={<InicioProfe/>}
+                    />
+                    <Route
+                        path='/login_padre'
+                        element={<InicioPadre/>}
+                    />
+                    <Route
+                        path='/registro_Alum'
+                        element={<RegistroAlum/>}
+                    />
                    </Routes>
           </Router>
       </>
