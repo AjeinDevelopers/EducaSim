@@ -60,7 +60,7 @@ export default function InicioAlumn (){
                                 <div style={{display: "flex", justifyContent: "center", textAlign: "center", padding: "0px", width:"100%"}}>
                                 <t6>¿Aún no tienes cuenta?&nbsp;&nbsp;</t6>
                                 <nav className={"/"}>
-                                <NavLink to="/play" ><t6 className={"primary brand"}> ¡Registrate ahora!</t6></NavLink>
+                                <NavLink to="/registro_Alum" ><t6 className={"primary brand"}> ¡Registrate ahora!</t6></NavLink>
                                     </nav>
 
                             

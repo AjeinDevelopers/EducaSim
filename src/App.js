@@ -66,6 +66,8 @@ function App() {
                         path='/Configuracion_Alum'
                         element={<ConfAlumn/>}
                     />
+                    
+
                    </Routes>
           </Router>
       </>
