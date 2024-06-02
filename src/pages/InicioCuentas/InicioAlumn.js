@@ -7,7 +7,7 @@ import InputEmail from "../../componentes/input/inputEmail.jsx";
 import InputPassword from "../../componentes/input/inputPassword.jsx";
 import Boton from "../../componentes/boton/boton.jsx";
 import {NavLink} from "react-router-dom";
-
+import FooterApp from "../../modelos/footer/FooterApp.jsx";
 export default function InicioAlumn (){
     const [sendForm, setSendForm] = useState(false);
     const [emailError, setEmailError] = useState(false);
@@ -49,11 +49,11 @@ export default function InicioAlumn (){
                             show3={true}  showIcon1={true}  showIcon2={false} to1="/login_alumno"  to2="/login_profesor" to3="/login_padre"
                         />
                         <div style={{ width:"624px",display: "flex", padding: "8px 12px", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: "8px", alignSelf: "stretch" }}>
-                            <InputEmail label="Correo Electrónico" EmailError={handleEmailError} required={true} register={true} />
-                            <InputPassword label={"Contraseña"} PasswordError={handlePasswordError} required={true} register = {true}/>
+                            <InputEmail label="Correo Electrónico" showLabel={true} EmailError={handleEmailError} required={true} register={true} />
+                            <InputPassword label={"Contraseña"} showLabel={true} PasswordError={handlePasswordError} required={true} register = {true}/>
 
                             <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "12px", width:"100%" }}>
-                            <Boton size = {"small"} style={""} text={"Iniciar Sesión"} showIcon2={true}
+                            <Boton size = {"small"} style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
                             icon2={"fa-solid fa-right-to-bracket fa-fw"} method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: true })} />
                              </div>    
                                 <div style={{display: "flex", justifyContent: "center", textAlign: "center", padding: "0px", width:"100%"}}>
@@ -71,6 +71,7 @@ export default function InicioAlumn (){
                 </div>
             </div>
         </div>
+        <FooterApp/>
         </>
-    )/*falta FOOTEER*/
+    )
 }

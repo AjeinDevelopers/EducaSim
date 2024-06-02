@@ -5,12 +5,12 @@ export default function InputPassword(props){
 
     const [passwordShown, setPasswordShown] = useState(false);
     const visibility = () => {
-        setPasswordShown(passwordShown ? false : true);
+        setPasswordShown(!passwordShown);
     };
 
     const [isPassword, setIsPassword] = useState(true);
     const [errorcito, setError] = useState("");
-    const [estilo, setEstilo] = useState(props.estilo);
+    const [estilo, setEstilo] = useState(props.Style);
 
     const PASSWORD_REGEX = new RegExp(
         /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,20}$/
@@ -36,20 +36,21 @@ export default function InputPassword(props){
         } else {
             props.PasswordError(false);
             setIsPassword(true);
-            setEstilo("success");
+            setEstilo(props.Style);
         }
     }, [props.PasswordError]);
 
     return(
         <div id={"Input-container"} className={estilo}>
-            <div className={"label-container"}>
+            {props.showLabel && <div className={"label-container"}>
                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
-            </div>
+            </div>}
             <input-container className={estilo}>
                 <input type={passwordShown ? 'text' : 'password'}
                        name={props.name}
                        id={props.id}
+                       placeholder={props.placeholder}
                         required={props.required}
                        {...(props.register ? {onChange: handlePassword} : {})}
                         maxLength={20}/>

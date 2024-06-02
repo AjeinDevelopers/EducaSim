@@ -36,7 +36,7 @@ import './input.css'
 
 export default function Input(props){
 
-    const [lleno, setLleno] = useState(false);
+    const [lleno, setLleno] = useState(true);
     const [error, setError] = useState("");
     const [estilo, setEstilo] = useState(props.Style);
 
@@ -58,16 +58,17 @@ export default function Input(props){
     return(
 
         <div id={"Input-container"} className={estilo}>
-            <div className={"label-container"}>
-                <t5 className={"label"}>{props.label}</t5>
+            {props.showLabel && <div className={"label-container"}>
+                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
-            </div>
+            </div>}
             <input-container className={props.estilo}>
                 <input type= "text"
                        name={props.name}
                        id={props.id}
                        onChange={handleInput}
-                       required={props.required}/>
+                       required={props.required}
+                       placeholder={props.placeholder}/>
                 {props.showIcon1 && <i className={props.icon1} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
             </input-container>
             {!lleno &&

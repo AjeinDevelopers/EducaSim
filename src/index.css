@@ -79,6 +79,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text, #051C32);
   background: var(--Color-Principales-Fuertes-Text_Alt, #F0F8FF);
+  margin: 0;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -303,3 +304,22 @@ t7{
 div{
   display: flex;
 }
+
+/*
+::-webkit-scrollbar {
+  width: var(--XXXS, 16px);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-principal-claro, #CAE6FF);
+  border-radius: var(--US, 12px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #80A3C2;
+  border-radius: var(--US, 12px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4BA8FF;
+}*/

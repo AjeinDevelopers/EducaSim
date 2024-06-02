@@ -10,8 +10,11 @@ import Playground from './pages/Playground.js';
 import InicioAlumn from './pages/InicioCuentas/InicioAlumn.js'
 import InicioProfe from './pages/InicioCuentas/InicioProfe.js'
 import InicioPadre from './pages/InicioCuentas/InicioPadre.js'
-import RegistroAlum from './pages/CuentaConf/RegistroAlum.js';
+import RegistroAlum from './pages/CuentaConf/RegistroAlum.js'
+import RegistroProfe from './pages/CuentaConf/RegistroProfe.js'
+import ConfAlumn from './pages/CuentaConf/ConfAlumn.js';
 import React from "react";
+
 
 function App() {
   return (
@@ -54,6 +57,14 @@ function App() {
                     <Route
                         path='/registro_Alum'
                         element={<RegistroAlum/>}
+                    />
+                    <Route
+                        path='/registro_Profe'
+                        element={<RegistroProfe/>}
+                    />
+                    <Route
+                        path='/Configuracion_Alum'
+                        element={<ConfAlumn/>}
                     />
                    </Routes>
           </Router>
