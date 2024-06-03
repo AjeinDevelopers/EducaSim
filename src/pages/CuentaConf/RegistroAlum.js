@@ -46,8 +46,8 @@ export default function RegistroAlum(){
     return(
         <>
             <HeaderApp/>
-         <div style={{display:"flex", width:"1440px", padding:"var(--XXS, 24px)", alignItems:"flex-start"}}>
-            <div style={{display:"flex", padding:"var(--XS, 32px) 0px", flexDirection:"column", alignItems:"center", gap:"var(--M, 48px)", flex:"1 0 0"}}>
+         <div style={{display:"flex", width:"calc(100% - 2*var(--XXS, 24px))", padding:"var(--XXS, 24px)", alignItems:"flex-start"}}>
+            <div style={{width:"50%", display:"flex", padding:"var(--XS, 32px) 0px", flexDirection:"column", alignItems:"center", gap:"var(--M, 48px)", flex:"1 0 0"}}>
                 <h2 className="secondary brand">¡Hola! Bienvenid@</h2>
                 <MultiLinks
                 text1="Alumno" text2="Profesor/a" text3="Padre de Familia" show1={true} show2={true} 
@@ -55,7 +55,7 @@ export default function RegistroAlum(){
                 />   
                 <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}>
                         <h5>Padre/Madre/Tutor</h5>
-                        <div style={{display:"flex",padding:"var(--US, 8px) var(--XXXS, 12px)", width:"624px", flexDirection:"column"}}>
+                        <div style={{display:"flex",padding:"var(--US, 8px) var(--XXXS, 12px)", width:"100%", flexDirection:"column"}}>
                         <InputEmail Style={"primary"} label={"Correo Electrónico"} showLabel={true} EmailError={handleEmailError} required={true} register={true}/>
                         <InputPassword label={"Pin de seguridad"} showLabel={true} PasswordError={handlePasswordError} required={true} register = {true}/>
                         <Input Style={"primary"} label={"Nombre(s)"} showLabel={true} required={true} InputError={handleInputError}/>
@@ -63,7 +63,7 @@ export default function RegistroAlum(){
                         <Input Style={"primary"} label={"Apellido Materno"} showLabel={true} required={true} InputError={handleInputError}/>
                         </div>
                         <h5>Alumno</h5> 
-                        <div style={{display:"flex",padding:"var(--US, 8px) var(--XXXS, 12px)", width:"624px", flexDirection:"column"}}>
+                        <div style={{display:"flex",padding:"var(--US, 8px) var(--XXXS, 12px)", width:"100%", flexDirection:"column"}}>
                         <InputPassword label={"Contraseña de la cuenta"} showLabel={true} PasswordError={handlePasswordError} required={true} register = {true}/>
                         <Input Style={"primary"} label={"Nombre(s)"} showLabel={true} required={true} InputError={handleInputError}/>
                         <Input Style={"primary"} label={"Apellido Paterno"} showLabel={true} required={true} InputError={handleInputError}/>
@@ -83,7 +83,7 @@ export default function RegistroAlum(){
                 </div>           
             </div>   
                  
-                <img src={registroAlum} alt="ninos Estudiando"/> 
+                <img style={{ width:"50%", position: "sticky", top: "0px"}} src={registroAlum} alt="ninos Estudiando"/> 
         </div>
         <FooterApp/> 
         </>

@@ -1,9 +1,9 @@
-import HeaderApp from "../../modelos/header/HeaderApp.jsx";
+import HeaderAlumno from "../../modelos/header/HeaderAlumno.jsx";
 import Card from "../../modelos/card/card.jsx";
 import { useState } from "react";
 import { Link} from "react-router-dom";
 import FooterApp from "../../modelos/footer/FooterApp.jsx";
-
+/**quitar boton2 */
   const cardData_1 = [
     {
         direction: "vertical",
@@ -13,7 +13,6 @@ import FooterApp from "../../modelos/footer/FooterApp.jsx";
         actions: true,
         adicional: true,
         bt1: "Hola",
-        bt2: "Hola",
         score: "10.0",
         date: "10/10/2021",
         img: "si",
@@ -27,7 +26,6 @@ import FooterApp from "../../modelos/footer/FooterApp.jsx";
       actions: true,
       adicional: true,
       bt1: "Hola",
-      bt2: "Hola",
       score: "10.0",
       date: "10/10/2021",
       img: "si",
@@ -41,7 +39,6 @@ import FooterApp from "../../modelos/footer/FooterApp.jsx";
     actions: true,
     adicional: true,
     bt1: "Hola",
-    bt2: "Hola",
     score: "10.0",
     date: "10/10/2021",
     img: "si",
@@ -55,7 +52,6 @@ import FooterApp from "../../modelos/footer/FooterApp.jsx";
   actions: true,
   adicional: true,
   bt1: "Hola",
-  bt2: "Hola",
   score: "10.0",
   date: "10/10/2021",
   img: "si",
@@ -71,7 +67,6 @@ const cardData_2 = [
       actions: true,
       adicional: true,
       bt1: "Hola",
-      bt2: "Hola",
       score: "10.0",
       date: "10/10/2021",
       img: "si",
@@ -85,7 +80,6 @@ const cardData_2 = [
     actions: true,
     adicional: true,
     bt1: "Hola",
-    bt2: "Hola",
     score: "10.0",
     date: "10/10/2021",
     img: "si",
@@ -99,7 +93,6 @@ const cardData_2 = [
   actions: true,
   adicional: true,
   bt1: "Hola",
-  bt2: "Hola",
   score: "10.0",
   date: "10/10/2021",
   img: "si",
@@ -113,7 +106,6 @@ link: true,
 actions: true,
 adicional: true,
 bt1: "Hola",
-bt2: "Hola",
 score: "10.0",
 date: "10/10/2021",
 img: "si",
@@ -129,7 +121,6 @@ const cardData_3 = [
       actions: true,
       adicional: true,
       bt1: "Hola",
-      bt2: "Hola",
       score: "10.0",
       date: "10/10/2021",
       img: "si",
@@ -143,7 +134,6 @@ const cardData_3 = [
     actions: true,
     adicional: true,
     bt1: "Hola",
-    bt2: "Hola",
     score: "10.0",
     date: "10/10/2021",
     img: "si",
@@ -157,7 +147,6 @@ const cardData_3 = [
     actions: true,
     adicional: true,
     bt1: "Hola",
-    bt2: "Hola",
     score: "10.0",
     date: "10/10/2021",
     img: "si",
@@ -171,7 +160,6 @@ const cardData_3 = [
   actions: true,
   adicional: true,
   bt1: "Hola",
-  bt2: "Hola",
   score: "10.0",
   date: "10/10/2021",
   img: "si",
@@ -187,7 +175,6 @@ const cardData_4 = [
       actions: true,
       adicional: true,
       bt1: "Hola",
-      bt2: "Hola",
       score: "10.0",
       date: "10/10/2021",
       img: "si",
@@ -201,7 +188,6 @@ const cardData_4 = [
     actions: true,
     adicional: true,
     bt1: "Hola",
-    bt2: "Hola",
     score: "10.0",
     date: "10/10/2021",
     img: "si",
@@ -215,7 +201,6 @@ const cardData_4 = [
   actions: true,
   adicional: true,
   bt1: "Hola",
-  bt2: "Hola",
   score: "10.0",
   date: "10/10/2021",
   img: "si",
@@ -229,7 +214,6 @@ link: true,
 actions: true,
 adicional: true,
 bt1: "Hola",
-bt2: "Hola",
 score: "10.0",
 date: "10/10/2021",
 img: "si",
@@ -259,7 +243,6 @@ const cardData_5 = [
   actions: true,
   adicional: true,
   bt1: "Hola",
-  bt2: "Hola",
   score: "10.0",
   date: "10/10/2021",
   img: "si",
@@ -287,7 +270,6 @@ link: true,
 actions: true,
 adicional: true,
 bt1: "Hola",
-bt2: "Hola",
 score: "10.0",
 date: "10/10/2021",
 img: "si",
@@ -343,7 +325,7 @@ export default function MenuEj(){
 
     return(
         <>
-           <HeaderApp/>
+           <HeaderAlumno/>
            <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
             <h2 className="secondary brand">Ejercicios</h2>   
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
@@ -417,4 +399,4 @@ export default function MenuEj(){
         <FooterApp/>
         </>
     )
-}/*lleva header distinto*/
+}

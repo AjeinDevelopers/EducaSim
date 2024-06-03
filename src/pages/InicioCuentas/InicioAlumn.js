@@ -10,19 +10,18 @@ import {NavLink} from "react-router-dom";
 import FooterApp from "../../modelos/footer/FooterApp.jsx";
 export default function InicioAlumn (){
     const [sendForm, setSendForm] = useState(false);
-    const [emailError, setEmailError] = useState(false);
-    const [passError, setPassError] = useState(false);
-    const [inputError, setInputError] = useState(true);
+    const [emailError, setEmailError] = useState(true);
+    const [passError, setPassError] = useState(true);
 
     useEffect(() => {
-        if(!emailError && !passError && !inputError){
+        if(!emailError && !passError){
             setSendForm(true);
             console.log("Entra al if error");
         }else{
             setSendForm(false);
             console.log("Entra al else");
         }
-    }, [emailError, passError, inputError]);
+    }, [emailError, passError]);
 
     let handleEmailError = (error) => {
         setEmailError(error);
@@ -30,10 +29,6 @@ export default function InicioAlumn (){
 
     let handlePasswordError = (error) => {
         setPassError(error);
-    };
-
-    let handleInputError = (error) => {
-        setInputError(error);
     };
     return(
         <>

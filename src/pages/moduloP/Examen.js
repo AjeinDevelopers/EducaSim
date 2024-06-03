@@ -1,4 +1,4 @@
-import HeaderApp from "../../modelos/header/HeaderApp"
+import HeaderAlumno from "../../modelos/header/HeaderAlumno.jsx"
 import {useState, useEffect} from "react";
 import Pregunta from "../../modelos/pregunta/pregunta";
 import RadButtonGroup from "../../componentes/radbutton/RadButtonGroup.jsx";
@@ -62,7 +62,7 @@ export default function Examen(){
 
     return(
         <>
-         <HeaderApp/>
+         <HeaderAlumno/>
          <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"flex-start", gap:"var(--XS, 32px)"}}>
             <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}>
                 <h2 className="secondary brand">Titulo Ejercicio</h2>
@@ -87,7 +87,7 @@ export default function Examen(){
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et leo."}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
-                <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
+                <Pregunta num={"1"} pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
                 <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
                 <h5 className="secondary brand">Pregunta 4</h5>
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}

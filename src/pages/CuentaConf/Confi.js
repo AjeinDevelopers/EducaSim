@@ -1,4 +1,4 @@
-import HeaderApp from "../../modelos/header/HeaderApp";
+import HeaderAlumno from "../../modelos/header/HeaderAlumno";
 import InputEmail from "../../componentes/input/inputEmail";
 import {useState, useEffect} from "react";
 import InputPassword from "../../componentes/input/inputPassword";
@@ -8,39 +8,27 @@ export default function ConfAlumn(){
     const [sendForm, setSendForm] = useState(false);
     const [emailError, setEmailError] = useState(true);
     const [passError, setPassError] = useState(true);
-    const [inputError, setInputError] = useState(true);
-
-    const [value, setValue] = useState(null);
-    const [selector, setSelector] = useState(null);
 
     useEffect(() => {
-        if(!emailError && !passError && !inputError ){
+        if(!emailError && !passError){
             setSendForm(true);
+            console.log("Entra al if error");
         }else{
             setSendForm(false);
+            console.log("Entra al else");
         }
-    }, [emailError, passError, inputError]);
-
-    let handleValue = (value) => {
-        setValue(value);
-    }
+    }, [emailError, passError]);
 
     let handleEmailError = (error) => {
         setEmailError(error);
     }
 
-
     let handlePasswordError = (error) => {
         setPassError(error);
     };
-
-    let handleInputError = (error) => {
-        setInputError(error);
-    };
-
     return(
         <>
-            <HeaderApp/>
+            <HeaderAlumno/>
             <div style={{display:"flex", padding:"var(--XS, 32px) var(--M, 48px)", flexDirection:"column", alignItems:"center", gap:" var(--M, 48px)", alignSelf:"stretch"}}>
                 <h2 className="secondary brand">Configuración de la cuenta</h2>
                 <div style={{display:"flex", justifyContent:"center", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
