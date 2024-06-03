@@ -13,6 +13,7 @@ import InicioPadre from './pages/InicioCuentas/InicioPadre.js'
 import RegistroAlum from './pages/CuentaConf/RegistroAlum.js'
 import RegistroProfe from './pages/CuentaConf/RegistroProfe.js'
 import ConfAlumn from './pages/CuentaConf/ConfAlumn.js';
+import menuEx from './pages/moduloPruebas/menuEx.js';
 import React from "react";
 
 
@@ -36,8 +37,6 @@ function App() {
                       path='*'
                       element={<NotFound/>}
                   />
-
-
                   <Route
                       path='/play'
                       element={<Playground/>}
@@ -65,6 +64,10 @@ function App() {
                     <Route
                         path='/Configuracion_Alum'
                         element={<ConfAlumn/>}
+                    />
+                    <Route
+                        path='/menu_Exam'
+                        element={<menuEx/>}
                     />
                     
 
