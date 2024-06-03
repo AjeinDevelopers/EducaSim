@@ -2,6 +2,9 @@
   "name": "educasim-react",
   "version": "0.1.0",
   "private": true,
+  "alias": {
+    "react": "path.resolve('./node_modules/react')"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

@@ -1,0 +1,54 @@
+input[type="radio"]{
+    display: none;
+}
+
+label[id="label-radio"]:before{
+  content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--color-principal, #4BA8FF);
+}
+
+label[id="label-radio"]{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: var(--US, 12px);
+    align-items: center;
+    width: 100%;
+    border: 2px solid var(--color-principal, #4BA8FF);
+    border-radius: var(--US, 12px);
+    padding: var(--XXXS, 12px) var(--XXS, 16px);
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+label[id="label-radio"]:hover{
+    border: 2px solid var(--color-principal, #4BA8FF);
+    box-shadow: 0px 4px var(--XXXS, 16px) 0px var(--color-principal-glow, #7ABFFF);
+}
+
+input[type="radio"]:checked + label[id="label-radio"]:before{
+    background: var(--color-principal, #4BA8FF);
+}
+
+input[type="radio"]:checked + label[id="label-radio"]{
+    background: var(--color-principal-claro, #CAE6FF);
+}
+
+.rad-container{
+    width: 100%;
+}
+
+.label-container{
+    display: flex;
+    width: 100%;
+    min-height: var(--XXS, 24px);
+    align-items: center;
+    align-self: stretch;
+}
+
+.label{
+    width: 100%;
+    color: var(--color-text, #051C32);
+}
