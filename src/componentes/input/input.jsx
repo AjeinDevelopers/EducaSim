@@ -43,15 +43,17 @@ export default function Input(props){
     const handleInput = useCallback((event) => {
         const newInput = event.target.value;
 
-        if (newInput.trim() === '' && props.required) {
-            setError("El campo no puede estar vacio");
-            props.InputError(true);
-            setLleno(false);
-            setEstilo("error");
-        }else {
-            props.InputError(false);
-            setLleno(true);
-            setEstilo("primary");
+        if(props.required) {
+            if (newInput.trim() === '') {
+                setError("El campo no puede estar vacio");
+                props.InputError(true);
+                setLleno(false);
+                setEstilo("error");
+            } else {
+                props.InputError(false);
+                setLleno(true);
+                setEstilo("primary");
+            }
         }
     }, [props.InputError]);
 

@@ -11,7 +11,3 @@ export default function HeaderApp() {
     </header>
   );
 }
-
-function click(){
-    
-}
