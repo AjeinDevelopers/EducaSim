@@ -88,6 +88,15 @@ export default function Examen(){
                                     label={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et leo."}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
+                <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
+                <h5 className="secondary brand">Pregunta 4</h5>
+                <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
+                                    label={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et leo."}
+                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                <h5 className="secondary brand">Pregunta 5</h5>
+                <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
+                                    label={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et leo."}
+                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 </div>
             </div>
          </div>

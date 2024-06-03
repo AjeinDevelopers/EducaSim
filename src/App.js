@@ -16,6 +16,7 @@ import ConfAlumn from './pages/CuentaConf/ConfAlumn.js';
 import MenuEx from './pages/moduloP/MenuEx.js';
 import MenuEj from './pages/moduloP/MenuEj.js';
 import Examen from './pages/moduloP/Examen.js';
+import PagInicioA from './pages/Inicios/PagInicioA.js';
 import React from "react";
 
 
@@ -78,6 +79,10 @@ function App() {
                     <Route
                         path='/Examen'
                         element={<Examen/>}
+                    />
+                    <Route
+                        path='/Inicio_Alum'
+                        element={<PagInicioA/>}
                     />
 
                    </Routes>
