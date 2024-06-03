@@ -64,7 +64,6 @@ export default function RegistroAlum(){
                         </div>
                         <h5>Alumno</h5> 
                         <div style={{display:"flex",padding:"var(--US, 8px) var(--XXXS, 12px)", width:"624px", flexDirection:"column"}}>
-                        <InputEmail Style={"primary"} label={"Correo"} showLabel={true} EmailError={handleEmailError} required={true} register={true}/>
                         <InputPassword label={"Contraseña de la cuenta"} showLabel={true} PasswordError={handlePasswordError} required={true} register = {true}/>
                         <Input Style={"primary"} label={"Nombre(s)"} showLabel={true} required={true} InputError={handleInputError}/>
                         <Input Style={"primary"} label={"Apellido Paterno"} showLabel={true} required={true} InputError={handleInputError}/>

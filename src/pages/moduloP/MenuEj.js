@@ -1,41 +1,11 @@
 import HeaderApp from "../../modelos/header/HeaderApp.jsx";
-import InputEmail from "../../componentes/input/inputEmail.jsx";
-import Boton from "../../componentes/boton/boton.jsx";
 import Card from "../../modelos/card/card.jsx";
-import {useState, useEffect} from "react";
-import FooterPromo from "../../modelos/footer/FooterPromo.jsx";
+import { useState } from "react";
+import { Link} from "react-router-dom";
+import FooterApp from "../../modelos/footer/FooterApp.jsx";
 
-export default function MenuEj(){
-    const cardData = [
-        {
-            direction: "vertical",
-            width: "304px",
-            header: "Holaa",
-            link: true,
-            actions: false,
-            adicional: true,
-            bt1: "Hola",
-            bt2: "Hola",
-            score: "10.0",
-            date: "10/10/2021",
-            img: "si",
-            text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-        },
-        {
-          direction: "vertical",
-          width: "404px",
-          header: "Funciones",
-          link: false,
-          actions: false,
-          adicional: false,
-          bt1: "Hola",
-          bt2: "Hola",
-          score: "10.0",
-          date: "10/10/2021",
-          img: "si",
-          text: "ahjasidagdkjSKJAHDAHJBLadhalksj    d"
-      },
-      {
+  const cardData_1 = [
+    {
         direction: "vertical",
         width: "304px",
         header: "Holaa",
@@ -48,74 +18,403 @@ export default function MenuEj(){
         date: "10/10/2021",
         img: "si",
         text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },];
-    const [sendForm, setSendForm] = useState(false);
-    const [emailError, setEmailError] = useState(true);
-    const [passError, setPassError] = useState(true);
-    const [inputError, setInputError] = useState(true);
-    const [dropdownError, setDropdownError] = useState(true);
-    const [radButtonError, setRadButtonError] = useState(true);
+    },
+    {
+      direction: "vertical",
+      width: "304px",
+      header: "Holaa",
+      link: true,
+      actions: true,
+      adicional: true,
+      bt1: "Hola",
+      bt2: "Hola",
+      score: "10.0",
+      date: "10/10/2021",
+      img: "si",
+      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+  {
+    direction: "vertical",
+    width: "304px",
+    header: "Holaa",
+    link: true,
+    actions: true,
+    adicional: true,
+    bt1: "Hola",
+    bt2: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+  direction: "vertical",
+  width: "304px",
+  header: "Holaa",
+  link: true,
+  actions: true,
+  adicional: true,
+  bt1: "Hola",
+  bt2: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+];
+const cardData_2 = [
+  {
+      direction: "vertical",
+      width: "304px",
+      header: "Holaa",
+      link: true,
+      actions: true,
+      adicional: true,
+      bt1: "Hola",
+      bt2: "Hola",
+      score: "10.0",
+      date: "10/10/2021",
+      img: "si",
+      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+  {
+    direction: "vertical",
+    width: "304px",
+    header: "Holaa",
+    link: true,
+    actions: true,
+    adicional: true,
+    bt1: "Hola",
+    bt2: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+  direction: "vertical",
+  width: "304px",
+  header: "Holaa",
+  link: true,
+  actions: true,
+  adicional: true,
+  bt1: "Hola",
+  bt2: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+direction: "vertical",
+width: "304px",
+header: "Holaa",
+link: true,
+actions: true,
+adicional: true,
+bt1: "Hola",
+bt2: "Hola",
+score: "10.0",
+date: "10/10/2021",
+img: "si",
+text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+];
+const cardData_3 = [
+  {
+      direction: "vertical",
+      width: "304px",
+      header: "Holaa",
+      link: true,
+      actions: true,
+      adicional: true,
+      bt1: "Hola",
+      bt2: "Hola",
+      score: "10.0",
+      date: "10/10/2021",
+      img: "si",
+      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+  {
+    direction: "vertical",
+    width: "304px",
+    header: "Holaa",
+    link: true,
+    actions: true,
+    adicional: true,
+    bt1: "Hola",
+    bt2: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+  {
+    direction: "vertical",
+    width: "304px",
+    header: "Holaa",
+    link: true,
+    actions: true,
+    adicional: true,
+    bt1: "Hola",
+    bt2: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+  {
+  direction: "vertical",
+  width: "304px",
+  header: "Holaa",
+  link: true,
+  actions: true,
+  adicional: true,
+  bt1: "Hola",
+  bt2: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+];
+const cardData_4 = [
+  {
+      direction: "vertical",
+      width: "304px",
+      header: "Holaa",
+      link: true,
+      actions: true,
+      adicional: true,
+      bt1: "Hola",
+      bt2: "Hola",
+      score: "10.0",
+      date: "10/10/2021",
+      img: "si",
+      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+  {
+    direction: "vertical",
+    width: "304px",
+    header: "Holaa",
+    link: true,
+    actions: true,
+    adicional: true,
+    bt1: "Hola",
+    bt2: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+  direction: "vertical",
+  width: "304px",
+  header: "Holaa",
+  link: true,
+  actions: true,
+  adicional: true,
+  bt1: "Hola",
+  bt2: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+direction: "vertical",
+width: "304px",
+header: "Holaa",
+link: true,
+actions: true,
+adicional: true,
+bt1: "Hola",
+bt2: "Hola",
+score: "10.0",
+date: "10/10/2021",
+img: "si",
+text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+];
+const cardData_5 = [
+{
+    direction: "vertical",
+    width: "304px",
+    header: "Holaa",
+    link: true,
+    actions: true,
+    adicional: true,
+    bt1: "Hola",
+    bt2: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+  direction: "vertical",
+  width: "304px",
+  header: "Holaa",
+  link: true,
+  actions: true,
+  adicional: true,
+  bt1: "Hola",
+  bt2: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+direction: "vertical",
+width: "304px",
+header: "Holaa",
+link: true,
+actions: true,
+adicional: true,
+bt1: "Hola",
+bt2: "Hola",
+score: "10.0",
+date: "10/10/2021",
+img: "si",
+text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+direction: "vertical",
+width: "304px",
+header: "Holaa",
+link: true,
+actions: true,
+adicional: true,
+bt1: "Hola",
+bt2: "Hola",
+score: "10.0",
+date: "10/10/2021",
+img: "si",
+text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+];
+const cardData= [
+{
+    direction: "vertical",
+    width: "304px",
+    header: "Holaa",
+    link: true,
+    actions: true,
+    adicional: true,
+    bt1: "Hola",
+    bt2: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+  direction: "vertical",
+  width: "304px",
+  header: "Holaa",
+  link: true,
+  actions: true,
+  adicional: true,
+  bt1: "Hola",
+  bt2: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+  direction: "vertical",
+  width: "304px",
+  header: "Holaa",
+  link: true,
+  actions: true,
+  adicional: true,
+  bt1: "Hola",
+  bt2: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+}
+];
 
-    const items = [
-        {value: 'opc1', label: 'Opc1'},
-        {value: 'opc2', label: 'Opc2'},
-        {value: 'opc3', label: 'Opc3'},
-    ];
+export default function MenuEj(){
 
-    const [value, setValue] = useState(null);
-    const [selector, setSelector] = useState(null);
-
-    useEffect(() => {
-        if(!emailError && !passError && !inputError && !dropdownError && !radButtonError){
-            setSendForm(true);
-        }else{
-            setSendForm(false);
-        }
-    }, [emailError, passError, inputError, dropdownError, radButtonError]);
-
-    let handleValue = (value) => {
-        setValue(value);
-    }
-
-    let handleEmailError = (error) => {
-        setEmailError(error);
-    }
-
-    let handleRadButtonError = (error) => {
-        setRadButtonError(error);
-    }
-
-    let handlePasswordError = (error) => {
-        setPassError(error);
-    };
-
-    let handleDropdownError = (error) => {
-        setDropdownError(error);
-    }
-
-    let handleInputError = (error) => {
-        setInputError(error);
-    };
-
-    let handleSelector = (value) => {
-        setSelector(value);
-    }
-        return(
-            <>
-                <HeaderApp/>
-                <InputEmail Style={"primary"} label={"Teodiox2"} showLabel={true} EmailError={handleEmailError} required={true}
-                                register={true}/>
-
-                <Boton size={"small"} Style={"secondary"} text={"Teodio"} showIcon2={true}
-                           icon2={"fa-solid fa-right-to-bracket fa-fw"}
-                           method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} /> 
-                           <div style={{gap:"var(--XS, 32px)"}}>
-                    {cardData.map((cardProps, index) => (
+    return(
+        <>
+           <HeaderApp/>
+           <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
+            <h2 className="secondary brand">Ejercicios</h2>   
+              <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+              <h3 className="secondary brand">Tecer Grado</h3>  
+              <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Recomendados</h5>
+                    <Link to="/">
+                      <t6 className="secondary brand">Ver más→ </t6>
+                    </Link> 
+                  </div>
+                  <div style={{gap:"var(--XS, 32px)"}}>
+                    {cardData_1.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
-                </div> 
-                <FooterPromo/>              
-            </>
-        )
-
-}
+                </div>
+                </div>
+                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 1</h5>
+                    <Link to="/">
+                      <t6 className="secondary brand">Ver más→ </t6>
+                    </Link> 
+                  </div>
+                  <div style={{gap:"var(--XS, 32px)"}}>
+                    {cardData_2.map((cardProps, index) => (
+                        <Card key={index} {...cardProps} />
+                    ))}
+                </div>
+                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 2</h5>
+                    <Link to="/">
+                      <t6 className="secondary brand">Ver más→ </t6>
+                    </Link> 
+                  </div>
+                  <div style={{gap:"var(--XS, 32px)"}}>
+                    {cardData_3.map((cardProps, index) => (
+                        <Card key={index} {...cardProps} />
+                    ))}
+                </div>
+            
+              
+            </div>
+            <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+              <h3 className="secondary brand">Segundo Grado</h3>  
+              <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Recomendados</h5>
+                    <Link to="/">
+                      <t6 className="secondary brand">Ver más→ </t6>
+                    </Link> 
+                  </div>
+                  <div style={{gap:"var(--XS, 32px)"}}>
+                    {cardData_4.map((cardProps, index) => (
+                        <Card key={index} {...cardProps} />
+                    ))}
+                </div>
+                </div>
+                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 1</h5>
+                    <Link to="/">
+                      <t6 className="secondary brand">Ver más→ </t6>
+                    </Link> 
+                  </div>
+                  <div style={{gap:"var(--XS, 32px)"}}>
+                    {cardData_5.map((cardProps, index) => (
+                        <Card key={index} {...cardProps} />
+                    ))}
+                </div>
+                </div>
+        </div>
+        <FooterApp/>
+        </>
+    )
+}/*lleva header distinto*/

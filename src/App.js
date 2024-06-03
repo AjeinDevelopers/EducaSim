@@ -15,6 +15,7 @@ import RegistroProfe from './pages/CuentaConf/RegistroProfe.js'
 import ConfAlumn from './pages/CuentaConf/ConfAlumn.js';
 import MenuEx from './pages/moduloP/MenuEx.js';
 import MenuEj from './pages/moduloP/MenuEj.js';
+import Examen from './pages/moduloP/Examen.js';
 import React from "react";
 
 
@@ -74,7 +75,10 @@ function App() {
                         path='/menu_Ejer'
                         element={<MenuEj/>}
                     />
-                    
+                    <Route
+                        path='/Examen'
+                        element={<Examen/>}
+                    />
 
                    </Routes>
           </Router>
