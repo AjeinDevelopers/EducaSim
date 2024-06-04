@@ -23,7 +23,7 @@ ChartJS.register(
     Filler
 );
 
-const progreso = [72, 56, 36, 80, 40, 30, 20, 30, 12, 60,70];
+const progreso = [72, 56, 36, 80, 40, 30, 20, 30, 12, 60,70, 50];
 const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 const misoptions = {
@@ -51,7 +51,9 @@ const midata = {
         {       
             label: 'Progreso',
             data: progreso,
-            backgroundColor: 'rgba(0, 220, 195, 0.5)'
+            backgroundColor: '#00BB9A',
+            borderWidth: 1, 
+            borderRadius: 10, 
         }
     ]
 };

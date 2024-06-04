@@ -11,8 +11,8 @@ export default function PagInicioA(){
             </div>
         </div>
         <div>
-            <p className="m-2"><b>Ejemplo</b> Grafica de barras</p>
-            <div  style={{width:"450px", height:"250px"}}>
+            <p>ajsh</p>
+            <div  style={{width:"1206px", height:"380px"}}>
                 <div style={{width:"100%", height:"100%", padding:"10px 0"}}>
                     <BarsChart/>
                 </div>

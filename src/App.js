@@ -18,7 +18,7 @@ import MenuEj from './pages/moduloP/MenuEj.js';
 import Examen from './pages/moduloP/Examen.js';
 import PagInicioA from './pages/Inicios/PagInicioA.js';
 import React from "react";
-import InicioLec from './pages/moduloCont/InicioLec.js';
+import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
 
 
 function App() {

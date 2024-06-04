@@ -1,8 +1,9 @@
-import HeaderAlumno from "../../modelos/header/HeaderAlumno.jsx"
-import Card from "../../modelos/card/card.jsx";
+import HeaderAlumno from "../../../modelos/header/HeaderAlumno.jsx"
+import Card from "../../../modelos/card/card.jsx";
 import { Link} from "react-router-dom";
-import FooterApp from "../../modelos/footer/FooterApp.jsx";
-
+import FooterApp from "../../../modelos/footer/FooterApp.jsx";
+import { useState } from "react";
+/**corregir modelo de menu ex, ej y este */
   const cardData = [
     {
         direction: "vertical",
@@ -43,6 +44,32 @@ import FooterApp from "../../modelos/footer/FooterApp.jsx";
   img: "si",
   text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
 },
+{
+  direction: "vertical",
+  width: "485px",
+  header: "Holaa",
+  link: false,
+  actions: true,
+  adicional: false,
+  bt1: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+  direction: "vertical",
+  width: "485px",
+  header: "Holaa",
+  link: false,
+  actions: true,
+  adicional: false,
+  bt1: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+}
 ];
 const cardData3 = [
     {
@@ -214,7 +241,10 @@ const cardData5 = [
 
 
 export default function InicioLec(){
-
+    const[showAll, setShowAll]=useState(true)
+    const handleShowAll=() =>{
+      setShowAll(()=>!showAll)
+    }
     return(
         <>
 <HeaderAlumno/>
@@ -222,33 +252,59 @@ export default function InicioLec(){
             <h2 className="secondary brand">Lecciones</h2>   
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
               <h3 className="secondary brand">Tecer Grado</h3>  
-              <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Recomendados</h5>
-                    <Link to="/">
-                      <t6 className="secondary brand">Ver más→ </t6>
-                    </Link> 
+              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 1</h5><button onClick={handleShowAll}>{showAll ? 'Show only important': 'show All'}</button>
                   </div>
                   <div style={{gap:"var(--XS, 32px)"}}>
-                    {cardData.map((cardProps, index) => (
+                    
+                    {cardData
+                    .filter(note =>{
+                      if(showAll === true) return Card;
+                        return Card.important === true;
+                    })
+                    .map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
                 <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <h3 className="secondary brand">Tecer Grado</h3>  
               <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Recomendados</h5>
-                    <Link to="/">
-                      <t6 className="secondary brand">Ver más→ </t6>
-                    </Link> 
+                    <h5 className="secondary brand">Tema 2</h5>
                   </div>
+                  
                   <div style={{gap:"var(--XS, 32px)"}}>
                     {cardData2.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
                 </div>
+                <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 3</h5> 
+                  </div>
+                  <div style={{gap:"var(--XS, 32px)"}}>
+                    {cardData3.map((cardProps, index) => (
+                        <Card key={index} {...cardProps} />
+                    ))}
+                    
+                </div>
+                </div>
+                <h3 className="secondary brand">Segundo Grado</h3>
+                <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 1</h5>
+                    <Link to="/">
+                      <t6 className="secondary brand">Ver más→ </t6>
+                    </Link> 
+                  </div>
+                  <div style={{gap:"var(--XS, 32px)"}}>
+                    {cardData4.map((cardProps, index) => (
+                        <Card key={index} {...cardProps} />
+                    ))}
+                </div>
+                </div>
+                <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
                 <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                     <h5 className="secondary brand">Tema 2</h5>
                     <Link to="/">
@@ -256,31 +312,14 @@ export default function InicioLec(){
                     </Link> 
                   </div>
                   <div style={{gap:"var(--XS, 32px)"}}>
-                    {cardData3.map((cardProps, index) => (
+                    {cardData5.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
+                </div>
                 </div>
             </div> 
-            
-            <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <h3 className="secondary brand">Tecer Grado</h3>  
-              <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Recomendados</h5>
-                    <Link to="/">
-                      <t6 className="secondary brand">Ver más→ </t6>
-                    </Link> 
-                  </div>
-                  <div style={{gap:"var(--XS, 32px)"}}>
-                    {cardData2.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
-                </div>
-            
-               </div>
-              </div>
-              </div>
+            </div>
+           </div>
         </div>
         <FooterApp/>
         </>
