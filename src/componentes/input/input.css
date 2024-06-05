@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: var(--US, 12px);
+    gap: var(--US, 2px);
 
 }
 
