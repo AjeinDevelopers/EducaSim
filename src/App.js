@@ -50,35 +50,35 @@ function App() {
                       element={<Playground/>}
                   />
                   <Route
-                        path='/login_alumno'
+                        path='/login/alumno'
                         element={<InicioAlumn/>}
                   />   
                     <Route
-                        path='/login_profesor'
+                        path='/login/profesor'
                         element={<InicioProfe/>}
                     />
                     <Route
-                        path='/login_padre'
+                        path='/login/padre'
                         element={<InicioPadre/>}
                     />
                     <Route
-                        path='/registro_Alum'
+                        path='/registro/Alum'
                         element={<RegistroAlum/>}
                     />
                     <Route
-                        path='/registro_Profe'
+                        path='/registro/profe'
                         element={<RegistroProfe/>}
                     />
                     <Route
-                        path='/Configuracion_Alum'
+                        path='/Configuracion/Alum'
                         element={<Confi/>}
                     />
                     <Route
-                        path='/menu_Examen'
+                        path='/menu/Examen'
                         element={<MenuEx/>}
                     />
                     <Route
-                        path='/menu_Ejer'
+                        path='/menu/Ejer'
                         element={<MenuEj/>}
                     />
                     <Route

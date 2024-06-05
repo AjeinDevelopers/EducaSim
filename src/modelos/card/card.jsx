@@ -37,8 +37,7 @@ export default function Card(props) {
               }
               {props.actions &&
                   <div className={"action-container"}>
-                      <Boton size = {"small"} Style={"secondary"} text={props.bt1} showIcon2={true} icon2={props.bt1} handleClick={props.click1}/>
-                      
+                      <Boton size = {"small"} Style={"secondary"} text={props.bt1} showIcon2={true} icon2={props.bt1} handleClick={props.click1} link = {props.link} to = {props.to} />
                   </div>
               }
           </div>
