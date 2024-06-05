@@ -1,0 +1,9 @@
+#alum-lista-container{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2*var(--XXXS, 16px));
+    border-radius: var(--US, 12px);
+    border: var(--color-principal, #4BA8FFFF) solid 2px;
+    padding: var(--XXXS, 16px);
+    align-items: center;
+}
