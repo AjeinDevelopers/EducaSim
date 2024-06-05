@@ -20,6 +20,7 @@ import PagInicioA from './pages/Inicios/PagInicioA.js';
 import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
 import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.js';
+import MenuMaterial from './pages/Nivel1/moduloCont/Material/MenuMaterial.js';
 import Leccion1 from './pages/Nivel1/moduloCont/Lecciones/Leccion1.js';
 
 import FormatoMaterial from './pages/Nivel1/moduloCont/Material/FormatoMaterial.js';
@@ -37,6 +38,7 @@ import Leccion5 from './pages/Nivel1/moduloCont/Lecciones/Leccion5.js';
 import Leccion6 from './pages/Nivel1/moduloCont/Lecciones/Leccion6.js';
 import Leccion7 from './pages/Nivel1/moduloCont/Lecciones/Leccion7.js';
 import Leccion8 from './pages/Nivel1/moduloCont/Lecciones/Leccion8.js';
+import Clases from './pages/moduloClases/Clases.js';
 
 
 
@@ -145,8 +147,16 @@ function App() {
                         element={<CuestionarioAjus/>}
                     />
                     <Route
+                        path='/Clases'
+                        element={<Clases/>}
+                    />
+                    <Route
                         path='/NuevaClase'
                         element={<NewClase/>}
+                    />
+                    <Route
+                        path='/menu/Material'
+                        element={<MenuMaterial/>}
                     />
                     <Route    
                         path='/Leccion/matematicas/cuarto/multiplicaciones'

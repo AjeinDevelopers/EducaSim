@@ -24,7 +24,7 @@ import {Link} from "react-router-dom";
 
 export default function Boton (props) {
     return(
-        <button {...(props.link ? {to: props.To} : {})} style={{...(props.plano ? {borderRadius: "0"} : {})}} className={props.disabled ? (props.size + " disabled") : (props.size + " " + props.Style)} onClick={props.handleClick} formAction={props.action} formMethod={props.method} disabled={props.disabled}>
+        <button as={Link} to={props.To} style={{...(props.plano ? {borderRadius: "0"} : {})}} className={props.disabled ? (props.size + " disabled") : (props.size + " " + props.Style)} onClick={props.handleClick} formAction={props.action} formMethod={props.method} disabled={props.disabled}>
             {props.showIcon1 && <i className={props.icon1}></i>}
             <t5>{props.text}</t5>
             {props.showIcon2 && <i className={props.icon2}></i>}

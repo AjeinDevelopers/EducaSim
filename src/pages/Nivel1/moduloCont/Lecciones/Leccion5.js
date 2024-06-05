@@ -2,6 +2,8 @@ import HeaderAlumno from '../../../../modelos/header/HeaderAlumno.jsx';
 import FooterApp from '../../../../modelos/footer/FooterApp.jsx'; 
 import fracciones from '../../../../assets/common/fracciones.png';
 import fracciones1_ej from '../../../../assets/common/fracciones1_ej.png';
+import Boton from '../../../../componentes/boton/boton.jsx';
+import { NavLink } from 'react-router-dom';
 
 export default function Leccion5(){
         return(
@@ -40,6 +42,10 @@ export default function Leccion5(){
                             Denominador que es divisor del otro:<br></br>
                             En estos casos se busca un número que multiplicado por el denominador menor, de como resultado el denominador mayor, entonces solo para esta fracción también multiplicamos el numerador, el de la otra fracción se conserva exactamente igual y se realiza la operación correspondiente.
                             </t5>
+                        </div>
+                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
+                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
+                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
                 </div>
             </div>

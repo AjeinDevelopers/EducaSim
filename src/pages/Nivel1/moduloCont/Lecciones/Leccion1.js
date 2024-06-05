@@ -12,9 +12,9 @@ export default function Leccion1(){
             <HeaderAlumno/>
             <div style={{display:"flex", padding:"var(--XXS, 24px) var(--L, 64px)", flexDirection:"column", alignItems:"center", gap:"var(--M, 48px)", alignSelf:"stretch"}}>
                 <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>
-                <div style={{width:"100%",borderRadius:"var(--US, 12px)", overflow: 'hidden'}}>
-                    <img style={{margin: "0", objectFit: "cover",width:"100%", display:"flex",height:"320px", padding:"0", justifyContent:"center", alignItems:"center", alignSelf:"stretch"}} src={multiplicacion} alt='leccion'/>
-                    </div>
+                <div style={{width:"100%",borderRadius:"var(--US, 12px)", overflow: 'hidden'}}>                   <img style={{margin: "0", objectFit: "cover",width:"100%", display:"flex",height:"320px", padding:"0", justifyContent:"center", alignItems:"center", alignSelf:"stretch"}} src={multiplicacion} alt='leccion'/>
+                <img style={{margin: "0", objectFit: "cover",width:"100%", display:"flex",height:"320px", padding:"0", justifyContent:"center", alignItems:"center", alignSelf:"stretch"}} src={multiplicacion} alt='leccion'/>
+                </div>
                     <h3 className='secondary brand'>Leccion1</h3>
                     <div style={{display:"flex",padding:"0px var(--L, 64px)", justifyContent:"center", alignItems:"center", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                         <div style={{display:"flex", alignItems:"center", gap:"var(--XXXS, 16px)"}}>
@@ -22,13 +22,9 @@ export default function Leccion1(){
                             <h5 className='primary brand'>  Tema:</h5><t5>Multiplicaciones</t5>
                         </div>
                     </div>    
+                    <div style={{display:"flex", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch", flex:"1 0 0"}}>  
 
-                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
-                        <Boton size={"small"} Style={"secondary"} text={"Volver a Lecciones"} showIcon1={true}
-                           icon1={"fa-solid fa-reply fa-fw"}  link={true} to='/menu/Lec'/>
-
-                        <div style={{display:"flex", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch", flex:"1 0 0"}}>
-                                <t5>Una multiplicación es una operación matemática que consiste en encontrar el resultado de multiplicar una cifra por otra.<br></br>
+                    <t5>Una multiplicación es una operación matemática que consiste en encontrar el resultado de multiplicar una cifra por otra.<br></br>
                                     Términos de la multiplicación: <br></br>
                                     Factores: Los factores son los números que se multiplican. <br></br>
                                     Producto: El producto es el resultado de la multiplicación.<br></br>
@@ -41,15 +37,17 @@ export default function Leccion1(){
                                     3.Sumar los productos <br></br>
                                 </t5>
                                 
-                                <img style={{display:"flex", width:"50%", alignItems:"center", justifyContent:"center", alignSelf:"stretch"}}src={multiplicacion_ej} alt='nnanana'/>         
-                        </div>
+                                </div>
                         <div style={{display:"flex",flexDirection:"column", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                             <t5>Si el multiplicador es de tres cifras, el resultado de la multiplicación de las centenas se escribirá desplazado dos posiciones hacia la izquierda.</t5>
-
                         </div>
+                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
+                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
+                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
                 </div>
-            </div>
+           </div>
+           
             <FooterApp/>
             </>
         )

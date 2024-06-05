@@ -2,6 +2,8 @@ import HeaderAlumno from '../../../../modelos/header/HeaderAlumno.jsx';
 import FooterApp from '../../../../modelos/footer/FooterApp.jsx'; 
 import fracciones from '../../../../assets/common/fracciones.png';
 import fracciones3_ej from '../../../../assets/common/fracciones3_ej.png';
+import Boton from '../../../../componentes/boton/boton.jsx';
+import { NavLink } from 'react-router-dom';
 
 export default function Leccion5(){
         return(
@@ -37,6 +39,10 @@ export default function Leccion5(){
                             En la división de fracciones mixtas, es necesario que la parte entera se exprese como una fracción con el mismo denominador que en la parte fraccionaria que la acompaña.  El resultado de la multiplicación se suma con el numerador de la fracción que la acompaña. Una vez que se convierten las fracciones mixtas, se puede realizar la división.
 
                             </t5>
+                        </div>
+                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
+                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
+                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
                 </div>
             </div>

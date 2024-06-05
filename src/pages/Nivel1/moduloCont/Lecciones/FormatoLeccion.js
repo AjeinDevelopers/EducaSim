@@ -37,8 +37,8 @@ export default function FormatoLeccion(){
                             <t5>Lorem ipsum dolor sit amet consectetur. Massa in sed facilisis lectus massa tortor quis. Sit ipsum facilisis diam posuere eu sed. Velit morbi rutrum leo egestas. Risus neque iaculis sed morbi penatibus eu nisi nisi a. Accumsan vitae eget est pharetra libero sed gravida eleifend id. Eu tempor amet erat volutpat risus leo.</t5>
                         </div>
                         <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
-                        <Boton size={"small"} Style={"secondary"} text={"Volver a Lecciones"} showIcon1={true}
-                           icon1={"fa-solid fa-reply fa-fw"}  link={true} to='/menu_Lec'/>
+                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
+                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
                 </div>
             </div>

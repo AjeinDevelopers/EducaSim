@@ -71,47 +71,6 @@ import { useState } from "react";
   text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
 }
 ];
-const cardData3 = [
-    {
-        direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: false,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
 const cardData2 = [
     {
         direction: "vertical",
@@ -153,7 +112,7 @@ const cardData2 = [
   text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
 },
 ];
-const cardData4 = [
+const cardData3 = [
     {
         direction: "vertical",
         width: "485px",
@@ -194,7 +153,90 @@ const cardData4 = [
   text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
 },
 ];
+const cardData4 = [
+  {
+      direction: "vertical",
+      width: "485px",
+      header: "Holaa",
+      link: false,
+      actions: true,
+      adicional: false,
+      bt1: "Hola",
+      score: "10.0",
+      date: "10/10/2021",
+      img: "si",
+      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+  {
+    direction: "vertical",
+    width: "485px",
+    header: "Holaa",
+    link: false,
+    actions: true,
+    adicional: false,
+    bt1: "Hola",
+    score: "10.0",
+    date: "10/10/2021",
+    img: "si",
+    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+{
+direction: "vertical",
+width: "485px",
+header: "Holaa",
+link: false,
+actions: true,
+adicional: false,
+bt1: "Hola",
+score: "10.0",
+date: "10/10/2021",
+img: "si",
+text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+];
+
 const cardData5 = [
+    {
+        direction: "vertical",
+        width: "485px",
+        header: "Holaa",
+        link: false,
+        actions: true,
+        adicional: false,
+        bt1: "Hola",
+        score: "10.0",
+        date: "10/10/2021",
+        img: "si",
+        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+    },
+    {
+      direction: "vertical",
+      width: "485px",
+      header: "Holaa",
+      link: false,
+      actions: true,
+      adicional: false,
+      bt1: "Hola",
+      score: "10.0",
+      date: "10/10/2021",
+      img: "si",
+      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  },
+{
+  direction: "vertical",
+  width: "485px",
+  header: "Holaa",
+  link: false,
+  actions: true,
+  adicional: false,
+  bt1: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},
+];
+const cardData6 = [
     {
         direction: "vertical",
         width: "485px",
@@ -252,6 +294,7 @@ export default function InicioLec(){
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                     <h5 className="secondary brand">Tema 1</h5>
+                      <t6 className="secondary brand">Ver más→ </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
                     
@@ -259,56 +302,74 @@ export default function InicioLec(){
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+              <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                     <h5 className="secondary brand">Tema 2</h5>
+                    <t6 className="secondary brand">Ver más→ </t6>
                   </div>
-                  
-                  <div style={{gap:"var(--XS, 32px)"}}>
+                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
+                    
                     {cardData2.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 3</h5> 
+                  
+                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 3</h5>
+                    <t6 className="secondary brand">Ver más→ </t6>
                   </div>
-                  <div style={{gap:"var(--XS, 32px)"}}>
+                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
+                    
                     {cardData3.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
-                    
                 </div>
                 </div>
                 <h3 className="secondary brand">Segundo Grado</h3>
-                <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+
+                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                     <h5 className="secondary brand">Tema 1</h5>
-                    <Link to="/">
-                      <t6 className="secondary brand">Ver más→ </t6>
-                    </Link> 
+                    <t6 className="secondary brand">Ver más→ </t6>
                   </div>
-                  <div style={{gap:"var(--XS, 32px)"}}>
+                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
+                    
                     {cardData4.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
-                </div>
-                <div style={{display:"flex", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-                <div style={{ display: "flex", padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                </div></div></div>
+                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                     <h5 className="secondary brand">Tema 2</h5>
-                    <Link to="/">
-                      <t6 className="secondary brand">Ver más→ </t6>
-                    </Link> 
+                    <t6 className="secondary brand">Ver más→ </t6>
                   </div>
-                  <div style={{gap:"var(--XS, 32px)"}}>
+                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
+                    
                     {cardData5.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
+                </div></div>
+                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
+              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
+                    <h5 className="secondary brand">Tema 3</h5>
+                    <t6 className="secondary brand">Ver más→ </t6>
+                  </div>
+                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
+                    
+                    {cardData6.map((cardProps, index) => (
+                        <Card key={index} {...cardProps} />
+                    ))}
                 </div>
+                </div></div>
             </div> 
             </div>
            </div>

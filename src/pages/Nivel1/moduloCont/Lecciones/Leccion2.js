@@ -2,6 +2,10 @@ import HeaderAlumno from '../../../../modelos/header/HeaderAlumno.jsx';
 import FooterApp from '../../../../modelos/footer/FooterApp.jsx'; 
 import multiplicacion2 from '../../../../assets/common/multiplicacion2.png';
 import multiplicacion_ej2 from '../../../../assets/common/multiplicacion_ej2.png';
+import Boton from '../../../../componentes/boton/boton.jsx';
+import { NavLink } from 'react-router-dom';
+import Link from '../../../../componentes/multiboton/link.jsx';
+
 
 export default function Leccion2(){
         return(
@@ -44,9 +48,15 @@ export default function Leccion2(){
                         </div>
                         <div style={{display:"flex",flexDirection:"column", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                             <t5>5.	Sumar los productos y finalmente obtenemos el resultado.</t5>
+                            
+                        </div>
+                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
+                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
+                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
                 </div>
             </div>
+
             <FooterApp/>
             </>
         )

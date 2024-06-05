@@ -1,7 +1,7 @@
-import HeaderAlumno from "../../../modelos/header/HeaderAlumno.jsx"
-import Card from "../../../modelos/card/card.jsx";
+import HeaderProfesor from "../../../../modelos/header/HeaderProfesor.jsx"
+import Card from "../../../../modelos/card/card.jsx";
 import { Link} from "react-router-dom";
-import FooterApp from "../../../modelos/footer/FooterApp.jsx";
+import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import { useState } from "react";
 /**corregir modelo de menu ex, ej y este */
   const cardData = [
@@ -282,13 +282,13 @@ const cardData6 = [
 
 
 
-export default function MenuEx(){
+export default function MenuMaterial(){
    
     return(
         <>
-<HeaderAlumno/>
+<HeaderProfesor/>
            <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
-            <h2 className="secondary brand">Exámenes</h2>   
+            <h2 className="secondary brand">Material Imprimible</h2>   
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
               <h3 className="secondary brand">Tecer Grado</h3>  
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
