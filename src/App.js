@@ -39,7 +39,7 @@ import Leccion6 from './pages/Nivel1/moduloCont/Lecciones/Leccion6.js';
 import Leccion7 from './pages/Nivel1/moduloCont/Lecciones/Leccion7.js';
 import Leccion8 from './pages/Nivel1/moduloCont/Lecciones/Leccion8.js';
 import Clases from './pages/moduloClases/Clases.js';
-
+import Administrar from './pages/moduloClases/Administrar.js';
 
 
 function App() {
@@ -187,7 +187,10 @@ function App() {
                         element={<Leccion8/>}
 
                     />
-
+                    <Route
+                      path='/Administrar'
+                      element={<Administrar/>}
+                    />
                    </Routes>
           </Router>
       </>

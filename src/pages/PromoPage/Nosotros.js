@@ -11,7 +11,7 @@ export default function Nosotros() {
             <PromoHeader />
             <div style={{ width: "calc(100% - 192px)", height: "240px", padding: "var(--M, 48px) var(--XXXL, 96px)", flexDirection: "column", alignItems: "center", background: "var(--Color-Principales-Claros-Primary, #CAE6FF)" }}>
                 <div style={{ flexDirection: "row", alignItems: "center" }}>
-                    <h3>Sobre</h3><h3 style={{ color: "var(--color-principal)" }} className={"secondary"}> Nosotros</h3>
+                    <h3>Sobre &nbsp;</h3><h3 style={{ color: "var(--color-principal)" }} className={"secondary"}> Nosotros</h3>
                 </div>
                 <div style={{ flexDirection: "column", alignItems: "center", textAlign: "center" }}>
                     <t5>En EducaSim, estamos comprometidos con la creación de una plataforma de apoyo integral para estudiantes de primaria. Nuestra misión es proporcionar un entorno educativo en línea que se adapte al método de aprendizaje de cada alumno, ofreciendo una amplia gama de recursos y actividades diseñadas para mejorar su experiencia educativa.</t5>
