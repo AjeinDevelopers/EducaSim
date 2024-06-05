@@ -241,10 +241,7 @@ const cardData5 = [
 
 
 export default function InicioLec(){
-    const[showAll, setShowAll]=useState(true)
-    const handleShowAll=() =>{
-      setShowAll(()=>!showAll)
-    }
+   
     return(
         <>
 <HeaderAlumno/>
@@ -254,16 +251,11 @@ export default function InicioLec(){
               <h3 className="secondary brand">Tecer Grado</h3>  
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 1</h5><button onClick={handleShowAll}>{showAll ? 'Show only important': 'show All'}</button>
+                    <h5 className="secondary brand">Tema 1</h5>
                   </div>
-                  <div style={{gap:"var(--XS, 32px)"}}>
+                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
                     
-                    {cardData
-                    .filter(note =>{
-                      if(showAll === true) return Card;
-                        return Card.important === true;
-                    })
-                    .map((cardProps, index) => (
+                    {cardData.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>

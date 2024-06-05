@@ -13,12 +13,14 @@ import InicioPadre from './pages/InicioCuentas/InicioPadre.js'
 import RegistroAlum from './pages/CuentaConf/RegistroAlum.js'
 import RegistroProfe from './pages/CuentaConf/RegistroProfe.js'
 import Confi from './pages/CuentaConf/Confi.js';
-import MenuEx from './pages/moduloP/MenuEx.js';
-import MenuEj from './pages/moduloP/MenuEj.js';
-import Examen from './pages/moduloP/Examen.js';
+import MenuEx from './pages/Nivel1/moduloP/MenuEx.js';
+import MenuEj from './pages/Nivel1/moduloP/MenuEj.js';
+import Examen from './pages/Nivel1/moduloP/Examen.js';
 import PagInicioA from './pages/Inicios/PagInicioA.js';
 import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
+import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.js';
+import Leccion1 from './pages/Nivel1/moduloCont/Lecciones/Leccion1.js';
 
 
 function App() {
@@ -88,6 +90,14 @@ function App() {
                     <Route
                         path='/menu_Lec'
                         element={<InicioLec/>}
+                    />
+                    <Route
+                        path='/Leccion_nom'
+                        element={<FormatoLeccion/>}
+                    />
+                    <Route
+                        path='/Leccion_1'
+                        element={<Leccion1/>}
                     />
 
                    </Routes>

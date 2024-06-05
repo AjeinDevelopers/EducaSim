@@ -1,7 +1,8 @@
-import HeaderAlumno from "../../modelos/header/HeaderAlumno.jsx"
+import HeaderAlumno from "../../../modelos/header/HeaderAlumno.jsx"
 import {useState, useEffect} from "react";
-import Pregunta from "../../modelos/pregunta/pregunta";
-import RadButtonGroup from "../../componentes/radbutton/RadButtonGroup.jsx";
+import Pregunta from "../../../modelos/pregunta/pregunta";
+import RadButtonGroup from "../../../componentes/radbutton/RadButtonGroup.jsx";
+import FooterApp from "../../../modelos/footer/FooterApp.jsx";
 
 
 export default function Examen(){
@@ -11,11 +12,12 @@ export default function Examen(){
     const [inputError, setInputError] = useState(true);
     const [dropdownError, setDropdownError] = useState(true);
     const [radButtonError, setRadButtonError] = useState(true);
-
+    /**repuestas correctas: */
     const items = [
         {value: 'opc1', label: 'Opc1'},
         {value: 'opc2', label: 'Opc2'},
-        {value: 'opc3', label: 'Opc3'},
+        {value: 'opc3', label: 'Opc3'}, 
+
     ];
 
     const [value, setValue] = useState(null);
@@ -100,6 +102,7 @@ export default function Examen(){
                 </div>
             </div>
          </div>
+         <FooterApp/>
         </>
     )
 
