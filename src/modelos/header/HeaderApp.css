@@ -1,11 +1,14 @@
-header{
+header[id="App"]{
     display: flex;
-    width: 98%;
+    width: calc(100% - (var(--XXS, 24px) * 2));
     min-height: var(--XL, 24px);
-    padding: 1%;
+    padding: var(--XXXS, 16px) var(--XXS, 24px);
     justify-content: space-around;
     align-items: center;
+    position: sticky;
     margin: 0;
+    top: 0;
+    background: #F0F8FF;
 }
 
 .link-container{

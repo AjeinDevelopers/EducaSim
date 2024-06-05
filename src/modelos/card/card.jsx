@@ -3,7 +3,7 @@ import "./card.css";
 import {Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 import Boton from "../../componentes/boton/boton";
-import noImg from '../../assets/common/noImg.svg';
+import noImg from '../../assets/common/noimg.svg';
 
 export default function Card(props) {
 
@@ -37,8 +37,7 @@ export default function Card(props) {
               }
               {props.actions &&
                   <div className={"action-container"}>
-                      <Boton size = {"small"} Style={"secondary"} text={props.bt1} showIcon2={true} icon2={props.bt1} handleClick={props.click1}/>
-                      
+                      <Boton size = {"small"} Style={"secondary"} text={props.bt1} showIcon2={true} icon2={props.bt1} handleClick={props.click1} link = {props.link} to = {props.to} />
                   </div>
               }
           </div>

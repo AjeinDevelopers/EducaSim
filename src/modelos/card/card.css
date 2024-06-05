@@ -26,6 +26,8 @@
     align-items: center;
     gap: var(--XXS, 24px);
     align-self: stretch;
+
+
 }
 
 .adicional{
@@ -43,6 +45,8 @@
     align-self: stretch;
     text-align: justify;
     text-overflow: ellipsis;
+
+    
 }
 
 .action-container{
