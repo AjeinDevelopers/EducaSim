@@ -7,10 +7,10 @@ export default function HeaderApp() {
         <header>
             <Link to="/"><h4 className={"secondary brand"}>EducaSim</h4></Link>
             <nav className={"link-container"}>
-                <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to="" ><t6>Inicio</t6></NavLink>
+                <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to="/Inicio/Prof" ><t6>Inicio</t6></NavLink>
                 <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to=''><t6>Grupos</t6></NavLink>
                 <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to=''><t6>Material</t6></NavLink>
-                <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to=''><t6>Cuenta</t6></NavLink>
+                <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to='/Configuracion/Profe'><t6>Cuenta</t6></NavLink>
             </nav>
         </header>
     );

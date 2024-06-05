@@ -23,6 +23,12 @@ import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.j
 import Leccion1 from './pages/Nivel1/moduloCont/Lecciones/Leccion1.js';
 import FormatoMaterial from './pages/Nivel1/moduloCont/Material/FormatoMaterial.js';
 import Ejercicio from './pages/Nivel1/moduloP/Ejercicios/Ejercicio.js';
+import Progreso from './pages/Inicios/Progreso.js';
+import ProgresoAlumP from './pages/Inicios/ProgresoAlumP.js';
+import CuestionarioAjus from './pages/Inicios/CuestionarioAjus.js';
+import NewClase from './pages/moduloClases/NewClase.js';
+import ConfiP from './pages/CuentaConf/ConfiP.js';
+import PagInicioP from './pages/Inicios/PagInicioP.js';
 
 
 function App() {
@@ -74,6 +80,10 @@ function App() {
                         element={<Confi/>}
                     />
                     <Route
+                        path='/Configuracion/Profe'
+                        element={<ConfiP/>}
+                    />
+                    <Route
                         path='/menu/Examen'
                         element={<MenuEx/>}
                     />
@@ -86,11 +96,15 @@ function App() {
                         element={<Examen/>}
                     />
                     <Route
-                        path='/Inicio_Alum'
+                        path='/Inicio/Alum'
                         element={<PagInicioA/>}
                     />
                     <Route
-                        path='/menu_Lec'
+                        path='/Inicio/Prof'
+                        element={<PagInicioP/>}
+                    />
+                    <Route
+                        path='/menu/Lec'
                         element={<InicioLec/>}
                     />
                     <Route
@@ -108,6 +122,22 @@ function App() {
                     <Route
                         path='/Ejercicio_1'
                         element={<Ejercicio/>}
+                    />
+                    <Route
+                        path='/Progreso/Alum'
+                        element={<Progreso/>}
+                    />
+                    <Route
+                        path='/Progreso/Prof'
+                        element={<ProgresoAlumP/>}
+                    />
+                    <Route
+                        path='/Cuestionario/Ajuste'
+                        element={<CuestionarioAjus/>}
+                    />
+                    <Route
+                        path='/NuevaClase'
+                        element={<NewClase/>}
                     />
 
                    </Routes>

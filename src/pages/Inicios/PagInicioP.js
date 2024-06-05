@@ -1,13 +1,12 @@
-import HeaderAlumno from "../../modelos/header/HeaderAlumno";
-import BarsChart from './BarsChart';
+import HeaderProfesor from "../../modelos/header/HeaderProfesor.jsx";
 import FooterApp from "../../modelos/footer/FooterApp";
 import Card from "../../modelos/card/card";
 import {Link} from 'react-router-dom';
-export default function PagInicioA(){
+export default function PagInicioP(){
     const cardData_1 = [
         {
             direction: "vertical",
-            width: "304px",
+            width: "324px",
             header: "Holaa",
             link: false,
             actions: true,
@@ -20,7 +19,7 @@ export default function PagInicioA(){
         },
         {
           direction: "vertical",
-          width: "304px",
+          width: "324px",
           header: "Holaa",
           link: false,
           actions: true,
@@ -33,7 +32,7 @@ export default function PagInicioA(){
       },
       {
         direction: "vertical",
-        width: "304px",
+        width: "324px",
         header: "Holaa",
         link: false,
         actions: true,
@@ -46,7 +45,7 @@ export default function PagInicioA(){
     },
     {
       direction: "vertical",
-      width: "304px",
+      width: "324px",
       header: "Holaa",
       link: false,
       actions: true,
@@ -59,7 +58,7 @@ export default function PagInicioA(){
     },
     {
         direction: "vertical",
-        width: "304px",
+        width: "324px",
         header: "Holaa",
         link: false,
         actions: true,
@@ -141,18 +140,18 @@ export default function PagInicioA(){
     return(
     
         <>
-        <HeaderAlumno/>
-        <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
-            <h2 className="secondary brand">¡Hola!</h2>
+        <HeaderProfesor/>
+        <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"flex-start", gap:"var(--XS, 32px)"}}>
+            <h2 >¡Buenos Días!</h2>
             <div style={{display:"flex", width:"100%", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXXS, 16px"}}>
-                <h3 className="primary brand">Lecciones Sugeridas</h3>
+                <h3 className="primary brand">Grupos</h3>
                 <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>                   
                     {cardData_1.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                     </div>
-                    <h3 className="primary brand">Ejercicios Sugeridos</h3>
+                    <h3 className="primary brand">Material</h3>
                 <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>                   
                     {cardData_2.map((cardProps, index) => (
@@ -161,27 +160,8 @@ export default function PagInicioA(){
                     </div>
             </div>
             </div>
-        
-        <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}>
-            <div style={{ display: "flex", padding: "padding: var(--XXXS, 16px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h3>Tu Rendimiento</h3>
-                    <Link to="/Progreso/Alum">
-                      <t6 className="secondary brand">Ver más→ </t6>
-                    </Link> 
-            </div>
-        </div>          
-            <div  style={{width:"100%", height:"100%"}}>
-                <div style={{width:"80%", height:"50%", display:"flex",padding:"var(--M, 48px) var(--L, 64px)",justifyContent:"center"}}>
-                    
-                    <BarsChart/>
-                    
-                    </div>
-                </div>
-            </div>  
-        </div>                  
-        <FooterApp/>
-        </>
-
-    )
-
-}
+            </div></div>
+            <FooterApp/>
+            </>
+            )
+            }

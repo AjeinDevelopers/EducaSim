@@ -1,10 +1,10 @@
-import HeaderAlumno from "../../modelos/header/HeaderAlumno";
+import HeaderProfesor from "../../modelos/header/HeaderProfesor";
 import InputEmail from "../../componentes/input/inputEmail";
 import {useState, useEffect} from "react";
 import InputPassword from "../../componentes/input/inputPassword";
 import Boton from "../../componentes/boton/boton";
 import FooterApp from "../../modelos/footer/FooterApp";
-export default function Confi(){
+export default function ConfiP(){
     const [sendForm, setSendForm] = useState(false);
     const [emailError, setEmailError] = useState(true);
     const [passError, setPassError] = useState(true);
@@ -49,7 +49,7 @@ export default function Confi(){
     };
     return(
         <>
-            <HeaderAlumno/>
+            <HeaderProfesor/>
             <div style={{display:"flex", padding:"var(--XS, 32px) var(--M, 48px)", flexDirection:"column", alignItems:"center", gap:" var(--M, 48px)", alignSelf:"stretch"}}>
                 <h2 className="secondary brand">Configuración de la cuenta</h2>
                 <div style={{display:"flex", justifyContent:"center", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
