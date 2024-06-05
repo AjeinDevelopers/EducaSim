@@ -14,6 +14,7 @@ import FooterPromo from "../modelos/footer/FooterPromo";
 import FooterApp from "../modelos/footer/FooterApp";
 import Pregunta from "../modelos/pregunta/pregunta";
 import HeaderApp from "../modelos/header/HeaderApp.jsx";
+import AlumnoLista from "../componentes/AlumnoLista/AlumnoLista";
 
 export default function Playground (){
 
@@ -106,7 +107,7 @@ export default function Playground (){
                 <Card direction={"vertical"} width={"304px"} header={"Holaa"} link={true} actions={true} adicional={true}
                       bt1={"Hola"} bt2={"Hola"} score={"10.0"} date={"10/10/2021"} img={"si"}
                       text={"Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"}/>
-
+                <AlumnoLista nombre={"Quesito"}/>
 
             </div>
 
