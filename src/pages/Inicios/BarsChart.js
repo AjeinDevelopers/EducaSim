@@ -37,10 +37,11 @@ const misoptions = {
     scales: {
         y: {
             min: 0,
-            max: 100
+            max: 100,
+            ticks:{color: '#051C32'}
         },
         x: {
-            ticks: { color: 'rgba(0, 220, 195)' }
+            ticks: { color: '#051C32' }
         }
     }
 };

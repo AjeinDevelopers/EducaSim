@@ -1,16 +1,13 @@
-import HeaderAlumno from "../../../modelos/header/HeaderAlumno.jsx"
+import HeaderAlumno from "../../../../modelos/header/HeaderAlumno.jsx";
 import {useState, useEffect} from "react";
-import Pregunta from "../../../modelos/pregunta/pregunta";
-import RadButtonGroup from "../../../componentes/radbutton/RadButtonGroup.jsx";
-import FooterApp from "../../../modelos/footer/FooterApp.jsx";
+import Pregunta from "../../../../modelos/pregunta/pregunta.jsx";
+import RadButtonGroup from "../../../../componentes/radbutton/RadButtonGroup.jsx";
+import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
+import Boton from "../../../../componentes/boton/boton.jsx";
 
 
-export default function Examen(){
+export default function Ejercicio(){
     const [sendForm, setSendForm] = useState(false);
-    const [emailError, setEmailError] = useState(true);
-    const [passError, setPassError] = useState(true);
-    const [inputError, setInputError] = useState(true);
-    const [dropdownError, setDropdownError] = useState(true);
     const [radButtonError, setRadButtonError] = useState(true);
     /**repuestas correctas: */
     const items = [
@@ -19,47 +16,38 @@ export default function Examen(){
         {value: 'opc3', label: 'Opc3'}, 
 
     ];
+    const items1 = [
+        {value: '1', label: 'Opc1'},
+        {value: '2', label: 'Opc2'},
+        {value: '3', label: 'Opc3'}, 
+
+    ];
+    const items2 = [
+        {value: '4', label: 'Opc1'},
+        {value: '5', label: 'Opc2'},
+        {value: '6', label: 'Opc3'}, 
+
+    ];
 
     const [value, setValue] = useState(null);
     const [selector, setSelector] = useState(null);
 
     useEffect(() => {
-        if(!emailError && !passError && !inputError && !dropdownError && !radButtonError){
+        if(!radButtonError){
             setSendForm(true);
         }else{
             setSendForm(false);
         }
-    }, [emailError, passError, inputError, dropdownError, radButtonError]);
+    }, [ radButtonError]);
 
     let handleValue = (value) => {
         setValue(value);
     }
 
-    let handleEmailError = (error) => {
-        setEmailError(error);
-    }
 
     let handleRadButtonError = (error) => {
         setRadButtonError(error);
     }
-
-    let handlePasswordError = (error) => {
-        setPassError(error);
-    };
-
-    let handleDropdownError = (error) => {
-        setDropdownError(error);
-    }
-
-    let handleInputError = (error) => {
-        setInputError(error);
-    };
-
-    let handleSelector = (value) => {
-        setSelector(value);
-    }
-
-
 
 
     return(
@@ -89,17 +77,22 @@ export default function Examen(){
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et leo."}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
-                <Pregunta num={"1"} pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
-                <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
+                <Pregunta num={"2"} pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
+                <Pregunta num={3} pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
                 <h5 className="secondary brand">Pregunta 4</h5>
-                <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
+                <RadButtonGroup items={items1} size={"large"} estilo={"secondary"}
                                     label={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et leo."}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
-                <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
+                <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
                                     label={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et leo."}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 </div>
+                <div style={{alignItems:"center"}}>
+                <Boton size={"small"} Style={"secondary"} text={"Comprobar"} showIcon2={true}
+                           icon2={"fa-solid fa-check fa-fw"}
+                           method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />                
+                 </div>
             </div>
          </div>
          <FooterApp/>
