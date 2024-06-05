@@ -21,6 +21,13 @@ import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
 import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.js';
 import Leccion1 from './pages/Nivel1/moduloCont/Lecciones/Leccion1.js';
+import Leccion2 from './pages/Nivel1/moduloCont/Lecciones/Leccion2.js';
+import Leccion3 from './pages/Nivel1/moduloCont/Lecciones/Leccion3.js';
+import Leccion4 from './pages/Nivel1/moduloCont/Lecciones/Leccion4.js';
+import Leccion5 from './pages/Nivel1/moduloCont/Lecciones/Leccion5.js';
+import Leccion6 from './pages/Nivel1/moduloCont/Lecciones/Leccion6.js';
+import Leccion7 from './pages/Nivel1/moduloCont/Lecciones/Leccion7.js';
+import Leccion8 from './pages/Nivel1/moduloCont/Lecciones/Leccion8.js';
 
 
 function App() {
@@ -96,8 +103,36 @@ function App() {
                         element={<FormatoLeccion/>}
                     />
                     <Route
-                        path='/Leccion_1'
+                        path='/Leccion/matematicas/tercero/multiplicaciones'
                         element={<Leccion1/>}
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/multiplicaciones'
+                        element={<Leccion2/>}
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/divisiones'
+                        element={<Leccion3/>}
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/fracciones/equivalentes'
+                        element={<Leccion4/>}
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/fracciones/suma_resta'
+                        element={<Leccion5/>}
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/fracciones/multiplicacion'
+                        element={<Leccion6/>}
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/fracciones/division'
+                        element={<Leccion7/>}
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/fracciones/decimales'
+                        element={<Leccion8/>}
                     />
 
                    </Routes>
