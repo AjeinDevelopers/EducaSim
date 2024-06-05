@@ -88,7 +88,7 @@ export default function Nosotros() {
                     </div>
                 </div>
             </div>
-            <div style={{ width: "calc(100% - 192px)", height: "240px", padding: "var(--XS, 32px) var(--XXS, 24px)", flexDirection: "column", alignItems: "center", gap: "var(--M, 48px)"}}>
+            <div style={{ width: "calc(100% - 192px)", height: "440px", padding: "var(--XS, 32px) var(--XXS, 24px)", flexDirection: "column", alignItems: "center", gap: "var(--M, 48px)"}}>
                 <div style={{ flexDirection: "row", alignItems: "center" }}>
                     <h2 style={{ color: "var(--color-principal)"}} className={"secondary"}>Nuestros</h2><h2 style={{ color: "var(--color-principal)" }} className={"primary"}> Colaboradores</h2>
                 </div>
@@ -109,6 +109,23 @@ export default function Nosotros() {
                     </div>
                 </div>
             </div>
+            <div style={{ width: "calc(100% - 192px)", height: "320px", padding: "var(--XS, 32px) var(--XXS, 24px)", flexDirection: "column", alignItems: "center", gap: "var(--M, 48px)"}}>
+                <div style={{ flexDirection: "row", alignItems: "center" }}>
+                    <h2 style={{ color: "var(--color-principal)"}} className={"secondary"}>Recursos Utilizados</h2>
+                </div>
+                <div style={{ width: "calc(100% - 192px)", flexDirection: "column", padding: "var(--XS, 32px) var(--L, 64px)", alignItems: "center", gap: "var(--XS, 32px)"}}>
+                    <div style={{ flexDirection: "column", alignItems: "center" }}>
+                        <h2>StorySet Illustrations</h2>
+                    </div>
+                    <div style={{ flexDirection: "column", alignItems: "center", width: "calc(100% - 192px)", gap: "var(--US, 12px)" }}>
+                            <Pill text={"Ilustraciones"} Style={"secondary"} />
+                    </div>
+                    <div style={{ flexDirection: "row", alignItems: "left", textAlign: "center" }}>
+                            <t5>Las ilustraciones vectoriales de esta plataforma pertenecen a la librería de ilustraciones de StorySet, las cuales están disponibles en https://storyset.com/</t5>
+                    </div>
+                </div>
+            </div>
+
         </>
     )
 }
