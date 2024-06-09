@@ -1,0 +1,28 @@
+
+.threeone, .threetwo, .threethree {
+    display: inline-block;
+    width: 453px;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.threeone {
+    background: #F5F5F5;
+}
+
+.threetwo {
+    background: #F5F5F5;
+}
+
+.threethree {
+    background: #F5F5F5;
+}
+
+.threeone:hover, .threetwo:hover, .threethree:hover {
+    background: #00BB9A;
+}
+
+
+

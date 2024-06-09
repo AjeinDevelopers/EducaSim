@@ -3,6 +3,10 @@ import PromoHeader from "../../modelos/header/PromoHeader.jsx";
 import Pill from "../../componentes/pill/pill.jsx";
 import Avatar from "../../assets/common/Avatar.svg";
 import FooterPromo from "../../modelos/footer/FooterPromo.jsx";
+import May from '../../assets/common/May.jpeg';
+import Carlitos from '../../assets/common/Carlitos.jpeg';
+import Mariana from '../../assets/common/Mariana.jpeg';
+import Uriel from '../../assets/common/Uriel.jpeg';
 
 export default function Nosotros() {
 
@@ -33,12 +37,12 @@ export default function Nosotros() {
                         </div>
                     </div>
                     <div style={{ flexDirection: "column", alignItems: "right" }}>
-                        <img src={Avatar}></img>
+                        <img style={{borderRadius:"168px", width: "320px", height: "320px"}}src={Mariana}></img>
                     </div>
                 </div>
                 <div style={{ width: "calc(100% - 192px)", height: "240px", padding: "var(--M, 48px) var(--XXXL, 96px)", flexDirection: "row", gap: "var(--M, 48px)", alignItems: "center" }}>
                     <div style={{ flexDirection: "column", alignItems: "left" }}>
-                        <img src={Avatar}></img>
+                        <img style={{borderRadius:"168px", width: "320px", height: "320px"}} src={May}></img>
                     </div>
                     <div style={{ width: "100%", flexDirection: "column", gap: "var(--XS, 32px)" }}>
                         <div style={{ flexDirection: "column", alignItems: "right", width: "100%" }}>
@@ -67,12 +71,12 @@ export default function Nosotros() {
                         </div>
                     </div>
                     <div style={{ flexDirection: "column", alignItems: "right" }}>
-                        <img src={Avatar}></img>
+                        <img style={{borderRadius:"168px", width: "320px", height: "320px"}}src={Uriel}></img>
                     </div>
                 </div>
                 <div style={{ width: "calc(100% - 192px)", height: "240px", padding: "var(--M, 48px) var(--XXXL, 96px)", flexDirection: "row", gap: "var(--M, 48px)", alignItems: "center" }}>
                     <div style={{ flexDirection: "column", alignItems: "left" }}>
-                        <img src={Avatar}></img>
+                        <img style={{borderRadius:"168px", width: "320px", height: "320px"}} src={Carlitos}></img>
                     </div>
                     <div style={{ width: "100%", flexDirection: "column", gap: "var(--XS, 32px)" }}>
                         <div style={{ flexDirection: "column", alignItems: "right", width: "100%" }}>
@@ -96,7 +100,7 @@ export default function Nosotros() {
                 <div style={{ width: "calc(100% - 192px)", height: "240px", padding: "var(--M, 48px) var(--XXXL, 96px)", flexDirection: "row", gap: "var(--M, 48px)", alignItems: "center" }}>
                     <div style={{ width: "100%", flexDirection: "column", gap: "var(--XS, 32px)" }}>
                         <div style={{ flexDirection: "column", alignItems: "left", width: "100%" }}>
-                            <h2>Nancy Toriz Vega</h2>
+                            <h2>Nancy Toriz Vergara</h2>
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "left", width: "100%", gap: "var(--US, 12px)" }}>
                             <Pill text={"Investigacion"} Style={"secondary"} size={"small"}/>

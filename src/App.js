@@ -40,6 +40,8 @@ import Leccion7 from './pages/Nivel1/moduloCont/Lecciones/Leccion7.js';
 import Leccion8 from './pages/Nivel1/moduloCont/Lecciones/Leccion8.js';
 import Clases from './pages/moduloClases/Clases.js';
 import Administrar from './pages/moduloClases/Administrar.js';
+import CrucigramaApp from './pages/Nivel1/moduloP/Juegos/CrucigramaApp.js';
+import Sopa from './pages/Nivel1/Juegos/Sopa.js';
 
 
 function App() {
@@ -191,7 +193,16 @@ function App() {
                       path='/Administrar'
                       element={<Administrar/>}
                     />
+                    <Route
+                      path='/Crucigrama'
+                      element={<CrucigramaApp/>}
+                    />
+                    <Route
+                      path='/SopaLetras'
+                      element={<Sopa/>}
+                    />
                    </Routes>
+                   
           </Router>
       </>
   );
