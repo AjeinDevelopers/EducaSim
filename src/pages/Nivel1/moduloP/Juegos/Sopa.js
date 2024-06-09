@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import WordSearch from '../../../componentes/WordSearch';
+import WordSearch from '../../../../componentes/WordSearch';
 
 function Sopa() {
     return (

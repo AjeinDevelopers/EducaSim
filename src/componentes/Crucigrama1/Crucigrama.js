@@ -1,38 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import './Crucigrama.css';
+import Boton from '../boton/boton';
 
 const Crossword = () => {
-    const gridSize = 13;
+    const gridSize = 18;
     const [grid, setGrid] = useState(
         Array(gridSize).fill(null).map(() => Array(gridSize).fill(''))
     );
     const [userGrid, setUserGrid] = useState(
         Array(gridSize).fill(null).map(() => Array(gridSize).fill(''))
     );
+    const [gameOver, setGameOver] = useState(false);
 
     const words = [
-        { word: 'HOLA', x: 0, y: 0, direction: 'across' },
-        { word: 'MUNDO', x: 1, y: 0, direction: 'down' },
-        { word: 'AMIGO', x:5, y:1, direction:'down'}
-        // Agrega más palabras aquí
+        { word: 'SUMAS', x: 7, y: 0, direction: 'vertical' },
+        { word: 'NUMEROS', x: 6, y: 1, direction: 'horizontal' },
+        { word: 'RESTAS', x: 5, y: 4, direction: 'horizontal' },
+        { word: 'PATRONES', x: 9, y: 3, direction: 'vertical' },
+        { word: 'MEDIDAS', x: 8, y: 9, direction: 'horizontal' },
+        { word: 'DIVISION', x: 11, y: 8, direction: 'vertical' },
+        { word: 'FIGURAS', x: 13, y: 4, direction: 'vertical' },
+        { word: 'MULTIPLICACION', x: 0, y: 13, direction: 'horizontal' },
     ];
 
     useEffect(() => {
         const newGrid = grid.map(row => row.slice());
         words.forEach(({ word, x, y, direction }) => {
             for (let i = 0; i < word.length; i++) {
-                if (direction === 'across') {
+                if (direction === 'horizontal') {
                     newGrid[y][x + i] = word[i];
-                } else if (direction === 'down') {
+                } else if (direction === 'vertical') {
                     newGrid[y + i][x] = word[i];
                 }
             }
         });
         setGrid(newGrid);
-    }, [grid, words]);
+    }, [words]);
 
     const handleChange = (e, rowIndex, cellIndex) => {
-        if (grid[rowIndex][cellIndex] !== '') { // Verifica si la celda contiene una palabra
+        if (grid[rowIndex][cellIndex] !== '') {
             const newUserGrid = userGrid.map(row => row.slice());
             newUserGrid[rowIndex][cellIndex] = e.target.value.toUpperCase();
             setUserGrid(newUserGrid);
@@ -49,34 +55,58 @@ const Crossword = () => {
             }
         }
         if (correct) {
-            alert('¡Correcto!');
+            setGameOver(true);
+            alert('¡Correcto! Felicidades :D.');
         } else {
             alert('Hay errores, sigue intentando.');
         }
     };
 
     return (
-        <>    <div className="crossword-container">
-            {userGrid.map((row, rowIndex) =>
-                row.map((cell, cellIndex) => (
-                    <div
-                        className={`cell ${grid[rowIndex][cellIndex] ? 'filled' : ''}`}
-                        key={`${rowIndex}-${cellIndex}`}
-                    >
-                        <input
-                            type="text"
-                            maxLength="1"
-                            value={cell}
-                            onChange={(e) => handleChange(e, rowIndex, cellIndex)}
-                            disabled={grid[rowIndex][cellIndex] === ''}
-                        />
+        <>
+            <div>
+                <div style={{ display: "flex", borderRadius: "8px", background: "#CAE6FF", padding: "10px 16px", justifyContent: "center", alignItems: "center" }}>
+                    <t5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; 
+                         &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</t5>
+                </div>
+            </div>
+            <div style={{ display: "flex" }}>
+                <div className="crossword-container">
+                    {userGrid.map((row, rowIndex) =>
+                        row.map((cell, cellIndex) => (
+                            <div
+                                className={`cell ${grid[rowIndex][cellIndex] ? 'filled' : ''}`}
+                                key={`${rowIndex}-${cellIndex}`}
+                            >
+                                <input
+                                    type="text"
+                                    maxLength="1"
+                                    value={cell}
+                                    onChange={(e) => handleChange(e, rowIndex, cellIndex)}
+                                    disabled={grid[rowIndex][cellIndex] === '' || gameOver}
+                                />
+                            </div>
+                        ))
+                    )}
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", marginLeft: "10px" }}>
+                    <div style={{ borderRadius: "8px", background: "#CAE6FF", padding: "10px 16px" }}>
+                        <t5><br />2 <br /><br /><br /><br />3<br /><br /><br /><br /><br />5<br /><br /><br /><br /><br />8<br /><br /><br /><br /><br /></t5>
                     </div>
-                ))
-            )}
-        </div>
-
-    <button onClick={checkAnswers}>Comprobar</button>
-    </>
+                </div>
+            </div>
+            <div style={{ display: "flex",alignItems:"center",width:"100%", justifyContent: "center",marginTop:"-50px" ,padding:" 0px var(--M, 48px)", gap:"160px" }}>
+            
+                <button onClick={checkAnswers} disabled={gameOver}>Revisar</button>
+            
+                
+            </div>
+            <div style={{ display: "flex",alignItems:"center",width:"100%", justifyContent: "center" ,padding:" 0px var(--M, 400px)" }}>
+            {gameOver && (
+                    <Boton size={"small"} Style={"secondary"} text={"Regresar al inicio"} showIcon2={true} icon2={"fa-solid fa-check fa-fw"} />
+                )}
+            </div>
+        </>
 
     );
 };
