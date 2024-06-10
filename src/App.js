@@ -42,6 +42,9 @@ import Clases from './pages/moduloClases/Clases.js';
 import Administrar from './pages/moduloClases/Administrar.js';
 import CrucigramaApp from './pages/Nivel1/moduloP/Juegos/CrucigramaApp.js';
 import Sopa from './pages/Nivel1/moduloP/Juegos/Sopa.js';
+import MaterialP1 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP1.js';
+import MaterialP2 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP2.js';
+import Memo from './pages/Nivel1/moduloP/Juegos/Memo.js';
 
 
 function App() {
@@ -200,6 +203,19 @@ function App() {
                     <Route
                       path='/SopaLetras'
                       element={<Sopa/>}
+                    />
+                   
+                   <Route
+                      path='/Material/Primero/1'
+                      element={<MaterialP1/>}
+                    />
+                    <Route
+                      path='/Material/Primero/2'
+                      element={<MaterialP2/>}
+                    />
+                    <Route
+                      path='/Memorama'
+                      element={<Memo/>}
                     />
                    </Routes>
                    

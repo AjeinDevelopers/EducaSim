@@ -8,29 +8,16 @@ import { useState } from "react";
     {
         direction: "vertical",
         width: "485px",
-        header: "Holaa",
+        header: "Identificando Números",
         link: false,
         actions: true,
         adicional: false,
-        bt1: "Hola",
+        bt1: "Ver más" ,
         score: "10.0",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: "si" ,
+        text: "El alumno podrá identificar números de 1 al 10, con figuras."
     },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
 {
   direction: "vertical",
   width: "485px",
@@ -47,15 +34,16 @@ import { useState } from "react";
 {
   direction: "vertical",
   width: "485px",
-  header: "Holaa",
-  link: false,
+  header: "Secuencias",
+  link: true,
   actions: true,
   adicional: false,
   bt1: "Hola",
   score: "10.0",
   date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  img: "../../../../assets/common/numeros.avif" ,
+  text: "El alumno podrá practicar series básicas y sumas pequeñas.",
+  toLink:'/menu/Lec'
 },
 {
   direction: "vertical",
@@ -290,10 +278,10 @@ export default function MenuMaterial(){
            <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
             <h2 className="secondary brand">Material Imprimible</h2>   
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <h3 className="secondary brand">Tecer Grado</h3>  
+              <h3 className="secondary brand">Primer Grado</h3>  
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 1</h5>
+                    <h5 className="secondary brand">Identificacion de números del 1 al 100</h5>
                       <t6 className="secondary brand">Ver más→ </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>

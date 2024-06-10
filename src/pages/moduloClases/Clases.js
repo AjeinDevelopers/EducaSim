@@ -1,6 +1,8 @@
 import HeaderProfesor from '../../modelos/header/HeaderProfesor.jsx';
 import Card from '../../modelos/card/card.jsx';
 import FooterApp from '../../modelos/footer/FooterApp.jsx';
+import Boton from '../../componentes/boton/boton.jsx';
+import { NavLink } from 'react-router-dom';
 export default function Clases(){
     
        
@@ -59,61 +61,7 @@ export default function Clases(){
         text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
       }
     ];
-    const cardData_2 = [
-        
-        {
-          direction: "vertical",
-          width: "304px",
-          header: "Holaa",
-          link: false,
-          actions: true,
-          adicional: true,
-          bt1: "Hola",
-          score: "10.0",
-          date: "10/10/2021",
-          img: "si",
-          text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-      },
-      {
-        direction: "vertical",
-        width: "304px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: true,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "304px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: true,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-        direction: "vertical",
-        width: "304px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: true,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-      }
-    ];
+    
     return(
     
         <>
@@ -127,15 +75,14 @@ export default function Clases(){
                         <Card key={index} {...cardProps} />
                     ))}
                     </div>
-                <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>                   
-                    {cardData_2.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                    </div>
+                
             </div>
             </div>
-            </div></div>
+            <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
+                        <NavLink className={''} to='/Administrar'><Boton size={"small"}
+                         Style={"secondary"} text={"Administrar clases"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
+                        </div>
+            </div>
             <FooterApp/>
             </>
             )

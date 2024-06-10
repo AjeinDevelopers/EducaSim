@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Crucigrama.css';
 import Boton from '../boton/boton';
+import { NavLink } from 'react-router-dom';
 
 const Crossword = () => {
     const gridSize = 18;
@@ -103,7 +104,8 @@ const Crossword = () => {
             </div>
             <div style={{ display: "flex",alignItems:"center",width:"100%", justifyContent: "center" ,padding:" 0px var(--M, 400px)" }}>
             {gameOver && (
-                    <Boton size={"small"} Style={"secondary"} text={"Regresar al inicio"} showIcon2={true} icon2={"fa-solid fa-check fa-fw"} />
+                   <NavLink className={''} to='/menu/Ejer'> <Boton size={"small"} Style={"secondary"} text={"Regresar al inicio"} showIcon2={true} icon2={"fa-solid fa-check fa-fw"} />
+                    </NavLink>
                 )}
             </div>
         </>

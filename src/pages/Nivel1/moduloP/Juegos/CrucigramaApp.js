@@ -1,4 +1,3 @@
-import React from 'react';
 import HeaderAlumno from '../../../../modelos/header/HeaderAlumno';
 import Crucigrama from '../../../../componentes/Crucigrama1/Crucigrama';
 import FooterApp from '../../../../modelos/footer/FooterApp';

@@ -54,6 +54,7 @@ export default function NewClase (){
                     
                         <div style={{ width:"624px",display: "flex", padding: "8px 12px", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: "8px", alignSelf: "stretch" }}>
                         <Input Style={"primary"} label={"Nombre Clase"}showLabel={true} required={true} InputError={handleInputError}/>
+                        
                         <Dropdown label={"Escoge la fase"} items={items} size={"medium"} required={true}
                               DropdownError={handleDropdownError} onChange={handleSelector}/>    
 

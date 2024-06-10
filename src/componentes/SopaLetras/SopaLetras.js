@@ -1,8 +1,9 @@
-// src/components/WordSearch.js
 import React, { useState, useEffect } from 'react';
-import './WordSearch.css';
+import Boton from '../boton/boton';
+import './SopaLetras.css';
+import { NavLink } from 'react-router-dom';
 
-const WordSearch = () => {
+const SopaLetras = () => {
     const gridSize = 10;
     const [grid, setGrid] = useState(Array(gridSize).fill(null).map(() => Array(gridSize).fill('')));
     const [selectedCells, setSelectedCells] = useState([]);
@@ -10,9 +11,15 @@ const WordSearch = () => {
     const [gameOver, setGameOver] = useState(false);
 
     const words = [
-        { word: 'HOLA', clue: 'Saludo en español', x: 0, y: 0, direction: 'horizontal' },
-        { word: 'MUNDO', clue: 'Planeta en el que vivimos', x: 1, y: 1, direction: 'vertical' },
-        // Agrega más palabras aquí
+        { word: 'DECENAS', x: 0, y: 0, direction: 'horizontal' },
+        { word: 'GRAFICO', x: 7, y: 0, direction: 'vertical' },
+        { word: 'FORMA', x: 2, y: 7, direction: 'horizontal' },
+        { word: 'COMPARAR', x: 0, y: 2, direction: 'vertical' },
+        { word: 'RESTAR', x: 1, y: 3, direction: 'horizontal' },
+        { word: 'LONGITUD', x: 9, y: 0, direction: 'vertical' },
+        { word: 'SUMAR', x: 4, y: 2, direction: 'horizontal' },
+        { word: 'HORA', x: 3, y: 6, direction: 'vertical' },
+
     ];
 
     useEffect(() => {
@@ -27,7 +34,6 @@ const WordSearch = () => {
             }
         });
 
-        // Llenar espacios vacíos con letras aleatorias
         const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         for (let i = 0; i < gridSize; i++) {
             for (let j = 0; j < gridSize; j++) {
@@ -64,6 +70,23 @@ const WordSearch = () => {
             setFoundWords([...foundWords, foundWord.word]);
             markWordAsFound(foundWord);
             setSelectedCells([]);
+
+            const { x, y, direction, word: wordString } = foundWord;
+            for (let i = 0; i < wordString.length; i++) {
+                let row = y, col = x;
+                if (direction === 'horizontal') {
+                    col += i;
+                } else if (direction === 'vertical') {
+                    row += i;
+                }
+                const cellElement = document.querySelector(`.sopa-cell[data-row="${row}"][data-col="${col}"]`);
+                if (cellElement) {
+                    cellElement.classList.add('bounce');
+                    setTimeout(() => {
+                        cellElement.classList.remove('bounce');
+                    }, 500); 
+                }
+            }
         } else {
             alert('Incorrecto');
             setSelectedCells([]);
@@ -84,13 +107,15 @@ const WordSearch = () => {
     };
 
     return (
-        <div>
+        <>
             <div className="word-search-container">
                 {grid.map((row, rowIndex) =>
                     row.map((cell, cellIndex) => (
                         <div
-                            className={`cell ${selectedCells.some(c => c.row === rowIndex && c.col === cellIndex) ? 'selected' : ''} ${cell.found ? 'found' : ''}`}
+                            className={`sopa-cell ${selectedCells.some(c => c.row === rowIndex && c.col === cellIndex) ? 'selected' : ''} ${cell.found ? 'found' : ''}`}
                             key={`${rowIndex}-${cellIndex}`}
+                            data-row={rowIndex}
+                            data-col={cellIndex}
                             onClick={() => handleCellClick(rowIndex, cellIndex)}
                         >
                             {cell.letter}
@@ -98,11 +123,17 @@ const WordSearch = () => {
                     ))
                 )}
             </div>
-            {!gameOver && <button onClick={checkWord}>Check Word</button>}
-            {gameOver && <div>¡Juego terminado!</div>}
-            <div>Palabras encontradas: {foundWords.join(', ')}</div>
-        </div>
+            <div style={{ display: "flex", alignItems: "center", width: "100%", justifyContent: "center", marginTop: "10px", padding: "0px var(--M, 48px)", gap: "160px" }}>
+                {!gameOver && <button onClick={checkWord}>Check Word</button>}
+            </div>
+            <div style={{ display: "flex", alignItems: "center", width: "100%", justifyContent: "center", padding: "0px var(--M, 10px)" }}>
+                {gameOver && (
+                   <NavLink className={''} to='/menu/Lec'> <Boton size={"small"} Style={"secondary"} text={"Regresar al inicio"} showIcon2={true} icon2={"fa-solid fa-check fa-fw"} />
+                    </NavLink>
+                )}
+            </div>
+        </>
     );
 };
 
-export default WordSearch;
+export default SopaLetras;
