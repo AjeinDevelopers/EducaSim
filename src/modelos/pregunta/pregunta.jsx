@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./pregunta.css";
-import noImg from "../../assets/common/noImg.svg";
+import noImg from "../../assets/common/noimg.svg";
 import Input from "../../componentes/input/input";
 
 export default function Pregunta(props) {

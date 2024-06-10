@@ -38,6 +38,23 @@ import Leccion5 from './pages/Nivel1/moduloCont/Lecciones/Leccion5.js';
 import Leccion6 from './pages/Nivel1/moduloCont/Lecciones/Leccion6.js';
 import Leccion7 from './pages/Nivel1/moduloCont/Lecciones/Leccion7.js';
 import Leccion8 from './pages/Nivel1/moduloCont/Lecciones/Leccion8.js';
+
+import Leccion1N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion1N2.js';
+import Leccion2N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion2N2.js';
+import Leccion3N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion3N2.js';
+import Leccion4N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion4N2.js';
+import Leccion5N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion5N2.js';
+import Leccion6N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion6N2.js';
+import Leccion7N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion7N2.js';
+import Leccion8N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion8N2.js';
+import Leccion9N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion9N2.js';
+import Leccion10N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion10N2.js';
+import Leccion11N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion11N2.js';
+
+import Ejercicio1N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio1N2.js';
+import Ejercicio2N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio2N2.js';
+
+
 import Clases from './pages/moduloClases/Clases.js';
 import Administrar from './pages/moduloClases/Administrar.js';
 
@@ -185,6 +202,73 @@ function App() {
                     <Route
                         path='/Leccion/matematicas/cuarto/fracciones/decimales'
                         element={<Leccion8/>}
+
+                    />
+
+
+                    <Route
+                        path='/Leccion/matematicas/primero/Numeros1al100'
+                        element={<Leccion1N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/SumaRestaBasica'
+                        element={<Leccion2N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/FigurasGeometricasBasicas'
+                        element={<Leccion3N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/SumaAvanzada'
+                        element={<Leccion4N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/RestaAvanzada'
+                        element={<Leccion5N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/MultiplicacionBasica'
+                        element={<Leccion6N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/OpcFraccionesBasicas'
+                        element={<Leccion7N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/FigurasGeométricas2D'
+                        element={<Leccion8N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/DivisionBasica'
+                        element={<Leccion9N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/MultiplicacionesNivel2'
+                        element={<Leccion10N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/PerimetroyArea'
+                        element={<Leccion11N2/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/Numeros1al100'
+                        element={<Ejercicio1N2/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/SumaRestaBasica'
+                        element={<Ejercicio2N2/>}
 
                     />
                     <Route
