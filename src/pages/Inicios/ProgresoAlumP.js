@@ -152,7 +152,9 @@ export default function ProgresoAlumP(){
         <div style={{display: "flex", width: "1376px", flexDirection: "column", alignItems: "flex-start",gap: "var(--XXXS, 24px)"}}>        
             <div  style={{width:"100%", height:"508px"}}>
                 <div style={{width:"100%", height:"100%", display:"flex",padding:"var(--M, 48px) var(--L, 64px)",justifyContent:"center"}}>
-                    
+                    <form id={"datosProgreso"}>
+                        <input type={"hidden"} id={"dato1"}  />
+                    </form>
                     <BarsChart/>
                  
                 </div>

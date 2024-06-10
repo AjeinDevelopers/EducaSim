@@ -1,31 +1,111 @@
 import HeaderApp from "../../modelos/header/HeaderApp";
 import registroAlum from "../CuentaConf/imagenes/registroAlum.svg"
 import MultiLinks from "../../componentes/multiboton/multiLinks";
-import {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import InputEmail from "../../componentes/input/inputEmail";
 import InputPassword from "../../componentes/input/inputPassword";
 import Input from "../../componentes/input/input";
 import Boton from "../../componentes/boton/boton";
-import {NavLink} from "react-router-dom";
+import {useNavigate, NavLink} from "react-router-dom";
 import FooterApp from "../../modelos/footer/FooterApp.jsx";
-import registroProf from "./imagenes/registroProf.svg";
+import axios from "axios";
 
 export default function RegistroAlum(){
+    const navigate = useNavigate();
     const [sendForm, setSendForm] = useState(false);
     const [emailError, setEmailError] = useState(true);
     const [passError, setPassError] = useState(true);
-    const [inputError, setInputError] = useState(true);
-
+    const [pinError, setPinError] = useState(true);
+    const [nombreError, setNombreError] = useState(true);
+    const [apeMatError, setApeMatError] = useState(true);
+    const [apePatError, setApePatError] = useState(true);
+    const [claseError, setClaseError] = useState(true);
+    const [sendError, setSendError] = useState(false);
+    const [sendMsg, setSendMsg] = useState("");
     const [value, setValue] = useState(null);
     const [selector, setSelector] = useState(null);
 
+    //################ Variable sdel formulario #####################//
+
+    const [nombre, setNombre] = useState("");
+    const [apePat, setApePat] = useState("");
+    const [apeMat, setApeMat] = useState("");
+    const [correo, setCorreo] = useState("");
+    const [pinSeguridad, setPinSeguridad] = useState("");
+    const [contrasena, setContrasena] = useState("");
+    const [clase, setClase] = useState("");
+
+    //#####################################//
+
+    async function save(event){
+        event.preventDefault();
+        try{
+            await axios.post("http://localhost:8080/usuario/registro/alumno",{
+                "alumno": {
+                    "nombre": nombre,
+                    "apePat": apePat,
+                    "apeMat": apeMat,
+                    "correo": correo,
+                    "pinSeguridad": pinSeguridad,
+                    "contrasena": contrasena
+                },
+                "clase": {
+                        "id": clase
+                }
+            }).then((res) => {
+                if(res.data.error === false){
+                    setSendError(false);
+                    setSendForm(false);
+                    setSendMsg("");
+                    localStorage.setItem("sessionId", res.data.sessionId);
+                    navigate('/Inicio/Alum');
+                }else{
+                    setSendMsg(res.data.message);
+                    setSendError(true);
+                }
+            });
+        }catch(error) {
+            setSendMsg("Hubo un error inesperado, intentelo más tarde");
+            setSendError(true);
+        }
+
+    }
+
+    let handleEmailContent = (content) => {
+        setCorreo(content);
+    }
+
+    let handlePinContent = (content) => {
+        setPinSeguridad(content);
+    }
+
+    let handleNombreContent = (content) => {
+        setNombre(content);
+    }
+
+    let handleApePatContent = (content) => {
+        setApePat(content);
+    }
+
+    let handleApeMatContent = (content) => {
+        setApeMat(content);
+    }
+
+    let handleClaseContent = (content) => {
+        setClase(content);
+    }
+
+    let handlePassContent = (content) => {
+        setContrasena(content);
+    }
+
     useEffect(() => {
-        if(!emailError && !passError && !inputError ){
+        if(!emailError && !passError && !pinError && !nombreError && !apeMatError && !apePatError && !claseError){
             setSendForm(true);
         }else{
             setSendForm(false);
         }
-    }, [emailError, passError, inputError]);
+    }, [emailError, passError, pinError, nombreError, apeMatError, apePatError, claseError]);
 
     let handleValue = (value) => {
         setValue(value);
@@ -35,14 +115,30 @@ export default function RegistroAlum(){
         setEmailError(error);
     }
 
-
     let handlePasswordError = (error) => {
         setPassError(error);
-    };
+    }
 
-    let handleInputError = (error) => {
-        setInputError(error);
-    };
+
+    let handlePinError = (error) => {
+        setPinError(error);
+    }
+
+    let handleNombreError = (error) => {
+        setNombreError(error);
+    }
+
+    let handleApeMatError = (error) => {
+        setApeMatError(error);
+    }
+
+    let handleApePatError = (error) => {
+        setApePatError(error);
+    }
+
+    let handleClaseError = (error) => {
+        setClaseError(error);
+    }
 
     return(
         <>
@@ -81,15 +177,9 @@ export default function RegistroAlum(){
                             flexDirection: "column"
                         }}>
                             <InputEmail Style={"primary"} label={"Correo Electrónico"} showLabel={true}
-                                        EmailError={handleEmailError} required={true} register={true}/>
+                                        EmailError={handleEmailError} required={true} register={true} contenido={handleEmailContent}/>
                             <InputPassword label={"Pin de seguridad"} showLabel={true}
-                                           PasswordError={handlePasswordError} required={true} register={true}/>
-                            <Input Style={"primary"} label={"Nombre(s)"} showLabel={true} required={true}
-                                   InputError={handleInputError}/>
-                            <Input Style={"primary"} label={"Apellido Paterno"} showLabel={true} required={true}
-                                   InputError={handleInputError}/>
-                            <Input Style={"primary"} label={"Apellido Materno"} showLabel={true} required={true}
-                                   InputError={handleInputError}/>
+                                           PasswordError={handlePinError} required={true} register={true} contenido={handlePinContent}/>
                         </div>
                         <h5>Alumno</h5>
                         <div style={{
@@ -99,15 +189,15 @@ export default function RegistroAlum(){
                             flexDirection: "column"
                         }}>
                             <InputPassword label={"Contraseña de la cuenta"} showLabel={true}
-                                           PasswordError={handlePasswordError} required={true} register={true}/>
+                                           PasswordError={handlePasswordError} required={true} register={true} contenido={handlePassContent}/>
                             <Input Style={"primary"} label={"Nombre(s)"} showLabel={true} required={true}
-                                   InputError={handleInputError}/>
+                                   InputError={handleNombreError} contenido={handleNombreContent}/>
                             <Input Style={"primary"} label={"Apellido Paterno"} showLabel={true} required={true}
-                                   InputError={handleInputError}/>
+                                   InputError={handleApePatError} contenido={handleApePatContent}/>
                             <Input Style={"primary"} label={"Apellido Materno"} showLabel={true} required={true}
-                                   InputError={handleInputError}/>
-                            <InputPassword label={"Código de la clase"} showLabel={true}
-                                           PasswordError={handlePasswordError} required={true} register={true}/>
+                                   InputError={handleApeMatError} contenido={handleApeMatContent}/>
+                            <Input label={"Código de la clase"} showLabel={true}
+                                   InputError={handleClaseError} required={true} register={true} contenido={handleClaseContent}/>
                             <div style={{
                                 display: "flex",
                                 justifyContent: "center",
@@ -115,9 +205,20 @@ export default function RegistroAlum(){
                                 padding: "12px",
                                 width: "100%"
                             }}>
-                                <Boton size={"small"} style={"secondary"} text={"Crear cuenta"} showIcon2={true}
-                                       icon2={"fa-solid fa-right-to-bracket fa-fw"}
-                                       method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />
+                                <div style={{
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    gap: "var(--XXS, 24px)"
+                                }}>
+                                    <Boton size={"small"} style={"secondary"} text={"Crear cuenta"} showIcon2={true}
+                                           icon2={"fa-solid fa-right-to-bracket fa-fw"}
+                                           handleClick={save} {...(sendForm ? {disabled: false} : {disabled: true})}
+                                           action={""}
+                                           method={""}/>
+                                    {sendError ?
+                                        <t6 style={{color: "var(--color-error, #FF0000)"}}>{sendMsg}</t6> : null}
+                                </div>
                             </div>
                             <div style={{
                                 display: "flex",

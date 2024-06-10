@@ -1,5 +1,5 @@
 import HeaderProfesor from "../../../../modelos/header/HeaderProfesor";
-import noImg from '../../../../assets/common/noImg.png';
+import noImg from '../../../../assets/common/noimg.png';
 export default function FormatoMaterial(){
     return(
         <>
