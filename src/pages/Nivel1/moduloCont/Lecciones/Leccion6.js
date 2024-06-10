@@ -2,8 +2,10 @@ import HeaderAlumno from '../../../../modelos/header/HeaderAlumno.jsx';
 import FooterApp from '../../../../modelos/footer/FooterApp.jsx'; 
 import fracciones from '../../../../assets/common/fracciones.png';
 import fracciones2_ej from '../../../../assets/common/fracciones2_ej.png';
+import Boton from '../../../../componentes/boton/boton.jsx';
+import { NavLink } from 'react-router-dom';
 
-export default function Leccion5(){
+export default function Leccion6(){
         return(
             <>
             <HeaderAlumno/>
@@ -16,7 +18,7 @@ export default function Leccion5(){
                     <div style={{display:"flex",padding:"0px var(--L, 64px)", justifyContent:"center", alignItems:"center", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                         <div style={{display:"flex", alignItems:"center", gap:"var(--XXXS, 16px)"}}>
                             <h5 className='primary brand'>Grado: </h5><t5>4°</t5>
-                            <h5 className='primary brand'>  Tema:</h5><t5>Fracciones</t5>
+                            <h5 className='primary brand'>  Tema:</h5><t5>Multiplicación de fracciones</t5>
                         </div>
                     </div>    
                         <div style={{display:"flex", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch", flex:"1 0 0"}}>
@@ -31,6 +33,10 @@ export default function Leccion5(){
                                 <img style={{display:"flex", width:"50%", alignItems:"center", justifyContent:"center", alignSelf:"stretch"}}src={fracciones2_ej} alt='nnanana'/>         
                         </div>
                         <div style={{display:"flex",flexDirection:"column", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
+                        </div>
+                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
+                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
+                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
                 </div>
             </div>

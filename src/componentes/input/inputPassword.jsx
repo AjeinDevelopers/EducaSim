@@ -42,14 +42,15 @@ export default function InputPassword(props){
 
     return(
         <div id={"Input-container"} className={estilo}>
-            <div className={"label-container"}>
+            {props.showLabel && <div className={"label-container"}>
                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
-            </div>
+            </div>}
             <input-container className={estilo}>
                 <input type={passwordShown ? 'text' : 'password'}
                        name={props.name}
                        id={props.id}
+                       placeholder={props.placeholder}
                         required={props.required}
                        {...(props.register ? {onChange: handlePassword} : {})}
                         maxLength={20}/>

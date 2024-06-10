@@ -38,14 +38,15 @@ export default function InputEmail(props){
 
     return(
         <div id={"Input-container"} className={estilo}>
-            <div className={"label-container"}>
+            {props.showLabel && <div className={"label-container"}>
                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
-            </div>
+            </div>}
             <input-container className={props.estilo}>
                 <input type= "email"
                        name={props.name}
                        id={props.id}
+                       placeholder={props.placeholder}
                        {...(props.register ? {onChange: handleEmail} : {})}
                        required={props.required}/>
                 {props.showIcon1 && <i className={props.icon1} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}

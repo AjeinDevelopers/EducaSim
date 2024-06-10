@@ -1,0 +1,36 @@
+    header[id="App"]{
+        display: flex;
+        width: calc(100% - (var(--XXS, 24px) * 2));
+        min-height: var(--XL, 24px);
+        padding: var(--XXXS, 16px) var(--XXS, 24px);
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        margin: 0;
+        top: 0;
+        background: #F0F8FF;
+    }
+
+    .link-container{
+        display: flex;
+        padding: 10px var(--XUS, 8px);
+        justify-content: center;
+        align-items: center;
+        gap: var(--XXXS, 16px);
+    }
+
+    .brand{
+        color: var(--color-principal, #4BA8FF);
+    }
+
+    a{
+        color: var(--color-text, #051C32);
+        transition: color 0.5s cubic-bezier(0.08,0.82,0.17,1);
+        transition: transform 0.5s cubic-bezier(0.08,0.82,0.17,1);
+    }
+
+    a:hover{
+        color: var(--color-principal, #4BA8FF);
+        transform: scale(1.1);
+    }
+

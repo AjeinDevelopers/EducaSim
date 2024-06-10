@@ -43,31 +43,34 @@ export default function Input(props){
     const handleInput = useCallback((event) => {
         const newInput = event.target.value;
 
-        if (newInput.trim() === '' && props.required) {
-            setError("El campo no puede estar vacio");
-            props.InputError(true);
-            setLleno(false);
-            setEstilo("error");
-        }else {
-            props.InputError(false);
-            setLleno(true);
-            setEstilo("primary");
+        if(props.required) {
+            if (newInput.trim() === '') {
+                setError("El campo no puede estar vacio");
+                props.InputError(true);
+                setLleno(false);
+                setEstilo("error");
+            } else {
+                props.InputError(false);
+                setLleno(true);
+                setEstilo("primary");
+            }
         }
     }, [props.InputError]);
 
     return(
 
         <div id={"Input-container"} className={estilo}>
-            <div className={"label-container"}>
-                <t5 className={"label"}>{props.label}</t5>
+            {props.showLabel && <div className={"label-container"}>
+                 <t5 className={"label"}>{props.label}</t5>
                 {props.required && <i className={"fa-solid fa-asterisk fa-fw"} style={{color: "#F24040"}}></i>}
-            </div>
+            </div>}
             <input-container className={props.estilo}>
                 <input type= "text"
                        name={props.name}
                        id={props.id}
                        onChange={handleInput}
-                       required={props.required}/>
+                       required={props.required}
+                       placeholder={props.placeholder}/>
                 {props.showIcon1 && <i className={props.icon1} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
             </input-container>
             {!lleno &&

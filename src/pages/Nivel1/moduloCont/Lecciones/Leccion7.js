@@ -2,8 +2,10 @@ import HeaderAlumno from '../../../../modelos/header/HeaderAlumno.jsx';
 import FooterApp from '../../../../modelos/footer/FooterApp.jsx'; 
 import fracciones from '../../../../assets/common/fracciones.png';
 import fracciones3_ej from '../../../../assets/common/fracciones3_ej.png';
+import Boton from '../../../../componentes/boton/boton.jsx';
+import { NavLink } from 'react-router-dom';
 
-export default function Leccion5(){
+export default function Leccion7(){
         return(
             <>
             <HeaderAlumno/>
@@ -16,7 +18,7 @@ export default function Leccion5(){
                     <div style={{display:"flex",padding:"0px var(--L, 64px)", justifyContent:"center", alignItems:"center", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                         <div style={{display:"flex", alignItems:"center", gap:"var(--XXXS, 16px)"}}>
                             <h5 className='primary brand'>Grado: </h5><t5>4°</t5>
-                            <h5 className='primary brand'>  Tema:</h5><t5>Fracciones</t5>
+                            <h5 className='primary brand'>  Tema:</h5><t5>División de fracciones</t5>
                         </div>
                     </div>    
                         <div style={{display:"flex", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch", flex:"1 0 0"}}>
@@ -37,6 +39,10 @@ export default function Leccion5(){
                             En la división de fracciones mixtas, es necesario que la parte entera se exprese como una fracción con el mismo denominador que en la parte fraccionaria que la acompaña.  El resultado de la multiplicación se suma con el numerador de la fracción que la acompaña. Una vez que se convierten las fracciones mixtas, se puede realizar la división.
 
                             </t5>
+                        </div>
+                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
+                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
+                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
                 </div>
             </div>
