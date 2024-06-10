@@ -21,7 +21,6 @@ import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
 import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.js';
 import MenuMaterial from './pages/Nivel1/moduloCont/Material/MenuMaterial.js';
-import Leccion1 from './pages/Nivel1/moduloCont/Lecciones/Leccion1.js';
 
 import FormatoMaterial from './pages/Nivel1/moduloCont/Material/FormatoMaterial.js';
 import Ejercicio from './pages/Nivel1/moduloP/Ejercicios/Ejercicio.js';
@@ -51,6 +50,7 @@ import Leccion18 from './pages/Nivel1/moduloCont/Lecciones/Leccion18.js';
 import Leccion19 from './pages/Nivel1/moduloCont/Lecciones/Leccion19.js';
 import Leccion20 from './pages/Nivel1/moduloCont/Lecciones/Leccion20.js';
 import Leccion21 from './pages/Nivel1/moduloCont/Lecciones/Leccion21.js';
+import Ejercicio1 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio1.js';
 
 import Clases from './pages/moduloClases/Clases.js';
 import Administrar from './pages/moduloClases/Administrar.js';
@@ -137,16 +137,8 @@ function App() {
                         element={<FormatoLeccion/>}
                     />
                     <Route
-                        path='/Leccion/matematicas/tercero/multiplicaciones'
-                        element={<Leccion1/>}
-                    />
-                    <Route
                         path='/Material_num'
                         element={<FormatoMaterial/>}
-                    />
-                    <Route
-                        path='/Ejercicio_1'
-                        element={<Ejercicio/>}
                     />
                     <Route
                         path='/Progreso/Alum'
@@ -264,6 +256,16 @@ function App() {
                     <Route
                         path='/Leccion/matematicas/sexto/porcentajes'
                         element={<Leccion21/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/ejemplo/ejercicio'
+                        element={<Ejercicio/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/cuarto/ejercicio1'
+                        element={<Ejercicio1/>}
 
                     />
                     <Route
