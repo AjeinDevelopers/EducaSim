@@ -9,7 +9,6 @@ import NotFound from './pages/404.js';
 import Playground from './pages/Playground.js';
 import InicioAlumn from './pages/InicioCuentas/InicioAlumn.js'
 import InicioProfe from './pages/InicioCuentas/InicioProfe.js'
-import InicioPadre from './pages/InicioCuentas/InicioPadre.js'
 import RegistroAlum from './pages/CuentaConf/RegistroAlum.js'
 import RegistroProfe from './pages/CuentaConf/RegistroProfe.js'
 import Confi from './pages/CuentaConf/Confi.js';
@@ -90,10 +89,6 @@ function App() {
                     <Route
                         path='/login/profesor'
                         element={<InicioProfe/>}
-                    />
-                    <Route
-                        path='/login/padre'
-                        element={<InicioPadre/>}
                     />
                     <Route
                         path='/registro/Alum'
