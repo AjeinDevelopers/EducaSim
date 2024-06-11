@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import HeaderProfesor from '../../modelos/header/HeaderProfesor.jsx';
 import Input from "../../componentes/input/input.jsx";
 import Boton from "../../componentes/boton/boton.jsx";
+import FooterApp from "../../modelos/footer/FooterApp.jsx";
+import AlumnoLista from '../../componentes/AlumnoLista/AlumnoLista.jsx';
 
 
 export default function AdministrarClase() {
@@ -98,8 +100,16 @@ export default function AdministrarClase() {
                             icon2={"fa-solid fa-trash fa-fw"}
                             method={"SUMBIT"} {...(sendForm ? { disabled: false } : { disabled: false })} />
                     </div>
+                    <div style={{display: "flex",padding:"10px", flexDirection:" column",alignItems: "flex-start", gap: "var(--XS, 32px)", alignSelf: "stretch"}}>
+                        <h3 className="primary brand">Administrar alumnos</h3>
+                        <div style={{width: "100%", flexDirection: "column", gap: ""}}>
+                        <AlumnoLista/>
+                        <AlumnoLista/>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <FooterApp/>
         </>
     )
 }

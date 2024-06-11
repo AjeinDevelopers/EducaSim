@@ -8,7 +8,7 @@ import papas from '../../assets/common/papas.jpg';
 import FooterPromo from "../../modelos/footer/FooterPromo.jsx";
 import foco from './imagenes/foco.jpg';
 import ninos from './imagenes/ninos.jpg';
-
+import './Home.css';
 
 
 
@@ -17,11 +17,11 @@ const Home = () => {
 
         <>
             <PromoHeader/>
-            <div style={{display: "flex", width: "100%", justifyContent: "center", alignItems: "center"}}>
+            <div style={{display: "flex", width: "100%",marginTop:"-120px", justifyContent: "center", alignItems: "center", }}>
                 <div style={{
                     justifyContent: "center",
                     display: "flex",
-                    padding: "var(--XXXS, 16px) var(--M, 48px)",
+                    padding: "var(--XXXS, 48px) var(--M, 48px)",
                     flexDirection: "column",
                     alignItems: "flex-start",
                     gap: "var(--XXXS, 16px)",
@@ -80,7 +80,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <img style={{width: "50%", top: "0px", alignItems: "center"}} src={nino} alt="nino estudiando"/>
+                <img style={{width: "60%", top: "48px", alignItems: "center", padding: "var(--XXS, 16px)"}} src={nino} alt="nino estudiando"/>
             </div>
             <div style={{
                 display: "flex",
@@ -92,7 +92,7 @@ const Home = () => {
             }}>
 
                 <h2 className="secondary brand">¿Por qué EducaSim?</h2>
-
+                
                 <div style={{
                     display: "flex",
                     padding: "var(--XS, 32px) var(--XXS, 24px)",
@@ -100,21 +100,25 @@ const Home = () => {
                     alignItems: "center",
                     alignSelf: "stretch"
                 }}>
+                    <div className="threeone">
                     <Card direction={"vertical"} width={"416px"} header={"Aprendizaje Personalizado"} link={false}
                           actions={false} adicional={false}
                           bt1={"Hola"} bt2={"Hola"} score={"10.0"} date={"10/10/2021"} img={papas}
                           text={"EducaSim permite a los padres crear y administrar cuentas para sus hijos, seleccionando el nivel adecuado y realizando un examen inicial de conocimientos junto con un test psicológico. Este enfoque personalizado asegura que el contenido y los ejercicios se adapten a las necesidades individuales de cada alumno. Al identificar las áreas donde el estudiante necesita más apoyo"}/>
-
+                    </div>
+                    <div className="threetwo">
                     <Card direction={"vertical"} width={"416px"} header={"Interactividad y Gamificación"} link={false}
                           actions={false} adicional={false}
                           bt1={"Hola"} bt2={"Hola"} score={"10.0"} date={"10/10/2021"} img={foco}
                           text={"EducaSim incorpora elementos interactivos y de gamificación en sus lecciones y ejercicios. Los estudiantes pueden aprender matemáticas a través de juegos educativos, desafíos interactivos y actividades prácticas que hacen que el aprendizaje sea divertido y atractivo. Este enfoque lúdico ayuda a mantener el interés de los alumnos y facilita la comprensión de conceptos matemáticos. "}/>
-
+                </div><div className="threethree">
                     <Card direction={"vertical"} width={"416px"} header={"Seguimiento y Reportes Detallados"}
                           link={false} actions={false} adicional={false}
                           bt1={"Hola"} bt2={"Hola"} score={"10.0"} date={"10/10/2021"} img={ninos}
                           text={"EducaSim ofrece herramientas avanzadas de seguimiento y reportes tanto para padres como para maestros. Los informes detallados proporcionan una visión clara del progreso académico y psicológico de los alumnos, incluyendo áreas de fortaleza y debilidad. Esta información es crucial para tomar decisiones educativas informadas y ajustar las estrategias de enseñanza según sea necesario."}/>
                 </div>
+                </div>
+                
             </div>
             <div style={{
                 display: "flex",

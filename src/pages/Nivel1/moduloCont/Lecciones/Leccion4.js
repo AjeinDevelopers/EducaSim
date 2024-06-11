@@ -46,10 +46,7 @@ export default function Leccion4(){
                         <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
                          Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
                         </div>
-                        <div style={{display:"flex", padding:"var(--XXXS, 16px)", alignItems:"center", gap:"var(--US, 12px)"}}>
-                        <NavLink className={''} to='/menu/Lec'><Boton size={"small"}
-                         Style={"secondary"} text={"Volver al menu Lecciones"} showIcon2={true} icon2={"fa-solid fa-reply fa-fw"}/></NavLink>
-                        </div>
+                    
                 </div>
             </div>
             <FooterApp/>
