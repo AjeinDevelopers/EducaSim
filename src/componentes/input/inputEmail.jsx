@@ -31,6 +31,7 @@ export default function InputEmail(props){
             setIsEmail(false);
         } else {
             props.EmailError(false);
+            props.contenido(newEmail.trim());
             setIsEmail(true);
             setEstilo(props.Style);
         }
@@ -48,7 +49,8 @@ export default function InputEmail(props){
                        id={props.id}
                        placeholder={props.placeholder}
                        {...(props.register ? {onChange: handleEmail} : {})}
-                       required={props.required}/>
+                       required={props.required}
+                       value={props.value}/>
                 {props.showIcon1 && <i className={props.icon1} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
             </input-container>
             {!isEmail &&

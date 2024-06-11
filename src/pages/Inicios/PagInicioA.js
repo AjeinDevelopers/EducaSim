@@ -2,8 +2,20 @@ import HeaderAlumno from "../../modelos/header/HeaderAlumno";
 import BarsChart from './BarsChart';
 import FooterApp from "../../modelos/footer/FooterApp";
 import Card from "../../modelos/card/card";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import {useEffect} from "react";
+
+
 export default function PagInicioA(){
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem("sessionId") === null || localStorage.getItem("sessionType") !== "alumno" || localStorage.getItem("sessionType") === null) {
+            navigate('/login/alumno');
+        }
+    }, []);
+
     const cardData_1 = [
         {
             direction: "vertical",
@@ -139,10 +151,10 @@ export default function PagInicioA(){
       }
     ];
     return(
-    
+
         <>
         <HeaderAlumno/>
-        <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
+        <div style={{display:"flex", width:"calc(100% - 2*var(--XS, 32px))", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
             <h2 className="secondary brand">¡Hola!</h2>
             <div style={{display:"flex", width:"100%", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXXS, 16px"}}>
                 <h3 className="primary brand">Lecciones Sugeridas</h3>
@@ -171,11 +183,11 @@ export default function PagInicioA(){
             </div>
         </div>          
             <div  style={{width:"100%", height:"100%"}}>
-                <div style={{width:"80%", height:"50%", display:"flex",padding:"var(--M, 48px) var(--L, 64px)",justifyContent:"center"}}>
+                <div style={{width:"calc(100% - 2*var(--L, 64px))", height: "100%", display:"flex",padding:"var(--M, 48px) var(--L, 64px)",justifyContent:"center"}}>
                     
                     <BarsChart/>
                     
-                    </div>
+                </div>
                 </div>
             </div>  
         </div>                  

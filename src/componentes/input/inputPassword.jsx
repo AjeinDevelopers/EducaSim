@@ -35,6 +35,7 @@ export default function InputPassword(props){
             setIsPassword(false);
         } else {
             props.PasswordError(false);
+            props.contenido(newEmail.trim());
             setIsPassword(true);
             setEstilo(props.Style);
         }
@@ -53,7 +54,8 @@ export default function InputPassword(props){
                        placeholder={props.placeholder}
                         required={props.required}
                        {...(props.register ? {onChange: handlePassword} : {})}
-                        maxLength={20}/>
+                        maxLength={20}
+                       value={props.value}/>
                 <div onClick={visibility} className={props.estilo}>
                     {passwordShown && <i className={'fa-solid fa-eye-slash fa-fw'} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
                     {!passwordShown && <i className={"fa-solid fa-eye fa-fw"} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
