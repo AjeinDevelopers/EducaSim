@@ -56,6 +56,8 @@ export default function InicioAlumn() {
                 "type": sessionType
             }).then((res) => {
                 if (res.data.error === false) {
+                    localStorage.setItem("sessionId", res.data.sessionId);
+                    localStorage.setItem("sessionType", "profesor");
                     navigate('/Inicio/Prof');
                 }
             });
