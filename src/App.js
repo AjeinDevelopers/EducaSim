@@ -9,7 +9,6 @@ import NotFound from './pages/404.js';
 import Playground from './pages/Playground.js';
 import InicioAlumn from './pages/InicioCuentas/InicioAlumn.js'
 import InicioProfe from './pages/InicioCuentas/InicioProfe.js'
-import InicioPadre from './pages/InicioCuentas/InicioPadre.js'
 import RegistroAlum from './pages/CuentaConf/RegistroAlum.js'
 import RegistroProfe from './pages/CuentaConf/RegistroProfe.js'
 import Confi from './pages/CuentaConf/Confi.js';
@@ -51,6 +50,22 @@ import Leccion19 from './pages/Nivel1/moduloCont/Lecciones/Leccion19.js';
 import Leccion20 from './pages/Nivel1/moduloCont/Lecciones/Leccion20.js';
 import Leccion21 from './pages/Nivel1/moduloCont/Lecciones/Leccion21.js';
 import Ejercicio1 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio1.js';
+
+import Leccion1N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion1N2.js';
+import Leccion2N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion2N2.js';
+import Leccion3N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion3N2.js';
+import Leccion4N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion4N2.js';
+import Leccion5N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion5N2.js';
+import Leccion6N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion6N2.js';
+import Leccion7N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion7N2.js';
+import Leccion8N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion8N2.js';
+import Leccion9N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion9N2.js';
+import Leccion10N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion10N2.js';
+import Leccion11N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion11N2.js';
+
+import Ejercicio1N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio1N2.js';
+import Ejercicio2N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio2N2.js';
+
 
 import Clases from './pages/moduloClases/Clases.js';
 import Administrar from './pages/moduloClases/Administrar.js';
@@ -94,10 +109,6 @@ function App() {
                     <Route
                         path='/login/profesor'
                         element={<InicioProfe/>}
-                    />
-                    <Route
-                        path='/login/padre'
-                        element={<InicioPadre/>}
                     />
                     <Route
                         path='/registro/Alum'
@@ -198,6 +209,73 @@ function App() {
                     <Route
                         path='/Leccion/matematicas/cuarto/fracciones/decimales'
                         element={<Leccion8/>}
+
+                    />
+
+
+                    <Route
+                        path='/Leccion/matematicas/primero/Numeros1al100'
+                        element={<Leccion1N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/SumaRestaBasica'
+                        element={<Leccion2N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/FigurasGeometricasBasicas'
+                        element={<Leccion3N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/SumaAvanzada'
+                        element={<Leccion4N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/RestaAvanzada'
+                        element={<Leccion5N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/MultiplicacionBasica'
+                        element={<Leccion6N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/OpcFraccionesBasicas'
+                        element={<Leccion7N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/FigurasGeométricas2D'
+                        element={<Leccion8N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/DivisionBasica'
+                        element={<Leccion9N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/MultiplicacionesNivel2'
+                        element={<Leccion10N2/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/primero/PerimetroyArea'
+                        element={<Leccion11N2/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/Numeros1al100'
+                        element={<Ejercicio1N2/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/SumaRestaBasica'
+                        element={<Ejercicio2N2/>}
 
                     />
                     <Route

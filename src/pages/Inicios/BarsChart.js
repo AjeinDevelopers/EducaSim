@@ -23,12 +23,14 @@ ChartJS.register(
     Filler
 );
 
+
 const progreso = [72, 56, 36, 80, 40, 30, 20, 30, 12, 60,70, 50];
 const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 const misoptions = {
     responsive: true,
-    animation: false,
+    animation: true,
+    aspectRatio: 2,
     plugins: {
         legend: {
             display: false
@@ -60,5 +62,5 @@ const midata = {
 };
 
 export default function Bars() {
-    return <Bar data={midata} options={misoptions} />;
+    return <Bar data={midata} options={misoptions}/>;
 }

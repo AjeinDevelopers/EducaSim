@@ -51,6 +51,7 @@ export default function Input(props){
                 setEstilo("error");
             } else {
                 props.InputError(false);
+                props.contenido(newInput.trim());
                 setLleno(true);
                 setEstilo("primary");
             }
@@ -70,7 +71,8 @@ export default function Input(props){
                        id={props.id}
                        onChange={handleInput}
                        required={props.required}
-                       placeholder={props.placeholder}/>
+                       placeholder={props.placeholder}
+                       value={props.value}/>
                 {props.showIcon1 && <i className={props.icon1} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}
             </input-container>
             {!lleno &&

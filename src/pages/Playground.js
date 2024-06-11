@@ -14,6 +14,7 @@ import FooterPromo from "../modelos/footer/FooterPromo";
 import FooterApp from "../modelos/footer/FooterApp";
 import Pregunta from "../modelos/pregunta/pregunta";
 import HeaderApp from "../modelos/header/HeaderApp.jsx";
+import axios from "axios";
 
 export default function Playground (){
 
@@ -69,6 +70,20 @@ export default function Playground (){
         setSelector(value);
     }
 
+    async function save(event){
+        event.preventDefault();
+        try{
+            await axios.post("http://localhost:8080/usuario/eliminar/alumno", {
+                correo: "quesakl@ggg.com",
+                pinSeguridad: "pin223ms8"
+            });
+            alert("Usuario registrado");
+        }catch(error) {
+            alert(error);
+        }
+
+    }
+
     return(
 
         <>
@@ -81,26 +96,11 @@ export default function Playground (){
                 alignItems: "center",
                 gap: "24px"
             }}>
-                <form style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px"}}
-                    action={""} method={"get"}>
-                    <MultiLinks text1={"hola"} text2={"hola"} text3={"hola"} show1={true} show2={true} showIcon1={false}
-                                showIcon2={false}
-                                to1={"/play"} to2={"/"}/>
-                    <Input Style={"primary"} label={"Hola buenas"} required={true} InputError={handleInputError}/>
-                    <InputEmail Style={"primary"} label={"Correo"} EmailError={handleEmailError} required={true}
-                                register={true}/>
-                    <InputPassword Style={"primary"} label={"Contraseña"} PasswordError={handlePasswordError}
-                                   required={true} register={true}/>
-                    <Boton size={"small"} Style={"secondary"} text={"Iniciar Sesión"} showIcon2={true}
-                           icon2={"fa-solid fa-right-to-bracket fa-fw"}
-                           method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />
-                    <Dropdown label={"Hola"} items={items} size={"Large"} required={true}
-                              DropdownError={handleDropdownError} onChange={handleSelector}/>
-                    <RadButtonGroup items={items} size={"large"} estilo={"primary"}
-                                    label={"hola"} required={true} onChange={handleValue}
-                                    RadButtonError={handleRadButtonError}/>
-                    <Pregunta pregunta={"¿Qué es un componente?"} width={"100%"} img={"a"} />
-                </form>
+                <Boton size={"small"} style={"secondary"} text={"Crear cuenta"} showIcon2={true}
+                       icon2={"fa-solid fa-right-to-bracket fa-fw"}
+                       handleClick={save}
+                       action={""}
+                       method={""}/>
                 <Pill text={"Holaaa"} size={"large"} showIcon={true} icon={"fa-solid fa-right-to-bracket fa-fw"}/>
 
                 <Card direction={"vertical"} width={"304px"} header={"Holaa"} link={true} actions={true} adicional={true}

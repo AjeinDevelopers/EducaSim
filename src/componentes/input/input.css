@@ -1,6 +1,6 @@
 #Input-container{
     display: flex;
-    width: calc(100% - var(--US, 12px) * 2);
+    width: calc(100% - var(--XXXS, 16px) * 2);
     padding: var(--US, 12px) var(--XXXS, 16px);
     flex-direction: column;
     justify-content: center;
