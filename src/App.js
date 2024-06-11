@@ -52,6 +52,7 @@ import Leccion11N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion11N2.js';
 
 import Ejercicio1N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio1N2.js';
 import Ejercicio2N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio2N2.js';
+import Ejercicio3N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio3N2.js';
 
 
 import Clases from './pages/moduloClases/Clases.js';
@@ -264,6 +265,11 @@ function App() {
                     <Route
                         path='/Ejercicio/matematicas/primero/SumaRestaBasica'
                         element={<Ejercicio2N2/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/FigurasGeometricasBasicas'
+                        element={<Ejercicio3N2/>}
 
                     />
                     <Route
