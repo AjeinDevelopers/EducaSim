@@ -46,7 +46,28 @@ export default function InicioAlumn() {
         setContrasena(content);
     }
 
+    async function validarSesion() {
 
+        try {
+            const sessionId = localStorage.getItem("sessionId");
+            const sessionType = localStorage.getItem("sessionType");
+            await axios.post("http://localhost:8080/usuario/validar/alumno", {
+                "sesionId": sessionId,
+                "type": sessionType
+            }).then((res) => {
+                if (res.data.error === false) {
+                    navigate('/Inicio/Alum');
+                }
+            });
+        } catch(error){
+        }
+    }
+
+    useEffect(() => {
+        if(localStorage.getItem("sessionId") != null && localStorage.getItem("sessionType") != null){
+            validarSesion();
+        }
+    }, []);
 
     async function save(event) {
         event.preventDefault();

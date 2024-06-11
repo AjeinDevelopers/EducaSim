@@ -58,6 +58,7 @@ export default function RegistroAlum(){
                     setSendForm(false);
                     setSendMsg("");
                     localStorage.setItem("sessionId", res.data.sessionId);
+                    localStorage.setItem("sessionType", "alumno");
                     navigate('/Inicio/Alum');
                 }else{
                     setSendMsg(res.data.message);
@@ -70,6 +71,29 @@ export default function RegistroAlum(){
         }
 
     }
+
+    async function validarSesion() {
+
+        try {
+            const sessionId = localStorage.getItem("sessionId");
+            const sessionType = localStorage.getItem("sessionType");
+            await axios.post("http://localhost:8080/usuario/validar/alumno", {
+                "sesionId": sessionId,
+                "type": sessionType
+            }).then((res) => {
+                if (res.data.error === false) {
+                    navigate('/Inicio/Alum');
+                }
+            });
+        } catch(error){
+        }
+    }
+
+    useEffect(() => {
+        if(localStorage.getItem("sessionId") != null && localStorage.getItem("sessionType") != null){
+            validarSesion();
+        }
+    }, []);
 
     let handleEmailContent = (content) => {
         setCorreo(content);

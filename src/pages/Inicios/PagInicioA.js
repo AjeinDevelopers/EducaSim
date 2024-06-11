@@ -15,9 +15,11 @@ export default function PagInicioA() {
     async function validarSesion() {
 
         try {
-            await axios.post("", {
-                "sessionId": localStorage.getItem("sessionId"),
-                "sessionType": localStorage.getItem("sessionType")
+            const sessionId = localStorage.getItem("sessionId");
+            const sessionType = localStorage.getItem("sessionType");
+            await axios.post("http://localhost:8080/usuario/validar/alumno", {
+                "sesionId": sessionId,
+                "type": sessionType
             }).then((res) => {
                 if (res.data.error === false) {
                     setLogged(true);
@@ -25,13 +27,13 @@ export default function PagInicioA() {
                     navigate('/login/alumno');
                 }
             });
-        } catch {
+        } catch(error){
             navigate('/login/alumno');
         }
     }
 
     useEffect(() => {
-        if (localStorage.getItem("sessionId") === null || localStorage.getItem("sessionType") !== "alumno" || localStorage.getItem("sessionType") === null) {
+        if (localStorage.getItem("sessionId") === null && localStorage.getItem("sessionType") === null) {
             navigate('/login/alumno');
         } else {
             validarSesion();
