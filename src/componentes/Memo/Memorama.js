@@ -106,11 +106,13 @@ const Memorama = () => {
                 >
                     <div className="card-inner">
                         <div className="card-front">{card.symbol}</div>
-                        <div className="card-back"></div>
+                        <div className="card-back">
+                            <h7>Educasim</h7>
+                        </div>
                     </div>
                 </div>
             ))}
-            <div className="new-game-container" style={{width:"100%"}}>
+            <div className="new-game-container">
                 <button className="new-game" onClick={startNewGame}>Nuevo Juego</button>
             </div>
         </div>

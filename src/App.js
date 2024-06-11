@@ -45,6 +45,7 @@ import Sopa from './pages/Nivel1/moduloP/Juegos/Sopa.js';
 import MaterialP1 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP1.js';
 import MaterialP2 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP2.js';
 import Memo from './pages/Nivel1/moduloP/Juegos/Memo.js';
+import Materialp3 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP3.js';
 
 
 function App() {
@@ -212,6 +213,10 @@ function App() {
                     <Route
                       path='/Material/Primero/2'
                       element={<MaterialP2/>}
+                    />
+                    <Route
+                        path='/Material/Primero/3'
+                        element={<Materialp3/>}
                     />
                     <Route
                       path='/Memorama'

@@ -1,6 +1,6 @@
 import React from "react";
 import "./card.css";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {useState, useEffect} from "react";
 import Boton from "../../componentes/boton/boton";
 import noImg from '../../assets/common/noImg.svg';
@@ -36,9 +36,9 @@ export default function Card(props) {
                   </div>
               }
               {props.actions &&
-                  <div className={"action-container"}>
-                      <Boton size = {"small"} Style={"secondary"} text={props.bt1} showIcon2={true} icon2={props.bt1} handleClick={props.click1} link = {props.link} to = {props.to} />
-                  </div>
+                  <NavLink to={props.linkButton} className={"action-container"}>
+                      <Boton size = {"small"} Style={"secondary"} text={props.bt1} showIcon2={true} icon2={props.bt1} handleClick={props.click1} />
+                  </NavLink>
               }
           </div>
       </div>

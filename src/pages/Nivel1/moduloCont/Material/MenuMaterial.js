@@ -3,33 +3,35 @@ import Card from "../../../../modelos/card/card.jsx";
 import { Link} from "react-router-dom";
 import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import { useState } from "react";
+import numeros from '../../../../assets/common/numeros.avif';
+
 /**corregir modelo de menu ex, ej y este */
   const cardData = [
     {
         direction: "vertical",
         width: "485px",
         header: "Identificando Números",
-        link: false,
+        linkButton: "/Material/Primero/1",
         actions: true,
         adicional: false,
         bt1: "Ver más" ,
         score: "10.0",
         date: "10/10/2021",
-        img: "si" ,
+        img: numeros,
         text: "El alumno podrá identificar números de 1 al 10, con figuras."
     },
 {
   direction: "vertical",
   width: "485px",
-  header: "Holaa",
-  link: false,
+  header: "Reconocimiento",
+  linkButton: "/Material/Primero/2",
   actions: true,
   adicional: false,
-  bt1: "Hola",
+  bt1: "Ver más",
   score: "10.0",
   date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  img: numeros,
+  text: "El alumno podrá practicar el reconocimiento de series básicas y sumas pequeñas."
 },
 {
   direction: "vertical",

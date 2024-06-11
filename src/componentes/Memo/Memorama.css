@@ -1,14 +1,13 @@
 .game-board {
     display: grid;
-    grid-template-columns: repeat(6, 100px);
-    
+    grid-template-columns: repeat(6, 120px);
     gap: 10px;
     justify-content: center;
 }
 
 .card {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     perspective: 1000px;
     cursor: pointer;
 }
@@ -41,9 +40,13 @@
 }
 
 .card-back {
+    border-radius: 7px;
     background-color: #00BB9A;
     transform: rotateY(180deg);
+    color: #c7ddd9;
+
 }
+
 
 .new-game-container {
     display: flex;
