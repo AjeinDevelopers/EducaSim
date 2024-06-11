@@ -5,7 +5,7 @@ import fracciones3_ej from '../../../../assets/common/fracciones3_ej.png';
 import Boton from '../../../../componentes/boton/boton.jsx';
 import { NavLink } from 'react-router-dom';
 
-export default function Leccion5(){
+export default function Leccion7(){
         return(
             <>
             <HeaderAlumno/>
@@ -14,11 +14,11 @@ export default function Leccion5(){
                 <div style={{width:"100%",borderRadius:"var(--US, 12px)", overflow: 'hidden'}}>
                     <img style={{margin: "0", objectFit: "cover",width:"100%", display:"flex",height:"320px", padding:"0", justifyContent:"center", alignItems:"center", alignSelf:"stretch"}} src={fracciones} alt='leccion'/>
                     </div>
-                    <h3 className='secondary brand'>Leccion4</h3>
+                    <h3 className='secondary brand'>Leccion6</h3>
                     <div style={{display:"flex",padding:"0px var(--L, 64px)", justifyContent:"center", alignItems:"center", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                         <div style={{display:"flex", alignItems:"center", gap:"var(--XXXS, 16px)"}}>
                             <h5 className='primary brand'>Grado: </h5><t5>4°</t5>
-                            <h5 className='primary brand'>  Tema:</h5><t5>Fracciones</t5>
+                            <h5 className='primary brand'>  Tema:</h5><t5>División de fracciones</t5>
                         </div>
                     </div>    
                         <div style={{display:"flex", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch", flex:"1 0 0"}}>

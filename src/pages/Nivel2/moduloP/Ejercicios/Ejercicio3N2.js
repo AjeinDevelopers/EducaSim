@@ -45,10 +45,10 @@ export default function Ejercicio3N2(){
 
     ];
     const items4 = [
-        {value: '57', label: '4'},
-        {value: '58', label: '5'},
-        {value: '59', label: '6'},
-        {value: '60', label: '7'}
+        {value: '57', label: 'Triángulo'},
+        {value: '58', label: 'Cuadrado'},
+        {value: '59', label: 'Pentágono'},
+        {value: '60', label: 'Hexágono'}
 
     ];
 
