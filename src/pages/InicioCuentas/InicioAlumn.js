@@ -46,8 +46,7 @@ export default function InicioAlumn() {
         setContrasena(content);
     }
 
-    localStorage.setItem("sessionId", null);
-    localStorage.setItem("sessionType", null);
+
 
     async function save(event) {
         event.preventDefault();
