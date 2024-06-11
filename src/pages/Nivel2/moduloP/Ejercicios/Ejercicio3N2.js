@@ -5,16 +5,16 @@ import RadButtonGroup from "../../../../componentes/radbutton/RadButtonGroup.jsx
 import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import Boton from "../../../../componentes/boton/boton.jsx";
 
-
+//Formas geométricas básicas
 export default function Ejercicio3N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
     /**repuestas correctas: 
-     * Pregunta 1: {value: '23', label: '8'}
-     * Pregunta 2: {value: '25', label: '6'}
-     * Pregunta 3: {value: '29', label: '5'}
-     * Pregunta 4: {value: '33', label: '10'}
-     * Pregunta 5: {value: '38', label: '5'}
+     * Pregunta 1: {value: '42', label: '3'}
+     * Pregunta 2: {value: '48', label: 'Rectángulo'}
+     * Pregunta 3: {value: '51', label: '4'}
+     * Pregunta 4: {value: '56', label: 'Hexágono'}
+     * Pregunta 5: {value: '59', label: 'Pentágono'}
     */
     const items = [
         {value: '41', label: '4'},
