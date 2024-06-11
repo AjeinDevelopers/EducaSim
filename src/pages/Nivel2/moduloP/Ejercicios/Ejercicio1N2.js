@@ -108,11 +108,11 @@ export default function Ejercicio1N2(){
                                     label={"¿Qué número falta en esta secuencia: 10, 20, 30, __, 50?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
-                <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
+                <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál de estos números es menor que 15?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
-                <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
+                <RadButtonGroup items={items4} size={"large"} estilo={"secondary"}
                                     label={"¿Cuántos dedos tienes en total en ambas manos?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 </div>

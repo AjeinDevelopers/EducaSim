@@ -6,7 +6,7 @@ import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import Boton from "../../../../componentes/boton/boton.jsx";
 
 
-export default function Ejercicio2N2(){
+export default function Ejercicio3N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
     /**repuestas correctas: 
@@ -17,38 +17,38 @@ export default function Ejercicio2N2(){
      * Pregunta 5: {value: '38', label: '5'}
     */
     const items = [
-        {value: '21', label: '6'},
-        {value: '22', label: '7'},
-        {value: '23', label: '8'}, 
-        {value: '24', label: '9'}
+        {value: '41', label: '4'},
+        {value: '42', label: '3'},
+        {value: '43', label: '5'}, 
+        {value: '44', label: '2'}
 
     ];
     const items1 = [
-        {value: '25', label: '6'},
-        {value: '26', label: '7'},
-        {value: '27', label: '8'}, 
-        {value: '28', label: '9'}
+        {value: '45', label: 'Cuadrado'},
+        {value: '46', label: 'Círculo'},
+        {value: '47', label: 'Triángulo'}, 
+        {value: '48', label: 'Rectángulo'}
 
     ];
     const items2 = [
-        {value: '29', label: '5'},
-        {value: '30', label: '6'},
-        {value: '31', label: '4'},
-        {value: '32', label: '3'}
+        {value: '49', label: '2'},
+        {value: '50', label: '3'},
+        {value: '51', label: '4'},
+        {value: '52', label: '5'}
 
     ];
     const items3 = [
-        {value: '33', label: '10'},
-        {value: '34', label: '11'},
-        {value: '35', label: '9'},
-        {value: '36', label: '8'}
+        {value: '53', label: 'Triángulo'},
+        {value: '54', label: 'Cuadrado'},
+        {value: '55', label: 'Pentágono'},
+        {value: '56', label: 'Hexágono'}
 
     ];
     const items4 = [
-        {value: '37', label: '4'},
-        {value: '38', label: '5'},
-        {value: '39', label: '6'},
-        {value: '40', label: '7'}
+        {value: '57', label: 'Triángulo'},
+        {value: '58', label: 'Cuadrado'},
+        {value: '59', label: 'Pentágono'},
+        {value: '60', label: 'Hexágono'}
 
     ];
 
@@ -78,7 +78,7 @@ export default function Ejercicio2N2(){
          <HeaderAlumno/>
          <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"flex-start", gap:"var(--XS, 32px)"}}>
             <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}>
-                <h2 className="secondary brand">Suma y resta simples</h2>
+                <h2 className="secondary brand">Formas geométricas básicas</h2>
                 <div style={{display:"flex", padding:"var(--XXS, 24px) var(--XS, 32px)", justifyContent:"center", alignItems:"center", gap:"var(--XXXS, 16px)", alignSelf:"stretch"}}>
                     <div style={{display:"flex", color:"var(--Color-Principales-Fuertes-Text_Alt, #F0F8FF)",borderRadius:"var(--XUS, 8px)", background:"var(--Color-Principales-Fuertes-Secondary, #00BB9A)", padding:"var(--XXS, 16px) var(--XS, 24px)", justifyContent:"center", alignItems:"center", gap:"var(--XXXS, 8px)", flex:"1 0 0"}}>
                         <t5>Grado: 1°</t5>
@@ -97,23 +97,23 @@ export default function Ejercicio2N2(){
                 <div style={{display:"flex",padding:"var(--M, 48px)", width:"1344px", flexDirection:"column",justifyContent:"center", alignItems:"flex-start", gap:"var(--XXXS, 16px)"}}>
                 <h5 className="secondary brand">Pregunta 1</h5>
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
-                                    label={"¿Cuánto es 5 + 3?"}
+                                    label={"¿Cuántos lados tiene un triángulo?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 2</h5>
                 <RadButtonGroup items={items1} size={"large"} estilo={"secondary"}
-                                    label={"Si tienes 10 manzanas y comes 4, ¿cuántas te quedan?"}
+                                    label={"¿Cuál de estas formas es cuadrada?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 3</h5>
                 <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
-                                    label={"¿Cuál es el resultado de 7 - 2?"}
+                                    label={"¿Cuántos lados tiene un cuadrado?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
                 <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
-                                    label={"¿Cuánto es 9 + 1?"}
+                                    label={"¿Cuál de estas formas tiene 6 lados?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
-                <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
-                                    label={"Si tienes 3 caramelos y tu amigo te da 2 más, ¿cuántos tienes en total?"}
+                <RadButtonGroup items={items4} size={"large"} estilo={"secondary"}
+                                    label={"¿Cuál de estas formas tiene 5 lados?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 </div>
                 <div style={{alignItems:"center"}}>

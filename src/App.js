@@ -49,6 +49,7 @@ import Leccion18 from './pages/Nivel1/moduloCont/Lecciones/Leccion18.js';
 import Leccion19 from './pages/Nivel1/moduloCont/Lecciones/Leccion19.js';
 import Leccion20 from './pages/Nivel1/moduloCont/Lecciones/Leccion20.js';
 import Leccion21 from './pages/Nivel1/moduloCont/Lecciones/Leccion21.js';
+
 import Ejercicio1 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio1.js';
 
 import Leccion1N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion1N2.js';
@@ -65,6 +66,7 @@ import Leccion11N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion11N2.js';
 
 import Ejercicio1N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio1N2.js';
 import Ejercicio2N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio2N2.js';
+import Ejercicio3N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio3N2.js';
 
 
 import Clases from './pages/moduloClases/Clases.js';
@@ -92,8 +94,6 @@ function App() {
                       path='/nosotros'
                       element={<Nosotros/>}
                   />
-
-
                   <Route
                       path='*'
                       element={<NotFound/>}
@@ -279,6 +279,11 @@ function App() {
 
                     />
                     <Route
+                        path='/Ejercicio/matematicas/primero/FigurasGeometricasBasicas'
+                        element={<Ejercicio3N2/>}
+                    />
+
+                    <Route
                         path='/Leccion/matematicas/cuarto/angulos'
                         element={<Leccion9/>}
 
@@ -349,7 +354,7 @@ function App() {
 
                     />
                     <Route
-                        path='/Ejercicio/matematicas/cuarto/ejercicio1'
+                        path='/Ejercicio/matematicas/cuarto/m_d'
                         element={<Ejercicio1/>}
 
                     />
