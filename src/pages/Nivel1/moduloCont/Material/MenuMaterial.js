@@ -36,8 +36,8 @@ import numeros from '../../../../assets/common/numeros.avif';
 {
   direction: "vertical",
   width: "485px",
-  header: "Secuencias",
-  link: true,
+  header: "Medidas",
+  linkButton: "",
   actions: true,
   adicional: false,
   bt1: "Hola",
@@ -50,7 +50,7 @@ import numeros from '../../../../assets/common/numeros.avif';
 {
   direction: "vertical",
   width: "485px",
-  header: "Holaa",
+  header: "Medid",
   link: false,
   actions: true,
   adicional: false,

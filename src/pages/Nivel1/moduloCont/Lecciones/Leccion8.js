@@ -4,7 +4,7 @@ import fracciones from '../../../../assets/common/fracciones.png';
 import fracciones4_ej from '../../../../assets/common/fracciones4_ej.png';
 import Boton from '../../../../componentes/boton/boton.jsx';
 import { NavLink } from 'react-router-dom';
-export default function Leccion2(){
+export default function Leccion8(){
         return(
             <>
             <HeaderAlumno/>
@@ -17,7 +17,7 @@ export default function Leccion2(){
                     <div style={{display:"flex",padding:"0px var(--L, 64px)", justifyContent:"center", alignItems:"center", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                         <div style={{display:"flex", alignItems:"center", gap:"var(--XXXS, 16px)"}}>
                             <h5 className='primary brand'>Grado: </h5><t5>4°</t5>
-                            <h5 className='primary brand'>  Tema:</h5><t5>Fracciones</t5>
+                            <h5 className='primary brand'>  Tema:</h5><t5>Fracciones a decimales</t5>
                         </div>
                     </div>    
                         <div style={{display:"flex", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch", flex:"1 0 0"}}>
