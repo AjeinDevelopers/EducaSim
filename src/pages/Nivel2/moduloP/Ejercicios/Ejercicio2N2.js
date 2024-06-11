@@ -108,11 +108,11 @@ export default function Ejercicio2N2(){
                                     label={"¿Cuál es el resultado de 7 - 2?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
-                <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
+                <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"¿Cuánto es 9 + 1?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
-                <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
+                <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"Si tienes 3 caramelos y tu amigo te da 2 más, ¿cuántos tienes en total?"}
                                      required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
                 </div>

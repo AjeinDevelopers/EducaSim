@@ -1,0 +1,62 @@
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg); 
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(0deg); 
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.card-front {
+    background-color: #ffffff;
+}
+
+.card-back {
+    border-radius: 7px;
+    background-color: #00BB9A;
+    transform: rotateY(180deg);
+    color: #c7ddd9;
+
+}
+
+
+.new-game-container {
+    display: flex;
+    padding: 10px 274px;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+
+.new-game {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}

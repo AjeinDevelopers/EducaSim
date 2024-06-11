@@ -7,7 +7,7 @@ export default function AlumnoLista(props) {
     return(
         <div id={"alum-lista-container"}>
             <div style={{justifyContent: "center", gap: "var(--XXXS, 16px)", alignItems: "center"}}>
-                <div><img src={avatar}  alt={avatar}/></div>
+                <div><img src={avatar}  alt={avatar} style={{width: "48px", height: "48px"}}/></div>
                 <t5>{props.nombre}</t5>
             </div>
             <Link to={props.to}>

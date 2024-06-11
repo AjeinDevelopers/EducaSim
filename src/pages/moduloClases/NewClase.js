@@ -86,7 +86,6 @@ export default function NewClase() {
                             gap: "8px",
                             width: "100%"
                         }}>
-
                             <div style={{
                                 width: "100%",
                                 display: "flex",

@@ -18,7 +18,7 @@ export default function Leccion5(){
                     <div style={{display:"flex",padding:"0px var(--L, 64px)", justifyContent:"center", alignItems:"center", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                         <div style={{display:"flex", alignItems:"center", gap:"var(--XXXS, 16px)"}}>
                             <h5 className='primary brand'>Grado: </h5><t5>4°</t5>
-                            <h5 className='primary brand'>  Tema:</h5><t5>Fracciones</t5>
+                            <h5 className='primary brand'>  Tema:</h5><t5>Suma y resta de fracciones</t5>
                         </div>
                     </div>    
                         <div style={{display:"flex", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch", flex:"1 0 0"}}>

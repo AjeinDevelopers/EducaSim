@@ -20,7 +20,6 @@ import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
 import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.js';
 import MenuMaterial from './pages/Nivel1/moduloCont/Material/MenuMaterial.js';
-import Leccion1 from './pages/Nivel1/moduloCont/Lecciones/Leccion1.js';
 
 import FormatoMaterial from './pages/Nivel1/moduloCont/Material/FormatoMaterial.js';
 import Ejercicio from './pages/Nivel1/moduloP/Ejercicios/Ejercicio.js';
@@ -37,6 +36,21 @@ import Leccion5 from './pages/Nivel1/moduloCont/Lecciones/Leccion5.js';
 import Leccion6 from './pages/Nivel1/moduloCont/Lecciones/Leccion6.js';
 import Leccion7 from './pages/Nivel1/moduloCont/Lecciones/Leccion7.js';
 import Leccion8 from './pages/Nivel1/moduloCont/Lecciones/Leccion8.js';
+import Leccion9 from './pages/Nivel1/moduloCont/Lecciones/Leccion9.js';
+import Leccion10 from './pages/Nivel1/moduloCont/Lecciones/Leccion10.js';
+import Leccion11 from './pages/Nivel1/moduloCont/Lecciones/Leccion11.js';
+import Leccion12 from './pages/Nivel1/moduloCont/Lecciones/Leccion12.js';
+import Leccion13 from './pages/Nivel1/moduloCont/Lecciones/Leccion13.js';
+import Leccion14 from './pages/Nivel1/moduloCont/Lecciones/Leccion14.js';
+import Leccion15 from './pages/Nivel1/moduloCont/Lecciones/Leccion15.js';
+import Leccion16 from './pages/Nivel1/moduloCont/Lecciones/Leccion16.js';
+import Leccion17 from './pages/Nivel1/moduloCont/Lecciones/Leccion17.js';
+import Leccion18 from './pages/Nivel1/moduloCont/Lecciones/Leccion18.js';
+import Leccion19 from './pages/Nivel1/moduloCont/Lecciones/Leccion19.js';
+import Leccion20 from './pages/Nivel1/moduloCont/Lecciones/Leccion20.js';
+import Leccion21 from './pages/Nivel1/moduloCont/Lecciones/Leccion21.js';
+
+import Ejercicio1 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio1.js';
 
 import Leccion1N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion1N2.js';
 import Leccion2N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion2N2.js';
@@ -52,10 +66,18 @@ import Leccion11N2 from './pages/Nivel2/moduloCont/Lecciones/Leccion11N2.js';
 
 import Ejercicio1N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio1N2.js';
 import Ejercicio2N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio2N2.js';
+import Ejercicio3N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio3N2.js';
 
 
 import Clases from './pages/moduloClases/Clases.js';
 import Administrar from './pages/moduloClases/Administrar.js';
+import CrucigramaApp from './pages/Nivel1/moduloP/Juegos/CrucigramaApp.js';
+import Sopa from './pages/Nivel1/moduloP/Juegos/Sopa.js';
+import MaterialP1 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP1.js';
+import MaterialP2 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP2.js';
+import Memo from './pages/Nivel1/moduloP/Juegos/Memo.js';
+import MaterialP3 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP3.js';
+import MaterialP4 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP4.js';
 
 
 function App() {
@@ -72,8 +94,6 @@ function App() {
                       path='/nosotros'
                       element={<Nosotros/>}
                   />
-
-
                   <Route
                       path='*'
                       element={<NotFound/>}
@@ -135,16 +155,8 @@ function App() {
                         element={<FormatoLeccion/>}
                     />
                     <Route
-                        path='/Leccion/matematicas/tercero/multiplicaciones'
-                        element={<Leccion1/>}
-                    />
-                    <Route
                         path='/Material_num'
                         element={<FormatoMaterial/>}
-                    />
-                    <Route
-                        path='/Ejercicio_1'
-                        element={<Ejercicio/>}
                     />
                     <Route
                         path='/Progreso/Alum'
@@ -267,10 +279,120 @@ function App() {
 
                     />
                     <Route
+                        path='/Ejercicio/matematicas/primero/FigurasGeometricasBasicas'
+                        element={<Ejercicio3N2/>}
+                    />
+
+                    <Route
+                        path='/Leccion/matematicas/cuarto/angulos'
+                        element={<Leccion9/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/rectas'
+                        element={<Leccion10/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/areas'
+                        element={<Leccion11/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/cuarto/perimetros'
+                        element={<Leccion12/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/quinto/decimales'
+                        element={<Leccion13/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/quinto/proporciones'
+                        element={<Leccion14/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/quinto/porcentajes'
+                        element={<Leccion15/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/quinto/volumenes'
+                        element={<Leccion16/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/quinto/coordenadas'
+                        element={<Leccion17/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/sexto/graficas'
+                        element={<Leccion18/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/sexto/ecuaciones'
+                        element={<Leccion19/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/sexto/proporcionalidad'
+                        element={<Leccion20/>}
+
+                    />
+                    <Route
+                        path='/Leccion/matematicas/sexto/porcentajes'
+                        element={<Leccion21/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/ejemplo/ejercicio'
+                        element={<Ejercicio/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/cuarto/m_d'
+                        element={<Ejercicio1/>}
+
+                    />
+                    <Route
                       path='/Administrar'
                       element={<Administrar/>}
                     />
+                    <Route
+                      path='/Crucigrama'
+                      element={<CrucigramaApp/>}
+                    />
+                    <Route
+                      path='/SopaLetras'
+                      element={<Sopa/>}
+                    />
+                   
+                   <Route
+                      path='/Material/Primero/1'
+                      element={<MaterialP1/>}
+                    />
+                    <Route
+                      path='/Material/Primero/2'
+                      element={<MaterialP2/>}
+                    />
+                    <Route
+                        path='/Material/Primero/3'
+                        element={<MaterialP3/>}
+                    />
+                    <Route
+                        path='/Material/Primero/4'
+                        element={<MaterialP4/>}
+                    />
+                    <Route
+                      path='/Memorama'
+                      element={<Memo/>}
+                    />
                    </Routes>
+                   
           </Router>
       </>
   );
