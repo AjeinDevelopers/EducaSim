@@ -1,8 +1,8 @@
 import React from 'react';
 import HeaderProfesor from '../../../../../modelos/header/HeaderProfesor';
-import Material1_1_1 from '../../../../../assets/common//Material1_1_1.jpg';
+import Material1_1_1_1 from '../../../../../assets/common//Material1_1_1_1.jpg';
 
-export default function MaterialP3() {
+export default function MaterialP4() {
     const imprimirPag = (impresion) => {
         var contenido = document.getElementById(impresion).innerHTML;
         var contenidoOriginal = document.body.innerHTML;
@@ -22,12 +22,12 @@ export default function MaterialP3() {
                         <h5 className="primary brand">Grado:</h5>
                         <t5>1°</t5>
                         <h5 className="primary brand">Tema:</h5>
-                        <t5>Identificación medidas </t5>
+                        <t5>Identificación de cantidades </t5>
                     </div>
                 </div>
                 <div id="impresion">
                     <div style={{display: "flex",width:"100%", height: "100%", padding: "var(--XXXS, 16px)", justifyContent: "center", alignItems: "center", alignSelf: "stretch"}}>
-                        <img  style={{width:"772px",height: "1040px"}} src={Material1_1_1} alt="Imagen no disponible"/>
+                        <img  style={{width:"772px",height: "1040px"}} src={Material1_1_1_1} alt="Imagen no disponible"/>
                     </div>
                 </div>
                 <div>

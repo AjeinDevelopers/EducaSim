@@ -37,28 +37,27 @@ import numeros from '../../../../assets/common/numeros.avif';
   direction: "vertical",
   width: "485px",
   header: "Medidas",
-  linkButton: "",
+  linkButton: "/Material/Primero/3",
   actions: true,
   adicional: false,
-  bt1: "Hola",
+  bt1: "Ver más",
   score: "10.0",
   date: "10/10/2021",
-  img: "../../../../assets/common/numeros.avif" ,
-  text: "El alumno podrá practicar series básicas y sumas pequeñas.",
-  toLink:'/menu/Lec'
+  img: numeros ,
+  text: "El alumno va a identificar la diferencia en las medidas de varios objetos.",
 },
 {
   direction: "vertical",
   width: "485px",
-  header: "Medid",
-  link: false,
+  header: "Cantidades",
+  linkButton: "/Material/Primero/4",
   actions: true,
   adicional: false,
-  bt1: "Hola",
+  bt1: "Ver más",
   score: "10.0",
   date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  img: numeros,
+  text: "El alumno irá identificando cantidades pequeñas mediante objetos. "
 }
 ];
 const cardData2 = [

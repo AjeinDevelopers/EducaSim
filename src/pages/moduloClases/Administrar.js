@@ -102,7 +102,7 @@ export default function AdministrarClase() {
                     </div>
                     <div style={{display: "flex",padding:"10px", flexDirection:" column",alignItems: "flex-start", gap: "var(--XS, 32px)", alignSelf: "stretch"}}>
                         <h3 className="primary brand">Administrar alumnos</h3>
-                        <div style={{width: "100%", flexDirection: "column"}}>
+                        <div style={{width: "100%", flexDirection: "column", gap: ""}}>
                         <AlumnoLista/>
                         <AlumnoLista/>
                         </div>

@@ -107,7 +107,7 @@ const Memorama = () => {
                     <div className="card-inner">
                         <div className="card-front">{card.symbol}</div>
                         <div className="card-back">
-                            <h7>Educasim</h7>
+                            <h7>EducaSim</h7>
                         </div>
                     </div>
                 </div>
