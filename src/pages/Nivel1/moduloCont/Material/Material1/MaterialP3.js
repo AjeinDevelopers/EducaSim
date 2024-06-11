@@ -22,7 +22,7 @@ export default function Materialp3() {
                         <h5 className="primary brand">Grado:</h5>
                         <t5>1°</t5>
                         <h5 className="primary brand">Tema:</h5>
-                        <t5>Identificación de número del 1 al 10</t5>
+                        <t5>Identificación medidas </t5>
                     </div>
                 </div>
                 <div id="impresion">
