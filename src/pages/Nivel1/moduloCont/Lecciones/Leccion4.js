@@ -14,7 +14,7 @@ export default function Leccion4(){
                 <div style={{width:"100%",borderRadius:"var(--US, 12px)", overflow: 'hidden'}}>
                     <img style={{margin: "0", objectFit: "cover",width:"100%", display:"flex",height:"320px", padding:"0", justifyContent:"center", alignItems:"center", alignSelf:"stretch"}} src={fracciones} alt='leccion'/>
                     </div>
-                    <h3 className='secondary brand'>Leccion3</h3>
+                    <h3 className='secondary brand'>Leccion 3</h3>
                     <div style={{display:"flex",padding:"0px var(--L, 64px)", justifyContent:"center", alignItems:"center", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
                         <div style={{display:"flex", alignItems:"center", gap:"var(--XXXS, 16px)"}}>
                             <h5 className='primary brand'>Grado: </h5><t5>4°</t5>

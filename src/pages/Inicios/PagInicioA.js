@@ -4,7 +4,9 @@ import FooterApp from "../../modelos/footer/FooterApp";
 import Card from "../../modelos/card/card";
 import {Link, useNavigate} from 'react-router-dom';
 import {useEffect} from "react";
-
+import MuLTI from "../../assets/common/MuLTI.jpg";
+import SUmAS from "../../assets/common/SUmAS.png";
+import Angulos from "../../assets/common/Angulos.avif";
 
 export default function PagInicioA(){
 
@@ -20,82 +22,82 @@ export default function PagInicioA(){
         {
             direction: "vertical",
             width: "304px",
-            header: "Holaa",
-            link: false,
+            header: "Multiplicaciones",
+            linkButton: "/Leccion/matematicas/cuarto/multiplicaciones",
             actions: true,
             adicional: false    ,
             bt1: "Leer",
             score: "10.0",
             date: "10/10/2021",
-            img: "si",
-            text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+            img: MuLTI,
+            text: "La multiplicación es una operación matemática que consiste en encontrar el resultado de multiplicar una cifra por otra..."
         },
         {
           direction: "vertical",
           width: "304px",
-          header: "Holaa",
-          link: false,
+          header: "División ",
+          linkButton: "/Leccion/matematicas/cuarto/divisiones",
           actions: true,
           adicional: false,
           bt1: "Leer",
           score: "10.0",
           date: "10/10/2021",
-          img: "si",
-          text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+          img: MuLTI,
+          text: "La división es una operación matemática que consiste en repartir cosas en grupos iguales. "
       },
       {
         direction: "vertical",
         width: "304px",
-        header: "Holaa",
-        link: false,
+        header: "Fracciones",
+        linkButton: "/Leccion/matematicas/cuarto/fracciones/equivalentes",
         actions: true,
         adicional: false,
         bt1: "Leer",
         score: "10.0",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: MuLTI,
+        text: "Fracciones equivalentes: son aquellas fracciones que representan la misma cantidad aunque el numerador y el denominador sean diferentes..."
     },
     {
       direction: "vertical",
       width: "304px",
-      header: "Holaa",
-      link: false,
+      header: "Fracciones",
+      linkButton: "/Leccion/matematicas/cuarto/fracciones/suma_resta",
       actions: true,
       adicional: false,
       bt1: "Leer",
       score: "10.0",
       date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+      img: SUmAS,
+      text: "Fracciones: Es la expresión de una cantidad dividida entre otra cantidad; es decir que representa un cociente no efectuado de números. Suma y resta de fracciones..."
     },
     {
         direction: "vertical",
         width: "304px",
-        header: "Holaa",
-        link: false,
+        header: "Ángulos",
+        linkButton: "/Leccion/matematicas/cuarto/angulos",
         actions: true,
         adicional: false,
         bt1: "Leer",
         score: "10.0",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: Angulos,
+        text: "El ángulo es la porción del plano comprendida entre dos semirrectas (lados) con un origen común llamado vértice. Los ángulos parten de un punto..."
       }
     ];
     const cardData_2 = [
         {
             direction: "vertical",
             width: "304px",
-            header: "Holaa",
-            link: false,
+            header: "Multiplicaciones y Divisiones",
+            linkButton: "/Ejercicio/matematicas/cuarto/m_d",
             actions: true,
             adicional: true,
             bt1: "Hola",
             score: "10.0",
             date: "10/10/2021",
             img: "si",
-            text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+            text: ""
         },
         {
           direction: "vertical",
@@ -157,14 +159,20 @@ export default function PagInicioA(){
         <div style={{display:"flex", width:"calc(100% - 2*var(--XS, 32px))", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
             <h2 className="secondary brand">¡Hola!</h2>
             <div style={{display:"flex", width:"100%", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXXS, 16px"}}>
+                <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                 <h3 className="primary brand">Lecciones Sugeridas</h3>
+                    <Link to='/menu/Lec'><t6 className="secondary brand">Ver más→ </t6></Link>
+                  </div>
                 <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>                   
                     {cardData_1.map((cardProps, index) => (
                         <Card key={index} {...cardProps} />
                     ))}
                     </div>
+                    <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                     <h3 className="primary brand">Ejercicios Sugeridos</h3>
+                    <Link to='/menu/Ejer'><t6 className="secondary brand">Ver más→ </t6></Link>
+                </div>
                 <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>                   
                     {cardData_2.map((cardProps, index) => (
