@@ -7,6 +7,9 @@ import {useEffect} from "react";
 import MuLTI from "../../assets/common/MuLTI.jpg";
 import SUmAS from "../../assets/common/SUmAS.png";
 import Angulos from "../../assets/common/Angulos.avif";
+import MyD from '../../assets/common/MyD.jpg';
+import Crucigrama from '../../assets/common/Crucigrama.jpg';
+import Memorama from '../../assets/common/Memorama.jpg';
 
 export default function PagInicioA(){
 
@@ -43,7 +46,7 @@ export default function PagInicioA(){
           score: "10.0",
           date: "10/10/2021",
           img: MuLTI,
-          text: "La división es una operación matemática que consiste en repartir cosas en grupos iguales. "
+          text: "La división es una operación matemática que consiste en repartir cosas en grupos iguales... "
       },
       {
         direction: "vertical",
@@ -93,37 +96,38 @@ export default function PagInicioA(){
             linkButton: "/Ejercicio/matematicas/cuarto/m_d",
             actions: true,
             adicional: true,
-            bt1: "Hola",
-            score: "10.0",
-            date: "10/10/2021",
-            img: "si",
+            bt1: "Resolver",
+            score: "xx.x",
+            date: "12/06/2024",
+            img: MyD,
             text: ""
         },
+        //*cambiar crucigrama *//
         {
           direction: "vertical",
           width: "304px",
-          header: "Holaa",
-          link: false,
+          header: "Crucigrama",
+          linkButton: "/Crucigrama/SF",
           actions: true,
           adicional: true,
-          bt1: "Hola",
-          score: "10.0",
+          bt1: "Resover",
+          score: "xx.x",
           date: "10/10/2021",
-          img: "si",
-          text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+          img: Crucigrama,
+          text: "Crucigrama de repaso general segunda fase."
       },
       {
         direction: "vertical",
         width: "304px",
-        header: "Holaa",
+        header: "Memorama",
         link: false,
         actions: true,
         adicional: true,
-        bt1: "Hola",
-        score: "10.0",
+        bt1: "Resolver",
+        score: "xx.x",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: Memorama,
+        text: "Memorama segunda fase."
     },
     {
       direction: "vertical",

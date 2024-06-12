@@ -3,73 +3,36 @@ import Card from "../../../modelos/card/card.jsx";
 import { Link} from "react-router-dom";
 import FooterApp from "../../../modelos/footer/FooterApp.jsx";
 import { useState } from "react";
+import MuLTI from "../../../assets/common/MuLTI.jpg";
+
 /**corregir modelo de menu ex, ej y este */
   const cardData = [
     {
         direction: "vertical",
         width: "485px",
-        header: "Holaa",
-        link: false,
+        header: "Multiplicaciones",
+        linkButton: "/Leccion/matematicas/cuarto/multiplicaciones",
         actions: true,
         adicional: false,
-        bt1: "Hola",
+        bt1: "Leer",
         score: "10.0",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: MuLTI,
+        text: "La multiplicación es una operación matemática que consiste en encontrar el resultado de multiplicar una cifra por otra..."
     },
     {
       direction: "vertical",
       width: "485px",
-      header: "Holaa",
-      link: false,
+      header: "Divisiones",
+      linkButton: "/Leccion/matematicas/cuarto/divisiones",
       actions: true,
       adicional: false,
-      bt1: "Hola",
+      bt1: "Leer",
       score: "10.0",
       date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-}
+      img: MuLTI,
+      text: "La división es una operación matemática que consiste en repartir cosas en grupos iguales..."
+  }
 ];
 const cardData2 = [
     {
@@ -110,7 +73,31 @@ const cardData2 = [
   date: "10/10/2021",
   img: "si",
   text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
+},{
+  direction: "vertical",
+  width: "485px",
+  header: "Holaa",
+  link: false,
+  actions: true,
+  adicional: false,
+  bt1: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+},{
+  direction: "vertical",
+  width: "485px",
+  header: "Holaa",
+  link: false,
+  actions: true,
+  adicional: false,
+  bt1: "Hola",
+  score: "10.0",
+  date: "10/10/2021",
+  img: "si",
+  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+}
 ];
 const cardData3 = [
     {
@@ -290,11 +277,11 @@ export default function InicioLec(){
            <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
             <h2 className="secondary brand">Lecciones</h2>   
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <h3 className="secondary brand">Tecer Grado</h3>  
+              <h3 className="secondary brand">Cuarto Grado</h3>  
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 1</h5>
-                      <t6 className="secondary brand">Ver más→ </t6>
+                    <h5 className="secondary brand">Operaciones Básicas </h5>
+                      <t6 className="secondary brand">  </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
                     
@@ -305,7 +292,7 @@ export default function InicioLec(){
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 2</h5>
+                    <h5 className="secondary brand">Fracciones</h5>
                     <t6 className="secondary brand">Ver más→ </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>

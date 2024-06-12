@@ -74,13 +74,15 @@ import Ejercicio6N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio6N2.js';
 
 import Clases from './pages/moduloClases/Clases.js';
 import Administrar from './pages/moduloClases/Administrar.js';
-import CrucigramaApp from './pages/Nivel1/moduloP/Juegos/CrucigramaApp.js';
-import Sopa from './pages/Nivel1/moduloP/Juegos/Sopa.js';
+import CrucigramaApp from './pages/Nivel2/moduloP/Juegos/CrucigramaApp.js';
+import Sopa from './pages/Nivel2/moduloP/Juegos/Sopa.js';
 import MaterialP1 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP1.js';
 import MaterialP2 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP2.js';
-import Memo from './pages/Nivel1/moduloP/Juegos/Memo.js';
+import Memo from './pages/Nivel2/moduloP/Juegos/Memo.js';
 import MaterialP3 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP3.js';
 import MaterialP4 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP4.js';
+import CrucigramaApp1 from './pages/Nivel1/moduloP/Juegos1/CrucigramaApp1.js';
+import Memorama1 from './pages/Nivel1/moduloP/Juegos1/Memorama1.js';
 
 
 function App() {
@@ -377,8 +379,16 @@ function App() {
                       element={<Administrar/>}
                     />
                     <Route
-                      path='/Crucigrama'
+                      path='/Crucigrama/PF'
                       element={<CrucigramaApp/>}
+                    />
+                    <Route
+                      path='/Crucigrama/SF'
+                      element={<CrucigramaApp1/>}
+                    />
+                    <Route
+                      path='/Memorama/SF'
+                      element={<Memorama1/>}
                     />
                     <Route
                       path='/SopaLetras'
@@ -402,7 +412,7 @@ function App() {
                         element={<MaterialP4/>}
                     />
                     <Route
-                      path='/Memorama'
+                      path='/Memorama/PF'
                       element={<Memo/>}
                     />
                    </Routes>
