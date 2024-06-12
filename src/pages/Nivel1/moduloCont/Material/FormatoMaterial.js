@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderProfesor from '../../../../modelos/header/HeaderProfesor';
-import noImg from '../../../../assets/common/noImg.png';
+import noImg from '../../../../assets/common/noImg.svg';
 
 export default function FormatoMaterial() {
     const imprimirPag = (impresion) => {
