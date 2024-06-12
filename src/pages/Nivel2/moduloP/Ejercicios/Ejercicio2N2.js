@@ -5,7 +5,7 @@ import RadButtonGroup from "../../../../componentes/radbutton/RadButtonGroup.jsx
 import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import Boton from "../../../../componentes/boton/boton.jsx";
 
-
+//Suma y resta simples
 export default function Ejercicio2N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);

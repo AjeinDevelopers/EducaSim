@@ -5,7 +5,7 @@ import RadButtonGroup from "../../../../componentes/radbutton/RadButtonGroup.jsx
 import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import Boton from "../../../../componentes/boton/boton.jsx";
 
-
+// Conteo y reconocimiento de números del 0 al 100.
 export default function Ejercicio1N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
