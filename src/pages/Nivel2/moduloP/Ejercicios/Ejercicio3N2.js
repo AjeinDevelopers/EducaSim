@@ -4,6 +4,8 @@ import Pregunta from "../../../../modelos/pregunta/pregunta.jsx";
 import RadButtonGroup from "../../../../componentes/radbutton/RadButtonGroup.jsx";
 import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import Boton from "../../../../componentes/boton/boton.jsx";
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 //Formas geométricas básicas
 export default function Ejercicio3N2(){
@@ -72,6 +74,36 @@ export default function Ejercicio3N2(){
         setRadButtonError(error);
     }
 
+    const navigate = useNavigate();
+    const [logged, setLogged] = useState(false);
+
+    async function validarSesion() {
+
+        try {
+            const sessionId = localStorage.getItem("sessionId");
+            const sessionType = localStorage.getItem("sessionType");
+            await axios.post("http://localhost:8080/usuario/validar/alumno", {
+                "sesionId": sessionId,
+                "type": sessionType
+            }).then((res) => {
+                if (res.data.error === false) {
+                    setLogged(true);
+                } else {
+                    navigate('/login/alumno');
+                }
+            });
+        } catch(error){
+            navigate('/login/alumno');
+        }
+    }
+
+    useEffect(() => {
+        if (localStorage.getItem("sessionId") === null && localStorage.getItem("sessionType") === null) {
+            navigate('/login/alumno');
+        } else {
+            validarSesion();
+        }
+    }, []);
 
     return(
         <>

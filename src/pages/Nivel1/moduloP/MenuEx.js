@@ -2,7 +2,10 @@ import HeaderAlumno from "../../../modelos/header/HeaderAlumno.jsx"
 import Card from "../../../modelos/card/card.jsx";
 import { Link} from "react-router-dom";
 import FooterApp from "../../../modelos/footer/FooterApp.jsx";
-import { useState } from "react";
+import axios from "axios";
+import {useEffect, useState} from "react";
+import { useNavigate } from 'react-router-dom';
+
 /**corregir modelo de menu ex, ej y este */
   const cardData = [
     {
@@ -283,6 +286,36 @@ const cardData6 = [
 
 
 export default function MenuEx(){
+  const navigate = useNavigate();
+    const [logged, setLogged] = useState(false);
+
+    async function validarSesion() {
+
+        try {
+            const sessionId = localStorage.getItem("sessionId");
+            const sessionType = localStorage.getItem("sessionType");
+            await axios.post("http://localhost:8080/usuario/validar/alumno", {
+                "sesionId": sessionId,
+                "type": sessionType
+            }).then((res) => {
+                if (res.data.error === false) {
+                    setLogged(true);
+                } else {
+                    navigate('/login/alumno');
+                }
+            });
+        } catch(error){
+            navigate('/login/alumno');
+        }
+    }
+
+    useEffect(() => {
+        if (localStorage.getItem("sessionId") === null && localStorage.getItem("sessionType") === null) {
+            navigate('/login/alumno');
+        } else {
+            validarSesion();
+        }
+    }, []);
    
     return(
         <>

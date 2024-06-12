@@ -4,9 +4,41 @@ import Boton from '../../../../componentes/boton/boton.jsx';
 import { NavLink } from 'react-router-dom';
 import areaPerimetro1 from '../../../../assets/common/areaPerimetro1.png';
 import multiplicacion_ej from '../../../../assets/common/multiplicacion_ej.png';
-
+import axios from "axios";
+import {useEffect, useState} from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Leccion11N2(){ 
+    const navigate = useNavigate();
+    const [logged, setLogged] = useState(false);
+
+    async function validarSesion() {
+
+        try {
+            const sessionId = localStorage.getItem("sessionId");
+            const sessionType = localStorage.getItem("sessionType");
+            await axios.post("http://localhost:8080/usuario/validar/alumno", {
+                "sesionId": sessionId,
+                "type": sessionType
+            }).then((res) => {
+                if (res.data.error === false) {
+                    setLogged(true);
+                } else {
+                    navigate('/login/alumno');
+                }
+            });
+        } catch(error){
+            navigate('/login/alumno');
+        }
+    }
+
+    useEffect(() => {
+        if (localStorage.getItem("sessionId") === null && localStorage.getItem("sessionType") === null) {
+            navigate('/login/alumno');
+        } else {
+            validarSesion();
+        }
+    }, []);
         return(
             <>
             <HeaderAlumno/>
