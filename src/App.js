@@ -18,6 +18,7 @@ import Examen from './pages/Nivel1/moduloP/Examenes/Examen.js';
 import PagInicioA from './pages/Inicios/PagInicioA.js';
 import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
+import InicioLec2 from './pages/Nivel2/moduloCont/InicioLec2.js';
 import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.js';
 import MenuMaterial from './pages/Nivel1/moduloCont/Material/MenuMaterial.js';
 
@@ -159,6 +160,10 @@ function App() {
                     <Route
                         path='/menu/Lec'
                         element={<InicioLec/>}
+                    />
+                    <Route
+                        path='/menu/Lec2'
+                        element={<InicioLec2/>}
                     />
                     <Route
                         path='/Leccion_nom'
