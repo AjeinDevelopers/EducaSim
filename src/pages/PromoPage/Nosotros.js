@@ -28,9 +28,9 @@ export default function Nosotros() {
                             <h2>Mariana Carrillo</h2>
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "left", width: "100%", gap: "var(--US, 12px)" }}>
-                            <Pill text={"CEO"} Style={"secondary"} />
-                            <Pill text={"Desarrolladora Back-End"} Style={"secondary"} />
-                            <Pill text={"Diseñadora de Bases de Datos"} Style={"secondary"} />
+                            <Pill text={"CEO"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Desarrolladora Front-End"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Investigadora"} Style={"secondary"} size={"small"} />
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "left", textAlign: "justify" }}>
                             <t5>¡Hola! Soy estudiante del CECyT 9 “Juan de Dios Bátiz” me gusta la música, el ajedrez y el voleibol. Además, me fascina la programación y entender cómo funcionan las cosas.</t5>
@@ -49,8 +49,9 @@ export default function Nosotros() {
                             <h2>Maylin Anzures</h2>
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "right", width: "100%", gap: "var(--US, 12px)" }}>
-                            <Pill text={"Desarrolladora Back-End"} Style={"secondary"} />
-                            <Pill text={"Investigadora"} Style={"secondary"} />
+                            <Pill text={"Desarrolladora Front-End"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Investigadora"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Diseñadora UI/UX"} Style={"secondary"} size={"small"} />
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "right", textAlign: "justify" }}>
                             <t5>Mucho gusto. Soy alumna del CECyT No. 9 “Juan de Dios Batiz”, disfruto de aprender de cualquier tema de interés especialmente de ciencias, me gusta mucho leer, la música y  la programación. </t5>
@@ -63,8 +64,9 @@ export default function Nosotros() {
                             <h2>Uriel Cabañas</h2>
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "left", width: "100%", gap: "var(--US, 12px)" }}>
-                            <Pill text={"Desarrolladora Back-End"} Style={"secondary"} />
-                            <Pill text={"Desarrolladora Front-End"} Style={"secondary"} />
+                            <Pill text={"Desarrollador Back-End"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Desarrollador Front-End"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Diseñador de Bases de Datos"} Style={"secondary"} size={"small"}/>
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "left", textAlign: "justify" }}>
                             <t5>Soy alumno del CECyT No. 9 “Juan de Dios Batiz”, me agrada mucho la rama de la informática y el desarrollo de software, así mismo me interesan los siguientes campos: el diseño de paginas web y aplicaciones, los videojuegos y la astronomía.</t5>
@@ -83,9 +85,9 @@ export default function Nosotros() {
                             <h2>Carlos Marin</h2>
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "right", width: "100%", gap: "var(--US, 12px)" }}>
-                            <Pill text={"Diseñador UI/UX"} Style={"secondary"} />
-                            <Pill text={"Desarrolladora Back-End"} Style={"secondary"} />
-                            <Pill text={"Diseñador de Bases de Datos"} Style={"secondary"} />
+                            <Pill text={"Diseñador UI/UX"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Desarrollador Back-End"} Style={"secondary"} size={"small"} />
+                            <Pill text={"Diseñador de Bases de Datos"} Style={"secondary"} size={"small"} />
                         </div>
                         <div style={{ flexDirection: "row", alignItems: "right", textAlign: "justify" }}>
                             <t5>Estudiante del CECyT 9 “Juan de Dios Bátiz” que le gusta la programación, la música, los videojuegos. Tengo varios intereses como lo son el desarrollo de videojuegos, el diseño, la informática y la producción musical. </t5>
@@ -95,7 +97,7 @@ export default function Nosotros() {
             </div>
             <div style={{ width: "calc(100% - 192px)", height: "480px", padding: "var(--XS, 32px) var(--XXS, 24px)", flexDirection: "column", alignItems: "center", gap: "var(--M, 48px)"}}>
                 <div style={{ flexDirection: "row", alignItems: "center" }}>
-                    <h2 style={{ color: "var(--color-principal)"}} className={"secondary"}>Nuestros</h2><h2 style={{ color: "var(--color-principal)" }} className={"primary"}> Colaboradores</h2>
+                    <h2 style={{ color: "var(--color-principal)"}} className={"secondary"}>Nuestros&nbsp;</h2><h2 style={{ color: "var(--color-principal)" }} className={"primary"}> Colaboradores</h2>
                 </div>
                 <div style={{ width: "calc(100% - 192px)", height: "240px", padding: "var(--M, 48px) var(--XXXL, 96px)", flexDirection: "row", gap: "var(--M, 48px)", alignItems: "center" }}>
                     <div style={{ width: "100%", flexDirection: "column", gap: "var(--XS, 32px)" }}>
@@ -126,7 +128,7 @@ export default function Nosotros() {
                         <Pill text={"Ilustraciones"} Style={"secondary"} />
                     </div>
                     <div style={{ flexDirection: "row", alignItems: "left", textAlign: "center" }}>
-                        <t5>Las ilustraciones vectoriales de esta plataforma pertenecen a la librería de ilustraciones de StorySet, las cuales están disponibles en https://storyset.com/</t5>
+                        <t5>Las ilustraciones vectoriales de esta plataforma pertenecen a la librería de ilustraciones de StorySet, las cuales están disponibles en <a href={"https://storyset.com/"}>https://storyset.com/</a></t5>
                     </div>
                 </div>
             </div>
