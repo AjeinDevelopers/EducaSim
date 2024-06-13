@@ -5,87 +5,62 @@ import FooterApp from "../../../modelos/footer/FooterApp.jsx";
 import axios from "axios";
 import {useEffect, useState} from "react";
 import { useNavigate } from 'react-router-dom';
-
+import MuLTI from '../../../assets/common/MuLTI.jpg';
+import Angulos from '../../../assets/common/Angulos.avif';
   const cardData = [
     {
         direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
+        width: "300px",
+        header: "Multiplicación y División",
+        linkButton: "/Ejercicio/matematicas/cuarto/m_d",
         actions: true,
         adicional: false,
-        bt1: "Hola",
-        score: "10.0",
+        bt1: "Resolver",
+        score: "XX.X",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: MuLTI,
+        text: "Multiplicaciones y divisiones de 4 cifras."
     },
     {
       direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
+      width: "300px",
+      header: "Fracciones",
+      linkButton: "/Ejercicio/matematicas/cuarto/FyOB",
       actions: true,
       adicional: false,
-      bt1: "Hola",
-      score: "10.0",
+      bt1: "Resolver",
+      score: "XX.X",
       date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+      img: MuLTI,
+      text: "Ejercicios de fracciones básicas."
   },
 {
   direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
+  width: "300px",
+  header: "Fracciones y su relacion con decimales",
+  linkButton: "/Ejercicio/matematicas/cuarto/FyD",
   actions: true,
   adicional: false,
   bt1: "Hola",
   score: "10.0",
   date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  img: MuLTI,
+  text: "Relaciones de decimales con fracciones."
 }
 ];
 const cardData2 = [
     {
         direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
+        width: "300px",
+        header: "Ángulos y líneas.",
+        linkButton: "/Ejercicio/matematicas/cuarto/AyL",
         actions: true,
         adicional: false,
-        bt1: "Hola",
-        score: "10.0",
+        bt1: "Resolver",
+        score: "XX.X",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: Angulos,
+        text: "Ejercicios de conceptos ángulos y líneas."
     },
     {
       direction: "vertical",
@@ -323,11 +298,10 @@ export default function MenuEj(){
            <div style={{display:"flex", width:"1440px", padding:"var(--M, 48px) var(--XS, 32px)", flexDirection:"column", alignItems:"center", gap:"var(--XS, 32px)"}}>
             <h2 className="secondary brand">Ejercicios</h2>   
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <h3 className="secondary brand">Tecer Grado</h3>  
+              <h3 className="secondary brand">Cuarto Grado</h3>  
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
                     <h5 className="secondary brand">Recomendados</h5>
-                      <t6 className="secondary brand">Ver más→ </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
                     
@@ -338,7 +312,7 @@ export default function MenuEj(){
               <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 2</h5>
+                    <h5 className="secondary brand">Ángulos</h5>
                     <t6 className="secondary brand">Ver más→ </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>

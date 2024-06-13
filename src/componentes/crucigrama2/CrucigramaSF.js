@@ -67,8 +67,8 @@ const Crossword = () => {
         <>
             <div>
                 <div style={{ display: "flex", borderRadius: "8px", background: "#CAE6FF", padding: "10px 16px", justifyContent: "center", alignItems: "center" }}>
-                    <t5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                         &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</t5>
+                    <t5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5&nbsp; 
+                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</t5>
                 </div>
             </div>
             <div style={{ display: "flex" }}>
@@ -92,7 +92,7 @@ const Crossword = () => {
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", marginLeft: "10px" }}>
                     <div style={{ borderRadius: "8px", background: "#CAE6FF", padding: "10px 16px" }}>
-                        <t5><br />2 <br /><br /><br /><br />3<br /><br /><br /><br /><br />5<br /><br /><br /><br /><br />8<br /><br /><br /><br /><br /></t5>
+                        <t5><br /> <br /><br />6<br /><br /><br /><br /><br />7<br /><br /><br /><br /><br /><br /><br /> 8<br /><br /><br /><br /><br /></t5>
                     </div>
                 </div>
             </div>

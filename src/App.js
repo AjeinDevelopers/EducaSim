@@ -83,6 +83,9 @@ import MaterialP3 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP3.
 import MaterialP4 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP4.js';
 import CrucigramaApp1 from './pages/Nivel1/moduloP/Juegos1/CrucigramaApp1.js';
 import Memorama1 from './pages/Nivel1/moduloP/Juegos1/Memorama1.js';
+import Ejercicio2 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio2.js';
+import Ejercicio3 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio3.js';
+import Ejercicio4 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio4.js';
 
 
 function App() {
@@ -372,6 +375,21 @@ function App() {
                     <Route
                         path='/Ejercicio/matematicas/cuarto/m_d'
                         element={<Ejercicio1/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/cuarto/FyOB'
+                        element={<Ejercicio2/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/cuarto/FyD'
+                        element={<Ejercicio3/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/cuarto/AyL'
+                        element={<Ejercicio4/>}
 
                     />
                     <Route

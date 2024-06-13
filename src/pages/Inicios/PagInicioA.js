@@ -126,7 +126,6 @@ export default function PagInicioA() {
             img: MyD,
             text: ""
         },
-        //*cambiar crucigrama *//
         {
           direction: "vertical",
           width: "304px",
@@ -156,28 +155,28 @@ export default function PagInicioA() {
     {
       direction: "vertical",
       width: "304px",
-      header: "Holaa",
-      link: false,
+      header: "Fracciones",
+      linkButton: "/Ejercicio/matematicas/cuarto/FyOB",
       actions: true,
       adicional: true,
-      bt1: "Hola",
-      score: "10.0",
+      bt1: "Resolver",
+      score: "XX.X",
       date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+      img: MuLTI,
+      text: "Ejercicios fracciones básicas."
     },
     {
         direction: "vertical",
         width: "304px",
-        header: "Holaa",
-        link: false,
+        header: "Ángulos y Líneas",
+        linkButton: "/Ejercicio/matematicas/cuarto/AyL",
         actions: true,
         adicional: true,
-        bt1: "Hola",
-        score: "10.0",
+        bt1: "Resolver",
+        score: "XX.X",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: Angulos,
+        text: "Ejercicio de conceptos de ángulos."
       }
     ];
 
