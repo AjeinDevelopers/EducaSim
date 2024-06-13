@@ -7,6 +7,8 @@ import Boton from "../../../../componentes/boton/boton.jsx";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
+//Operaciones con fracciones basicas
+
 export default function Ejercicio6N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);

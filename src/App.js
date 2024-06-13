@@ -70,6 +70,11 @@ import Ejercicio3N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio3N2.js';
 import Ejercicio4N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio4N2.js';
 import Ejercicio5N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio5N2.js';
 import Ejercicio6N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio6N2.js';
+import Ejercicio7N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio7N2.js';
+import Ejercicio8N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio8N2.js';
+import Ejercicio9N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio9N2.js';
+import Ejercicio10N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio10N2.js';
+import Ejercicio11N2 from './pages/Nivel2/moduloP/Ejercicios/Ejercicio11N2.js';
 
 
 import Clases from './pages/moduloClases/Clases.js';
@@ -296,9 +301,30 @@ function App() {
                         element={<Ejercicio5N2/>}
                     />
                     <Route
-                        path='/Ejercicio/matematicas/primero/Fraccionesbasic'
+                        path='/Ejercicio/matematicas/primero/FraccionesBasic'
                         element={<Ejercicio6N2/>}
                     />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/FigurasGeom2D'
+                        element={<Ejercicio7N2/>}
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/Multiplicacion3Digitos'
+                        element={<Ejercicio8N2/>}
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/DivisionBasic'
+                        element={<Ejercicio9N2/>}
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/FraccionesBasic2'
+                        element={<Ejercicio10N2/>}
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/primero/PerimetroArea'
+                        element={<Ejercicio11N2/>}
+                    />
+
                     <Route
                         path='/Leccion/matematicas/cuarto/angulos'
                         element={<Leccion9/>}
