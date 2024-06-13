@@ -18,7 +18,6 @@ import Examen from './pages/Nivel1/moduloP/Examenes/Examen.js';
 import PagInicioA from './pages/Inicios/PagInicioA.js';
 import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
-import InicioLec2 from './pages/Nivel2/moduloCont/InicioLec2.js';
 import FormatoLeccion from './pages/Nivel1/moduloCont/Lecciones/FormatoLeccion.js';
 import MenuMaterial from './pages/Nivel1/moduloCont/Material/MenuMaterial.js';
 
@@ -94,6 +93,8 @@ import Ejercicio3 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio3.js';
 import Ejercicio4 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio4.js';
 import Ejercicio5 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio5.js';
 import Ejercicio6 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio6.js';
+import Ejercicio7 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio7.js';
+import InicioLec2 from './pages/Nivel2/moduloCont/InicioLec2.js';
 
 
 function App() {
@@ -433,6 +434,11 @@ function App() {
                     <Route
                         path='/Ejercicio/matematicas/quinto/FyO'
                         element={<Ejercicio6/>}
+
+                    />
+                     <Route
+                        path='/Ejercicio/matematicas/quinto/P'
+                        element={<Ejercicio7/>}
 
                     />
                     <Route
