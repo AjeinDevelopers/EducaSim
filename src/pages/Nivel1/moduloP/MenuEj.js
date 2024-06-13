@@ -7,10 +7,15 @@ import {useEffect, useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import MuLTI from '../../../assets/common/MuLTI.jpg';
 import Angulos from '../../../assets/common/Angulos.avif';
+import margen from '../../../assets/common/margen.png';
+import MyD from '../../../assets/common/MyD.jpg';
+import Crucigrama from '../../../assets/common/Crucigrama.jpg';
+import Memorama from '../../../assets/common/Memorama.jpg';
+
   const cardData = [
     {
         direction: "vertical",
-        width: "300px",
+        width: "400px",
         header: "Multiplicación y División",
         linkButton: "/Ejercicio/matematicas/cuarto/m_d",
         actions: true,
@@ -23,7 +28,7 @@ import Angulos from '../../../assets/common/Angulos.avif';
     },
     {
       direction: "vertical",
-      width: "300px",
+      width: "400px",
       header: "Fracciones",
       linkButton: "/Ejercicio/matematicas/cuarto/FyOB",
       actions: true,
@@ -36,7 +41,7 @@ import Angulos from '../../../assets/common/Angulos.avif';
   },
 {
   direction: "vertical",
-  width: "300px",
+  width: "400px",
   header: "Fracciones y su relacion con decimales",
   linkButton: "/Ejercicio/matematicas/cuarto/FyD",
   actions: true,
@@ -51,7 +56,7 @@ import Angulos from '../../../assets/common/Angulos.avif';
 const cardData2 = [
     {
         direction: "vertical",
-        width: "300px",
+        width: "400px",
         header: "Ángulos y líneas.",
         linkButton: "/Ejercicio/matematicas/cuarto/AyL",
         actions: true,
@@ -64,197 +69,75 @@ const cardData2 = [
     },
     {
       direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
+      width: "400px",
+      header: "Ángulos y líneas 2",
+      linkButton: "/Ejercicio/matematicas/cuarto/AyL2",
       actions: true,
       adicional: false,
-      bt1: "Hola",
-      score: "10.0",
+      bt1: "Resolver",
+      score: "XX.x",
       date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+      img: Angulos,
+      text: "Ejercicios de conceptos ángulos y líneas."
   },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
+
 ];
-const cardData3 = [
-    {
-        direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: false,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
+
+
 const cardData4 = [
   {
       direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
+      width: "300px",
+      header: "Operaciones con fracciones",
+      linkButton: "/Ejercicio/matematicas/quinto/FyO",
       actions: true,
       adicional: false,
-      bt1: "Hola",
-      score: "10.0",
+      bt1: "Resolver",
+      score: "XX.X",
       date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+      img: MuLTI,
+      text: "Ejercicios de operaciones con fracciones y puntos decimales."
   },
   {
     direction: "vertical",
-    width: "485px",
-    header: "Holaa",
-    link: false,
+    width: "300px",
+    header: "Introducción a las proporciones y porcentajes     ",
+    linkButton: "/Ejercicio/matematicas/quinto/P",
     actions: true,
     adicional: false,
-    bt1: "Hola",
-    score: "10.0",
+    bt1: "Resolver",
+    score: "XX.x",
     date: "10/10/2021",
-    img: "si",
-    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+    img: margen,
+    text: "Ejercicios Introducción a los porcentajes."
+  },
+{
+  direction: "vertical",
+  width: "304px",
+  header: "Crucigrama",
+  linkButton: "/Crucigrama/SF",
+  actions: true,
+  adicional: true,
+  bt1: "Resover",
+  score: "xx.x",
+  date: "10/10/2021",
+  img: Crucigrama,
+  text: "Crucigrama de repaso general segunda fase."
 },
 {
 direction: "vertical",
-width: "485px",
-header: "Holaa",
+width: "304px",
+header: "Memorama",
 link: false,
 actions: true,
-adicional: false,
-bt1: "Hola",
-score: "10.0",
+adicional: true,
+bt1: "Resolver",
+score: "xx.x",
 date: "10/10/2021",
-img: "si",
-text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
+img: Memorama,
+text: "Memorama segunda fase."
+}
 ];
-
-const cardData5 = [
-    {
-        direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: false,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
-const cardData6 = [
-    {
-        direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: false,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
-
 
 
 
@@ -323,25 +206,13 @@ export default function MenuEj(){
                 </div>
                 </div>
                   
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 3</h5>
-                    <t6 className="secondary brand">Ver más→ </t6>
-                  </div>
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
-                    
-                    {cardData3.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
-                </div>
-                <h3 className="secondary brand">Segundo Grado</h3>
+               
+                <h3 className="secondary brand">Quinto Grado</h3>
 
                 <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 1</h5>
+                    <h5 className="secondary brand">Decimales y porcentajes</h5>
                     <t6 className="secondary brand">Ver más→ </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
@@ -351,36 +222,12 @@ export default function MenuEj(){
                     ))}
                 </div>
                 </div></div></div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 2</h5>
-                    <t6 className="secondary brand">Ver más→ </t6>
-                  </div>
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
-                    
-                    {cardData5.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
-                </div></div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 3</h5>
-                    <t6 className="secondary brand">Ver más→ </t6>
-                  </div>
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
-                    
-                    {cardData6.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
-                </div></div>
+
+                
             </div> 
             </div>
            </div>
-        </div>
+        
         <FooterApp/>
         </>
     )

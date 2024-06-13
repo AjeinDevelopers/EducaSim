@@ -91,6 +91,8 @@ import Memorama1 from './pages/Nivel1/moduloP/Juegos1/Memorama1.js';
 import Ejercicio2 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio2.js';
 import Ejercicio3 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio3.js';
 import Ejercicio4 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio4.js';
+import Ejercicio5 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio5.js';
+import Ejercicio6 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio6.js';
 
 
 function App() {
@@ -416,6 +418,16 @@ function App() {
                     <Route
                         path='/Ejercicio/matematicas/cuarto/AyL'
                         element={<Ejercicio4/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/cuarto/AyL2'
+                        element={<Ejercicio5/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/quinto/FyO'
+                        element={<Ejercicio6/>}
 
                     />
                     <Route
