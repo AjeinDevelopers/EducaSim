@@ -1,6 +1,5 @@
 import HeaderAlumno from "../../../modelos/header/HeaderAlumno.jsx";
 import Card from "../../../modelos/card/card.jsx";
-import { Link} from "react-router-dom";
 import FooterApp from "../../../modelos/footer/FooterApp.jsx";
 import MuLTI from "../../../assets/common/MuLTI.jpg";
 import axios from "axios";

@@ -153,31 +153,18 @@ export default function PagInicioA() {
         text: "Memorama segunda fase."
     },
     {
-      direction: "vertical",
-      width: "304px",
-      header: "Fracciones",
-      linkButton: "/Ejercicio/matematicas/cuarto/FyOB",
-      actions: true,
-      adicional: true,
-      bt1: "Resolver",
-      score: "XX.X",
-      date: "10/10/2021",
-      img: MuLTI,
-      text: "Ejercicios fracciones básicas."
-    },
-    {
         direction: "vertical",
         width: "304px",
-        header: "Ángulos y Líneas",
-        linkButton: "/Ejercicio/matematicas/cuarto/AyL",
+        header: "Sopa de letras",
+        linkButton: "/SopaLetras",
         actions: true,
         adicional: true,
         bt1: "Resolver",
-        score: "XX.X",
-        date: "10/10/2021",
-        img: Angulos,
-        text: "Ejercicio de conceptos de ángulos."
-      }
+        score: "xx.x",
+        date: "12/06/2024",
+        img: MyD,
+        text: "Sopa de letras de repaso."
+    }
     ];
 
     return (
