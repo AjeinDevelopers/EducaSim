@@ -16,7 +16,7 @@ export default function Pregunta(props) {
             <div className={"img"}>
                 <img id={"img-pregunta"} src={img} alt={props.alt} onError={() => setImg(noImg)}/>
             </div>
-            <Input type={"text"} placeholder={"Respuesta"} showLabel={false}/>
+            <Input type={"text"} placeholder={"Respuesta"} showLabel={false} contenido={props.contenido}/>
         </div>
     );
 }
