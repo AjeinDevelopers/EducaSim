@@ -124,7 +124,7 @@ const SopaLetras = () => {
                 )}
             </div>
             <div style={{ display: "flex", alignItems: "center", width: "100%", justifyContent: "center", marginTop: "10px", padding: "0px var(--M, 48px)", gap: "160px" }}>
-                {!gameOver && <button onClick={checkWord}>Check Word</button>}
+                {!gameOver && <button onClick={checkWord}>Checar palabra</button>}
             </div>
             <div style={{ display: "flex", alignItems: "center", width: "100%", justifyContent: "center", padding: "0px var(--M, 10px)" }}>
                 {gameOver && (

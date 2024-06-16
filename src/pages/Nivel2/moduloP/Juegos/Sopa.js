@@ -22,7 +22,7 @@ export default function Sopa() {
                 </div>
                 <div style={{display:"flex", padding:"var(--M, 30px)",flexDirection:"column", alignItems:"center", gap:"var(--XXS, 24px)", alignSelf:"stretch",background:"var(--Color-Principales-Claros-Primary, #CAE6FF)", border:"4px solid var(--Color-Principales-Fuertes-Primary, #4BA8FF)", borderRadius:"var(--XXXS, 16px)"}}>
                     <h4>Instrucciones</h4>
-                    <t5>Escribe las palabras que consideres correctas de acuerdo a las pistas y verifica al completar todos los espacios, si no te marca "correcto", tendrás que revisar tus palabras.</t5>
+                    <t5>Selecciona las palabras que vayas encontrando y presiona el checar palabra.</t5>
                 </div>
                </div></div>
                <div style={{display: "flex",padding: "10px var(--M, 32px)",flexDirection: "column", alignItems: "center", gap: "var(--XXS, 24px)",alignSelf: "stretch"}}>
