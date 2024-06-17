@@ -128,7 +128,7 @@ const cardData4 = [
 direction: "vertical",
 width: "304px",
 header: "Memorama",
-link: false,
+linkButton: "/Memorama/SF",
 actions: true,
 adicional: true,
 bt1: "Resolver",
