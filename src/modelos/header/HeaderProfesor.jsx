@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 export default function HeaderApp() {
     return (
         <header>
-            <Link to="/"><h4 className={"secondary brand"}>EducaSim</h4></Link>
+            <Link to="/inicio/prof"><h4 className={"secondary brand"}>EducaSim</h4></Link>
             <nav className={"link-container"}>
                 <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to="/Inicio/Prof" ><t6>Inicio</t6></NavLink>
                 <NavLink className={(navData) => (navData.isActive ? "activeStyle" : '')} to='/Clases'><t6>Grupos</t6></NavLink>
