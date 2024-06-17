@@ -95,7 +95,9 @@ import Ejercicio5 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio5.js';
 import Ejercicio6 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio6.js';
 import Ejercicio7 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio7.js';
 import InicioLec2 from './pages/Nivel2/moduloCont/InicioLec2.js';
-
+import Ejercicio8 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio8.js';
+import Ejercicio9 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio9.js';
+import Ejercicio10 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio10.js';
 
 function App() {
   return (
@@ -439,6 +441,21 @@ function App() {
                      <Route
                         path='/Ejercicio/matematicas/quinto/P'
                         element={<Ejercicio7/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/quinto/ProPor'
+                        element={<Ejercicio8/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/quinto/Vol'
+                        element={<Ejercicio9/>}
+
+                    />
+                    <Route
+                        path='/Ejercicio/matematicas/quinto/Coor'
+                        element={<Ejercicio10/>}
 
                     />
                     <Route
