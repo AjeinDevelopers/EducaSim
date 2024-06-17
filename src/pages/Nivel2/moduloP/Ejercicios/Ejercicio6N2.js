@@ -12,12 +12,43 @@ import { useNavigate } from 'react-router-dom';
 export default function Ejercicio6N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
+
+    let handleContent1 = (value) => {
+        setinp1(value)
+    }
+    let handleContent2 = (value) => (
+        setinp2(value)
+    )
+    let handleContent3 = (value) => (
+        setinp3(value)
+    )
+    let handleContent4 = (value) => (
+        setinp4(value)
+    )
+    let handleContent5 = (value) => (
+        setinp5(value)
+    )
+
+    const [inp1 , setinp1] = useState(0);
+    const [inp2 , setinp2] = useState(0);
+    const [inp3 , setinp3] = useState(0);
+    const [inp4 , setinp4] = useState(0);
+    const [inp5 , setinp5] = useState(0);
+
+    const correctAnswers6 = {
+        inp1: '103',
+        inp2: '107',
+        inp3: '112',
+        inp4: '115', 
+        inp5: '120'
+    };
+
     /**repuestas correctas: 
-     * Pregunta 1: {value: '83', label: '1/2'}
-     * Pregunta 2: {value: '87', label: '1/4'}
-     * Pregunta 3: {value: '92', label: '3/4'}
-     * Pregunta 4: {value: '95', label: '1/2'}
-     * Pregunta 5: {value: '100', label: '1/3'}
+     * Pregunta 1: {value: '103', label: '1/2'}
+     * Pregunta 2: {value: '107', label: '1/4'}
+     * Pregunta 3: {value: '112', label: '3/4'}
+     * Pregunta 4: {value: '115', label: '1/2'}
+     * Pregunta 5: {value: '120', label: '1/3'}
     */
     const items = [
         {value: '101', label: '1/3'},
@@ -105,7 +136,31 @@ export default function Ejercicio6N2(){
             validarSesion();
         }
     }, []);
+    let respTot = 0;
+    async function handleSubmit() {
+        
+        const userAnswers6 = {
+            inp1,
+            inp2,
+            inp3,
+            inp4,
+            inp5
+        };
 
+        let respBuenas6 = 0;
+        for (let key in correctAnswers6) {
+            if (correctAnswers6[key] === userAnswers6[key]) {
+                respBuenas6++;
+                respTot++;
+            }
+        }
+
+        if (respBuenas6 === Object.keys(correctAnswers6).length) {
+            alert("¡Todas las respuestas son correctas!");
+        } else {
+            alert(`Respuestas correctas: ${respBuenas6}/${Object.keys(correctAnswers6).length}`);
+        }
+    }
     return(
         <>
          <HeaderAlumno/>
@@ -131,27 +186,28 @@ export default function Ejercicio6N2(){
                 <h5 className="secondary brand">Pregunta 1</h5>
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es la mitad de un círculo?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent1} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 2</h5>
                 <RadButtonGroup items={items1} size={"large"} estilo={"secondary"}
                                     label={"¿Qué fracción representa una cuarta parte de un pastel?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent2} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 3</h5>
                 <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
                                     label={"Si tienes un chocolate dividido en 4 partes iguales y comes 1 parte, ¿qué fracción del chocolate te queda?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent3} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
                 <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"¿Qué fracción representa la parte sombreada si un rectángulo está dividido en 2 partes iguales y una parte está sombreada?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent4} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
                 <RadButtonGroup items={items4} size={"large"} estilo={"secondary"}
                                     label={"Si divides una pizza en 3 partes iguales y comes 2 partes, ¿qué fracción de la pizza has comido?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent5} RadButtonError={handleRadButtonError}/>
                 </div>
                 <div style={{alignItems:"center"}}>
                 <Boton size={"small"} Style={"secondary"} text={"Comprobar"} showIcon2={true}
                            icon2={"fa-solid fa-check fa-fw"}
+                           handleClick={handleSubmit}
                            method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />                
                  </div>
             </div>

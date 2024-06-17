@@ -12,6 +12,37 @@ import { useNavigate } from 'react-router-dom';
 export default function Ejercicio11N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
+
+    let handleContent1 = (value) => {
+        setinp1(value)
+    }
+    let handleContent2 = (value) => (
+        setinp2(value)
+    )
+    let handleContent3 = (value) => (
+        setinp3(value)
+    )
+    let handleContent4 = (value) => (
+        setinp4(value)
+    )
+    let handleContent5 = (value) => (
+        setinp5(value)
+    )
+
+    const [inp1 , setinp1] = useState(0);
+    const [inp2 , setinp2] = useState(0);
+    const [inp3 , setinp3] = useState(0);
+    const [inp4 , setinp4] = useState(0);
+    const [inp5 , setinp5] = useState(0);
+
+    const correctAnswers11 = {
+        inp1: '163',
+        inp2: '166',
+        inp3: '169',
+        inp4: '175', 
+        inp5: '179'
+    };
+
     /**repuestas correctas: 
      * Pregunta 1: {value: '163', label: '25 cm'}
      * Pregunta 2: {value: '166', label: '24 cm²'}
@@ -105,6 +136,31 @@ export default function Ejercicio11N2(){
             validarSesion();
         }
     }, []);
+    let respTot = 0;
+    async function handleSubmit() {
+        
+        const userAnswers11 = {
+            inp1,
+            inp2,
+            inp3,
+            inp4,
+            inp5
+        };
+
+        let respBuenas11 = 0;
+        for (let key in correctAnswers11) {
+            if (correctAnswers11[key] === userAnswers11[key]) {
+                respBuenas11++;
+                respTot++;
+            }
+        }
+
+        if (respBuenas11 === Object.keys(correctAnswers11).length) {
+            alert("¡Todas las respuestas son correctas!");
+        } else {
+            alert(`Respuestas correctas: ${respBuenas11}/${Object.keys(correctAnswers11).length}`);
+        }
+    }
 
     return(
         <>
@@ -131,27 +187,28 @@ export default function Ejercicio11N2(){
                 <h5 className="secondary brand">Pregunta 1</h5>
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es el perímetro de un cuadrado con lados de 5 cm?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent1} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 2</h5>
                 <RadButtonGroup items={items1} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es el área de un rectángulo de 4 cm de ancho y 6 cm de largo?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent2} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 3</h5>
                 <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
                                     label={"Si un triángulo tiene lados de 3 cm, 4 cm y 5 cm, ¿cuál es su perímetro?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent3} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
                 <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es el perímetro de un rectángulo que mide 8 cm de largo y 3 cm de ancho?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent4} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
                 <RadButtonGroup items={items4} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es el área de un cuadrado con lados de 7 cm?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent5} RadButtonError={handleRadButtonError}/>
                 </div>
                 <div style={{alignItems:"center"}}>
                 <Boton size={"small"} Style={"secondary"} text={"Comprobar"} showIcon2={true}
                            icon2={"fa-solid fa-check fa-fw"}
+                           handleClick={handleSubmit}
                            method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />                
                  </div>
             </div>

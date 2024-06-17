@@ -11,6 +11,37 @@ import { useNavigate } from 'react-router-dom';
 export default function Ejercicio3N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
+
+    let handleContent1 = (value) => {
+        setinp1(value)
+    }
+    let handleContent2 = (value) => (
+        setinp2(value)
+    )
+    let handleContent3 = (value) => (
+        setinp3(value)
+    )
+    let handleContent4 = (value) => (
+        setinp4(value)
+    )
+    let handleContent5 = (value) => (
+        setinp5(value)
+    )
+
+    const [inp1 , setinp1] = useState(0);
+    const [inp2 , setinp2] = useState(0);
+    const [inp3 , setinp3] = useState(0);
+    const [inp4 , setinp4] = useState(0);
+    const [inp5 , setinp5] = useState(0);
+
+    const correctAnswers3 = {
+        inp1: '42',
+        inp2: '48',
+        inp3: '51',
+        inp4: '56', 
+        inp5: '59'
+    };
+
     /**repuestas correctas: 
      * Pregunta 1: {value: '42', label: '3'}
      * Pregunta 2: {value: '48', label: 'Rectángulo'}
@@ -104,6 +135,31 @@ export default function Ejercicio3N2(){
             validarSesion();
         }
     }, []);
+    let respTot = 0;
+    async function handleSubmit() {
+        
+        const userAnswers3 = {
+            inp1,
+            inp2,
+            inp3,
+            inp4,
+            inp5
+        };
+
+        let respBuenas3 = 0;
+        for (let key in correctAnswers3) {
+            if (correctAnswers3[key] === userAnswers3[key]) {
+                respBuenas3++;
+                respTot++;
+            }
+        }
+
+        if (respBuenas3 === Object.keys(correctAnswers3).length) {
+            alert("¡Todas las respuestas son correctas!");
+        } else {
+            alert(`Respuestas correctas: ${respBuenas3}/${Object.keys(correctAnswers3).length}`);
+        }
+    }
 
     return(
         <>
@@ -130,27 +186,28 @@ export default function Ejercicio3N2(){
                 <h5 className="secondary brand">Pregunta 1</h5>
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"¿Cuántos lados tiene un triángulo?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent1} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 2</h5>
                 <RadButtonGroup items={items1} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál de estas formas es cuadrada?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent2} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 3</h5>
                 <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
                                     label={"¿Cuántos lados tiene un cuadrado?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent3} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
                 <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál de estas formas tiene 6 lados?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent4} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
                 <RadButtonGroup items={items4} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál de estas formas tiene 5 lados?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent5} RadButtonError={handleRadButtonError}/>
                 </div>
                 <div style={{alignItems:"center"}}>
                 <Boton size={"small"} Style={"secondary"} text={"Comprobar"} showIcon2={true}
                            icon2={"fa-solid fa-check fa-fw"}
+                           handleClick={handleSubmit}
                            method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />                
                  </div>
             </div>

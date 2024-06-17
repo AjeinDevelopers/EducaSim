@@ -11,6 +11,37 @@ import { useNavigate } from 'react-router-dom';
 export default function Ejercicio2N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
+
+    let handleContent1 = (value) => {
+        setinp1(value)
+    }
+    let handleContent2 = (value) => (
+        setinp2(value)
+    )
+    let handleContent3 = (value) => (
+        setinp3(value)
+    )
+    let handleContent4 = (value) => (
+        setinp4(value)
+    )
+    let handleContent5 = (value) => (
+        setinp5(value)
+    )
+
+    const [inp1 , setinp1] = useState(0);
+    const [inp2 , setinp2] = useState(0);
+    const [inp3 , setinp3] = useState(0);
+    const [inp4 , setinp4] = useState(0);
+    const [inp5 , setinp5] = useState(0);
+
+    const correctAnswers2 = {
+        inp1: '23',
+        inp2: '25',
+        inp3: '29',
+        inp4: '33', 
+        inp5: '38'
+    };
+
     /**repuestas correctas: 
      * Pregunta 1: {value: '23', label: '8'}
      * Pregunta 2: {value: '25', label: '6'}
@@ -69,7 +100,7 @@ export default function Ejercicio2N2(){
         setValue(value);
     }
 
-
+    
     let handleRadButtonError = (error) => {
         setRadButtonError(error);
     }
@@ -96,7 +127,7 @@ export default function Ejercicio2N2(){
             navigate('/login/alumno');
         }
     }
-
+    
     useEffect(() => {
         if (localStorage.getItem("sessionId") === null && localStorage.getItem("sessionType") === null) {
             navigate('/login/alumno');
@@ -104,6 +135,32 @@ export default function Ejercicio2N2(){
             validarSesion();
         }
     }, []);
+    let respTot = 0;
+    async function handleSubmit() {
+        
+        const userAnswers2 = {
+            inp1,
+            inp2,
+            inp3,
+            inp4,
+            inp5
+        };
+
+        let respBuenas2 = 0;
+        for (let key in correctAnswers2) {
+            if (correctAnswers2[key] === userAnswers2[key]) {
+                respBuenas2++;
+                respTot++;
+            }
+        }
+
+        if (respBuenas2 === Object.keys(correctAnswers2).length) {
+            alert("¡Todas las respuestas son correctas!");
+        } else {
+            alert(`Respuestas correctas: ${respBuenas2}/${Object.keys(correctAnswers2).length}`);
+        }
+    }
+    
 
     return(
         <>
@@ -130,27 +187,28 @@ export default function Ejercicio2N2(){
                 <h5 className="secondary brand">Pregunta 1</h5>
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"¿Cuánto es 5 + 3?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent1} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 2</h5>
                 <RadButtonGroup items={items1} size={"large"} estilo={"secondary"}
                                     label={"Si tienes 10 manzanas y comes 4, ¿cuántas te quedan?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent2} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 3</h5>
                 <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es el resultado de 7 - 2?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent3} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
                 <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"¿Cuánto es 9 + 1?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent4} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
-                <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
+                <RadButtonGroup items={items4} size={"large"} estilo={"secondary"}
                                     label={"Si tienes 3 caramelos y tu amigo te da 2 más, ¿cuántos tienes en total?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent5} RadButtonError={handleRadButtonError}/>
                 </div>
                 <div style={{alignItems:"center"}}>
                 <Boton size={"small"} Style={"secondary"} text={"Comprobar"} showIcon2={true}
                            icon2={"fa-solid fa-check fa-fw"}
+                           handleClick={handleSubmit}
                            method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />                
                  </div>
             </div>

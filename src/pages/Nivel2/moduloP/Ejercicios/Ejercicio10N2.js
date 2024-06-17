@@ -12,6 +12,37 @@ import { useNavigate } from 'react-router-dom';
 export default function Ejercicio10N2(){
     const [sendForm, setSendForm] = useState(false);
     const [radButtonError, setRadButtonError] = useState(true);
+
+    let handleContent1 = (value) => {
+        setinp1(value)
+    }
+    let handleContent2 = (value) => (
+        setinp2(value)
+    )
+    let handleContent3 = (value) => (
+        setinp3(value)
+    )
+    let handleContent4 = (value) => (
+        setinp4(value)
+    )
+    let handleContent5 = (value) => (
+        setinp5(value)
+    )
+
+    const [inp1 , setinp1] = useState(0);
+    const [inp2 , setinp2] = useState(0);
+    const [inp3 , setinp3] = useState(0);
+    const [inp4 , setinp4] = useState(0);
+    const [inp5 , setinp5] = useState(0);
+
+    const correctAnswers10 = {
+        inp1: '142',
+        inp2: '147',
+        inp3: '154',
+        inp4: '156', 
+        inp5: '159'
+    };
+
     /**repuestas correctas: 
      * Pregunta 1: {value: '161', label: '1/4'}
      * Pregunta 2: {value: '166', label: '8/12'}
@@ -105,6 +136,31 @@ export default function Ejercicio10N2(){
             validarSesion();
         }
     }, []);
+    let respTot = 0;
+    async function handleSubmit() {
+        
+        const userAnswers10 = {
+            inp1,
+            inp2,
+            inp3,
+            inp4,
+            inp5
+        };
+
+        let respBuenas10 = 0;
+        for (let key in correctAnswers10) {
+            if (correctAnswers10[key] === userAnswers10[key]) {
+                respBuenas10++;
+                respTot++;
+            }
+        }
+
+        if (respBuenas10 === Object.keys(correctAnswers10).length) {
+            alert("¡Todas las respuestas son correctas!");
+        } else {
+            alert(`Respuestas correctas: ${respBuenas10}/${Object.keys(correctAnswers10).length}`);
+        }
+    }
 
     return(
         <>
@@ -131,27 +187,28 @@ export default function Ejercicio10N2(){
                 <h5 className="secondary brand">Pregunta 1</h5>
                 <RadButtonGroup items={items} size={"large"} estilo={"secondary"}
                                     label={"Si tienes 3/4 de un pastel y comes 1/2 de lo que tienes, ¿cuánto pastel te queda?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent1} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 2</h5>
                 <RadButtonGroup items={items1} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es la fracción equivalente a 2/3 cuando multiplicas el numerador y el denominador por 4?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent2} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 3</h5>
                 <RadButtonGroup items={items2} size={"large"} estilo={"secondary"}
                                     label={"Si sumas 1/5 y 2/5, ¿cuál es el resultado?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent3} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 4</h5>
                 <RadButtonGroup items={items3} size={"large"} estilo={"secondary"}
                                     label={"¿Cuál es el resultado de restar 3/8 de 7/8?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent4} RadButtonError={handleRadButtonError}/>
                 <h5 className="secondary brand">Pregunta 5</h5>
                 <RadButtonGroup items={items4} size={"large"} estilo={"secondary"}
                                     label={"Si tienes 5/6 de una pizza y comes 1/2 de ella, ¿cuánto te queda?"}
-                                     required={true} onChange={handleValue} RadButtonError={handleRadButtonError}/>
+                                     required={true} onChange={handleContent5} RadButtonError={handleRadButtonError}/>
                 </div>
                 <div style={{alignItems:"center"}}>
                 <Boton size={"small"} Style={"secondary"} text={"Comprobar"} showIcon2={true}
                            icon2={"fa-solid fa-check fa-fw"}
+                           handleClick={handleSubmit}
                            method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />                
                  </div>
             </div>
