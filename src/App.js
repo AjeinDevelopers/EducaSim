@@ -100,6 +100,7 @@ import Ejercicio10 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio10.js';
 import MaterialP5 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP5.js';
 import MaterialP6 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP6.js';
 import MaterialP7 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP7.js';
+import Alumnos from './pages/moduloClases/Alumnos.js';
 
 function App() {
   return (
@@ -162,6 +163,10 @@ function App() {
                     <Route
                         path='/Inicio/Prof'
                         element={<PagInicioP/>}
+                    />
+                    <Route
+                        path='/Inicio/Prof/Alumnos'
+                        element={<Alumnos/>}
                     />
                     <Route
                         path='/menu/Lec'
