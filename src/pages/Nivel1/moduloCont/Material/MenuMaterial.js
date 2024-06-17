@@ -4,6 +4,8 @@ import { Link} from "react-router-dom";
 import FooterApp from "../../../../modelos/footer/FooterApp.jsx";
 import { useState } from "react";
 import numeros from '../../../../assets/common/numeros.avif';
+import figurasG from '../../../../assets/common/figurasG.webp';
+import CDU from '../../../../assets/common/CDU.jpg';
 
 /**corregir modelo de menu ex, ej y este */
   const cardData = [
@@ -63,207 +65,42 @@ import numeros from '../../../../assets/common/numeros.avif';
 const cardData2 = [
     {
         direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
+        width: "300px",
+        header: "Identificación Figuras",
+        linkButton: "/Material/Segundo/1",
         actions: true,
         adicional: false,
-        bt1: "Hola",
+        bt1: "Ver más",
         score: "10.0",
         date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+        img: figurasG,
+        text: "El alumno identifica las figuras geométricas básicas."
     },
     {
       direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
+      width: "300px",
+      header: "Figuras Geométricas",
+      linkButton: "/Material/Segundo/2",
       actions: true,
       adicional: false,
-      bt1: "Hola",
+      bt1: "Ver más",
       score: "10.0",
       date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+      img: figurasG,
+      text: "Identificar las figuras geométricas y sus lados"
   },
 {
   direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
+  width: "300px",
+  header: "Centenas, decenas y unidades",
+  linkButton: "/Material/Segundo/3",
   actions: true,
   adicional: false,
-  bt1: "Hola",
+  bt1: "Ver más",
   score: "10.0",
   date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
-const cardData3 = [
-    {
-        direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: false,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
-const cardData4 = [
-  {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-  {
-    direction: "vertical",
-    width: "485px",
-    header: "Holaa",
-    link: false,
-    actions: true,
-    adicional: false,
-    bt1: "Hola",
-    score: "10.0",
-    date: "10/10/2021",
-    img: "si",
-    text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-{
-direction: "vertical",
-width: "485px",
-header: "Holaa",
-link: false,
-actions: true,
-adicional: false,
-bt1: "Hola",
-score: "10.0",
-date: "10/10/2021",
-img: "si",
-text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
-
-const cardData5 = [
-    {
-        direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: false,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-},
-];
-const cardData6 = [
-    {
-        direction: "vertical",
-        width: "485px",
-        header: "Holaa",
-        link: false,
-        actions: true,
-        adicional: false,
-        bt1: "Hola",
-        score: "10.0",
-        date: "10/10/2021",
-        img: "si",
-        text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-    },
-    {
-      direction: "vertical",
-      width: "485px",
-      header: "Holaa",
-      link: false,
-      actions: true,
-      adicional: false,
-      bt1: "Hola",
-      score: "10.0",
-      date: "10/10/2021",
-      img: "si",
-      text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
-  },
-{
-  direction: "vertical",
-  width: "485px",
-  header: "Holaa",
-  link: false,
-  actions: true,
-  adicional: false,
-  bt1: "Hola",
-  score: "10.0",
-  date: "10/10/2021",
-  img: "si",
-  text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
+  img: CDU,
+  text: "Descomponer en decenas, centenas y unidades"
 },
 ];
 
@@ -291,10 +128,14 @@ export default function MenuMaterial(){
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
-              <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
+                  
+               
+                <h3 className="secondary brand">Segundo Grado</h3>
+
+                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
               <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
               <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 2</h5>
+                    <h5 className="secondary brand">Figuras Geométricas</h5>
                     <t6 className="secondary brand">Ver más→ </t6>
                   </div>
                   <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
@@ -303,66 +144,11 @@ export default function MenuMaterial(){
                         <Card key={index} {...cardProps} />
                     ))}
                 </div>
-                </div>
-                  
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 3</h5>
-                    <t6 className="secondary brand">Ver más→ </t6>
-                  </div>
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
-                    
-                    {cardData3.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
-                </div>
-                <h3 className="secondary brand">Segundo Grado</h3>
-
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 1</h5>
-                    <t6 className="secondary brand">Ver más→ </t6>
-                  </div>
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
-                    
-                    {cardData4.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
                 </div></div></div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 2</h5>
-                    <t6 className="secondary brand">Ver más→ </t6>
-                  </div>
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
-                    
-                    {cardData5.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
-                </div></div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", gap:"var(--XXS, 24px)", alignSelf:"stretch"}}> 
-              <div style={{display:"flex",gridTemplateColumns:"repeat(auto-fill, minmax(485px, 1fr))", flexDirection:"column", gap:"var(--XS, 32px)", alignSelf:"stretch"}}>   
-              <div style={{ display: "flex",  padding: "var(--US, 12px) 0px", justifyContent: "space-between", alignItems: "center", width: "100%" }}> 
-                    <h5 className="secondary brand">Tema 3</h5>
-                    <t6 className="secondary brand">Ver más→ </t6>
-                  </div>
-                  <div style={{overflowX:"auto", gap:"var(--XS, 32px)" }}>
-                    
-                    {cardData6.map((cardProps, index) => (
-                        <Card key={index} {...cardProps} />
-                    ))}
-                </div>
-                </div></div>
             </div> 
             </div>
-           </div>
-        </div>
+           
+        
         <FooterApp/>
         </>
     )

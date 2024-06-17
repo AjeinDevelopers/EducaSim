@@ -14,7 +14,6 @@ import RegistroProfe from './pages/CuentaConf/RegistroProfe.js'
 import Confi from './pages/CuentaConf/Confi.js';
 import MenuEx from './pages/Nivel1/moduloP/MenuEx.js';
 import MenuEj from './pages/Nivel1/moduloP/MenuEj.js';
-import Examen from './pages/Nivel1/moduloP/Examenes/Examen.js';
 import PagInicioA from './pages/Inicios/PagInicioA.js';
 import React from "react";
 import InicioLec from './pages/Nivel1/moduloCont/InicioLec.js';
@@ -98,6 +97,9 @@ import InicioLec2 from './pages/Nivel2/moduloCont/InicioLec2.js';
 import Ejercicio8 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio8.js';
 import Ejercicio9 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio9.js';
 import Ejercicio10 from './pages/Nivel1/moduloP/Ejercicios/Ejercicio10.js';
+import MaterialP5 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP5.js';
+import MaterialP6 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP6.js';
+import MaterialP7 from './pages/Nivel1/moduloCont/Material/Material1/MaterialP7.js';
 
 function App() {
   return (
@@ -152,10 +154,6 @@ function App() {
                     <Route
                         path='/menu/Ejer'
                         element={<MenuEj/>}
-                    />
-                    <Route
-                        path='/Examen'
-                        element={<Examen/>}
                     />
                     <Route
                         path='/Inicio/Alum'
@@ -494,6 +492,18 @@ function App() {
                     <Route
                         path='/Material/Primero/4'
                         element={<MaterialP4/>}
+                    />
+                    <Route
+                        path='/Material/Segundo/1'
+                        element={<MaterialP5/>}
+                    />
+                    <Route
+                        path='/Material/Segundo/2'
+                        element={<MaterialP6/>}
+                    />
+                    <Route
+                        path='/Material/Segundo/3'
+                        element={<MaterialP7/>}
                     />
                     <Route
                       path='/Memorama/PF'

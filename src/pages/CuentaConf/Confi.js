@@ -56,39 +56,23 @@ export default function Confi(){
                 
                 </div>
                 <div style={{display:"flex", padding:"0px var(--XXS, 24px)", flexDirection:"column", alignItems:"center", gap:"var(--S, 36px)", flex:"1 0 0"}}>
-                    <h5>Cambio de Contraseña</h5>
+                    <h5>Cambio de Clase</h5>
                     <div style={{display:"flex",width:"884px" ,padding:"var(--US, 8px) var(--XXXS, 12px)", flexDirection:"column", justifyContent:"center", alignItems:"flex-start", gap:"var(--US, 8px)", alignSelf:"stretch"}}>
-                        <InputPassword Style={"primary"} label={"Contraseña Anterior"} showLabel={true} PasswordError={handlePasswordError}
+                        <InputPassword Style={"primary"} label={"Código de la clase nueva"} showLabel={true} PasswordError={handlePasswordError}
                         required={true} register={false}/>
 
-                        <InputPassword Style={"primary"} label={"Nueva Contraseña"} showLabel={true} PasswordError={handlePasswordError}
+                        <InputPassword Style={"primary"} label={"Pin de seguridad"} showLabel={true} PasswordError={handlePasswordError}
                         required={true} register={true}/>
                         <div style={{display:"flex", justifyContent:"center", padding:"var(--XXXS, 12px)",alignItems:"center", gap:"var(--US, 8px)", width:"100%"}}>
-                        <Boton size={"small"} Style={"secondary"} text={"Cambiar Contraseña"} showIcon2={false}
+                        <Boton size={"small"} Style={"secondary"} text={"Cambiar Clase"} showIcon2={false}
                            icon2={""}
                            method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />
                         </div>
                     </div>
-                    <h5>Cambio de Corre Electrónico</h5>
-                    <div style={{display:"flex",width:"884px" ,padding:"var(--US, 8px) var(--XXXS, 12px)", flexDirection:"column", justifyContent:"center", alignItems:"flex-start", gap:"var(--US, 8px)", alignSelf:"stretch"}}>
-                        <InputEmail Style={"primary"} label={"Correo Electrónico"} showLabel={true} EmailError={handleEmailError} required={true}
-                            register={false}/>
-                        <InputEmail Style={"primary"} label={" Nuevo Correo Electrónico"} showLabel={true} EmailError={handleEmailError} required={true}
-                            register={false}/>
-                        <InputPassword Style={"primary"} label={"Contraseña"} showLabel={true} PasswordError={handlePasswordError}
-                        required={true} register={false}/> 
-                        <div style={{display:"flex", justifyContent:"center", padding:"var(--XXXS, 12px)",alignItems:"center", gap:"var(--US, 8px)", width:"100%"}}>
-                        <Boton size={"small"} Style={"secondary"} text={"Cambiar Contraseña"} showIcon2={false}
-                           icon2={""}
-                           method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />
-                        </div>       
-                    </div>
                     <h5>Zona de Peligro</h5>
                     <div style={{display:"flex",width:"884px" ,padding:"var(--US, 8px) var(--XXXS, 12px)", flexDirection:"column", justifyContent:"center", alignItems:"flex-start", gap:"var(--US, 8px)", alignSelf:"stretch"}}>
-                    <InputPassword Style={"primary"} label={"Contraseña"} showLabel={true} PasswordError={handlePasswordError}
-                        required={true} register={true}/>
-                    <InputEmail Style={"primary"} label={"Correo Electrónico"} showLabel={true} EmailError={handleEmailError} required={true}
-                            register={false}/>    
+                    <InputPassword Style={"primary"} label={"Pin de seguridad"} showLabel={true} PasswordError={handlePasswordError}
+                        required={true} register={true}/> 
                         
                     <div style={{display:"flex", justifyContent:"center", padding:"var(--XXXS, 12px)",alignItems:"center", gap:"var(--US, 8px)", width:"100%"}}>
                         <Boton size={"small"} Style={"error"} text={"Eliminar Cuenta"} showIcon2={true}
