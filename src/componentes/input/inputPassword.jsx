@@ -20,25 +20,44 @@ export default function InputPassword(props){
     const handlePassword = useCallback((event) => {
         const newEmail = event.target.value;
 
-        if (newEmail.trim() === '' && props.required) {
-            setError("La contraseña no puede estar vacia");
-            props.PasswordError(true);
-            setEstilo("error");
-            setIsPassword(false);
-            return;
+        if(props.required && !props.register){
+            if (newEmail.trim() === '' && props.required) {
+                setError("La contraseña no puede estar vacia");
+                props.PasswordError(true);
+                setEstilo("error");
+                setIsPassword(false);
+                return;
+            }else{
+                props.PasswordError(false);
+                props.contenido(newEmail.trim());
+                setIsPassword(true);
+                setEstilo(props.Style);
+            }
         }
 
-        if (!PASSWORD_REGEX.test(newEmail) && props.register) {
-            setError("La contraseña debe tener al minimo 8 caracteres, una letra mayúscula, una letra minúscula, un número y un caracter especial");
-            props.PasswordError(true);
-            setEstilo("error");
-            setIsPassword(false);
-        } else {
-            props.PasswordError(false);
-            props.contenido(newEmail.trim());
-            setIsPassword(true);
-            setEstilo(props.Style);
+        if(props.register) {
+            if (props.required){
+                if (newEmail.trim() === '') {
+                    setError("La contraseña no puede estar vacia");
+                    props.PasswordError(true);
+                    setEstilo("error");
+                    setIsPassword(false);
+                    return;
+                }
+            }
+            if (!PASSWORD_REGEX.test(newEmail) && props.register) {
+                setError("La contraseña debe tener al minimo 8 caracteres, una letra mayúscula, una letra minúscula, un número y un caracter especial");
+                props.PasswordError(true);
+                setEstilo("error");
+                setIsPassword(false);
+            } else {
+                props.PasswordError(false);
+                props.contenido(newEmail.trim());
+                setIsPassword(true);
+                setEstilo(props.Style);
+            }
         }
+
     }, [props.PasswordError]);
 
     return(
@@ -52,9 +71,9 @@ export default function InputPassword(props){
                        name={props.name}
                        id={props.id}
                        placeholder={props.placeholder}
-                        required={props.required}
-                       {...(props.register ? {onChange: handlePassword} : {})}
-                        maxLength={20}
+                       required={props.required}
+                       onChange={handlePassword}
+                       maxLength={20}
                        value={props.value}/>
                 <div onClick={visibility} className={props.estilo}>
                     {passwordShown && <i className={'fa-solid fa-eye-slash fa-fw'} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}

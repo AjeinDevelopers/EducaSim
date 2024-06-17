@@ -16,25 +16,44 @@ export default function InputEmail(props){
     const handleEmail = useCallback((event) => {
         const newEmail = event.target.value;
 
-        if (newEmail.trim() === '' && props.required) {
-            setError("El correo no puede estar vacio");
-            props.EmailError(true);
-            setEstilo("error");
-            setIsEmail(false);
-            return;
+        if(props.required && !props.register){
+            if (newEmail.trim() === '' && props.required) {
+                setError("El correo no puede estar vacio");
+                props.EmailError(true);
+                setEstilo("error");
+                setIsEmail(false);
+                return;
+            }else{
+                props.EmailError(false);
+                props.contenido(newEmail.trim());
+                setIsEmail(true);
+                setEstilo(props.Style);
+            }
         }
 
-        if (!EMAIL_REGEX.test(newEmail) && props.register) {
-            setError("Correo inválido");
-            props.EmailError(true);
-            setEstilo("error");
-            setIsEmail(false);
-        } else {
-            props.EmailError(false);
-            props.contenido(newEmail.trim());
-            setIsEmail(true);
-            setEstilo(props.Style);
+        if(props.register) {
+            if (props.required){
+                if (newEmail.trim() === '' && props.required) {
+                    setError("El correo no puede estar vacio");
+                    props.EmailError(true);
+                    setEstilo("error");
+                    setIsEmail(false);
+                    return;
+                }
+            }
+            if (!EMAIL_REGEX.test(newEmail) && props.register) {
+                setError("Correo inválido");
+                props.EmailError(true);
+                setEstilo("error");
+                setIsEmail(false);
+            } else {
+                props.EmailError(false);
+                props.contenido(newEmail.trim());
+                setIsEmail(true);
+                setEstilo(props.Style);
+            }
         }
+
     }, [props.EmailError]);
 
     return(
@@ -48,7 +67,7 @@ export default function InputEmail(props){
                        name={props.name}
                        id={props.id}
                        placeholder={props.placeholder}
-                       {...(props.register ? {onChange: handleEmail} : {})}
+                       onChange={handleEmail}
                        required={props.required}
                        value={props.value}/>
                 {props.showIcon1 && <i className={props.icon1} style={{color: "var(--color-principal, #4BA8FF)"}}></i>}

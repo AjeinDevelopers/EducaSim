@@ -1,85 +1,168 @@
 import HeaderAlumno from "../../modelos/header/HeaderAlumno";
-import InputEmail from "../../componentes/input/inputEmail";
-import {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import InputPassword from "../../componentes/input/inputPassword";
 import Boton from "../../componentes/boton/boton";
 import FooterApp from "../../modelos/footer/FooterApp";
-export default function Confi(){
-    const [sendForm, setSendForm] = useState(false);
-    const [emailError, setEmailError] = useState(true);
-    const [passError, setPassError] = useState(true);
+import Input from "../../componentes/input/input";
 
-    useEffect(() => {
-        if(!emailError && !passError){
-            setSendForm(true);
-            console.log("Entra al if error");
-        }else{
-            setSendForm(false);
-            console.log("Entra al else");
-        }
-    }, [emailError, passError]);
+export default function Confi() {
 
-    let handleEmailError = (error) => {
-        setEmailError(error);
+    const [sendCambioClase, setSendCambioClase] = useState(false);
+    const [sendEliminarCuenta, setEliminarCuenta] = useState(false);
+    const [claseError, setClaseError] = useState(true);
+    const [pinCodigoError, setPinCodigoError] = useState(true);
+    const [pinEliminarError, setPinEliminarError] = useState(true);
+    const [claseContent, setClaseContent] = useState("");
+    const [pinCodigoContent, setPinCodigoContent] = useState("");
+    const [pinEliminarContent, setPinEliminarContent] = useState("");
+
+    let handleClaseError = (error) => {
+        setClaseError(error);
     }
 
-    let handlePasswordError = (error) => {
-        setPassError(error);
-    };
-    const [sendForm2, setSendForm2] = useState(false);
-    const [emailError2, setEmailError2] = useState(true);
-    const [passError2, setPassError2] = useState(true);
-
-    useEffect(() => {
-        if(!emailError && !passError){
-            setSendForm(true);
-            console.log("Entra al if error");
-        }else{
-            setSendForm(false);
-            console.log("Entra al else");
-        }
-    }, [emailError, passError]);
-
-    let handleEmailError2 = (error) => {
-        setEmailError(error);
+    let handlePinCodigoError = (error) => {
+        setPinCodigoError(error);
     }
 
-    let handlePasswordError2 = (error) => {
-        setPassError(error);
-    };
-    return(
+    let handlePinEliminarError = (error) => {
+        setPinEliminarError(error);
+    }
+
+    let handleClaseContent = (content) => {
+        setClaseContent(content);
+    }
+
+    let handlePinCodigoContent = (content) => {
+        setPinCodigoContent(content);
+    }
+
+    let handlePinEliminarContent = (content) => {
+        setPinEliminarContent(content);
+    }
+
+    useEffect(() => {
+        if (!claseError && !pinCodigoError) {
+            setSendCambioClase(true);
+        } else {
+            setSendCambioClase(false);
+        }
+    }, [claseError, pinCodigoError]);
+
+    useEffect(() => {
+        if (!pinEliminarError) {
+            setEliminarCuenta(true);
+        } else {
+            setEliminarCuenta(false);
+        }
+    }, [pinEliminarError]);
+
+    async function cerrarSesion() {
+        localStorage.removeItem("sessionId");
+        localStorage.removeItem("sessionType");
+    }
+
+    return (
         <>
             <HeaderAlumno/>
-            <div style={{display:"flex", padding:"var(--XS, 32px) var(--M, 48px)", flexDirection:"column", alignItems:"center", gap:" var(--M, 48px)", alignSelf:"stretch"}}>
+            <div style={{
+                display: "flex",
+                padding: "var(--XS, 32px) var(--M, 48px)",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: " var(--M, 48px)",
+                alignSelf: "stretch"
+            }}>
                 <h2 className="secondary brand">Configuración de la cuenta</h2>
-                <div style={{display:"flex", justifyContent:"center", alignItems:"flex-start", gap:"var(--S, 36px)", alignSelf:"stretch"}}>
-                
-                </div>
-                <div style={{display:"flex", padding:"0px var(--XXS, 24px)", flexDirection:"column", alignItems:"center", gap:"var(--S, 36px)", flex:"1 0 0"}}>
-                    <h5>Cambio de Clase</h5>
-                    <div style={{display:"flex",width:"884px" ,padding:"var(--US, 8px) var(--XXXS, 12px)", flexDirection:"column", justifyContent:"center", alignItems:"flex-start", gap:"var(--US, 8px)", alignSelf:"stretch"}}>
-                        <InputPassword Style={"primary"} label={"Código de la clase nueva"} showLabel={true} PasswordError={handlePasswordError}
-                        required={true} register={false}/>
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "flex-start",
+                    gap: "var(--S, 36px)",
+                    alignSelf: "stretch"
+                }}>
 
-                        <InputPassword Style={"primary"} label={"Pin de seguridad"} showLabel={true} PasswordError={handlePasswordError}
-                        required={true} register={true}/>
-                        <div style={{display:"flex", justifyContent:"center", padding:"var(--XXXS, 12px)",alignItems:"center", gap:"var(--US, 8px)", width:"100%"}}>
-                        <Boton size={"small"} Style={"secondary"} text={"Cambiar Clase"} showIcon2={false}
-                           icon2={""}
-                           method={"SUMBIT"} {...(sendForm ? {disabled: false} : {disabled: true})} />
+                </div>
+                <div style={{
+                    display: "flex",
+                    padding: "0px var(--XXS, 24px)",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "var(--S, 36px)",
+                    flex: "1 0 0"
+                }}>
+                    <h5>Cambio de Clase</h5>
+                    <div style={{
+                        display: "flex",
+                        width: "884px",
+                        padding: "var(--US, 8px) var(--XXXS, 12px)",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "flex-start",
+                        gap: "var(--US, 8px)",
+                        alignSelf: "stretch"
+                    }}>
+                        <Input label={"Código de la clase"} showLabel={true} InputError={handleClaseError}
+                               required={true} register={false} contenido={handleClaseContent}
+                               maxLength={6}/>
+                        <InputPassword Style={"primary"} label={"Pin de seguridad"} showLabel={true}
+                                       required={true} register={false} PasswordError={handlePinCodigoError}
+                                       contenido={handlePinCodigoContent}/>
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            padding: "var(--XXXS, 12px)",
+                            alignItems: "center",
+                            gap: "var(--US, 8px)",
+                            width: "100%"
+                        }}>
+                            <Boton size={"small"} Style={"secondary"} text={"Cambiar Clase"} showIcon2={false}
+                                   icon2={""}
+                                   method={""} {...(sendCambioClase ? {disabled: false} : {disabled: true})} />
                         </div>
                     </div>
                     <h5>Zona de Peligro</h5>
-                    <div style={{display:"flex",width:"884px" ,padding:"var(--US, 8px) var(--XXXS, 12px)", flexDirection:"column", justifyContent:"center", alignItems:"flex-start", gap:"var(--US, 8px)", alignSelf:"stretch"}}>
-                    <InputPassword Style={"primary"} label={"Pin de seguridad"} showLabel={true} PasswordError={handlePasswordError}
-                        required={true} register={true}/> 
-                        
-                    <div style={{display:"flex", justifyContent:"center", padding:"var(--XXXS, 12px)",alignItems:"center", gap:"var(--US, 8px)", width:"100%"}}>
-                        <Boton size={"small"} Style={"error"} text={"Eliminar Cuenta"} showIcon2={true}
-                           icon2={"fa-solid fa-trash fa-fw"}
-                           method={"SUMBIT"} disabled={false} />
+                    <div style={{
+                        display: "flex",
+                        width: "884px",
+                        padding: "var(--US, 8px) var(--XXXS, 12px)",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "var(--US, 8px)",
+                        alignSelf: "stretch"
+                    }}>
+                        <h6>Cerrar Sesion</h6>
+                        <Boton size={"small"} Style={"warning"} text={"Cerrar Sesión"} showIcon2={true}
+                               icon2={"fa-solid fa-trash fa-fw"}
+                               method={""} disabled={false} onClick={cerrarSesion}/>
+                    </div>
+                    <div style={{
+                        display: "flex",
+                        width: "884px",
+                        padding: "var(--US, 8px) var(--XXXS, 12px)",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "var(--US, 8px)",
+                        alignSelf: "stretch"
+                    }}>
+                        <h6>Eliminar cuenta</h6>
+                        <InputPassword Style={"primary"} label={"Pin de seguridad"} showLabel={true}
+                                       PasswordError={handlePinEliminarError}
+                                       required={true} register={false} contenido={handlePinEliminarContent}/>
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            padding: "var(--XXXS, 12px)",
+                            alignItems: "center",
+                            gap: "var(--US, 8px)",
+                            width: "100%"
+                        }}>
+                            <Boton size={"small"} Style={"error"} text={"Eliminar Cuenta"} showIcon2={true}
+                                   icon2={"fa-solid fa-trash fa-fw"}
+                                   method={""} {...(sendEliminarCuenta ? {disabled: false} : {disabled: true})}/>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <FooterApp/>

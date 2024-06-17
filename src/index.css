@@ -59,6 +59,12 @@
   --color-principal-glow: var(--color-error-glow, #FF6969);
 }
 
+.warning{
+  --color-text: var(--color-warn, #EDB31F);
+  --color-principal: var(--color-warn, #EDB31F);
+  --color-principal-glow: var(--color-warn-glow, #F6C33E);
+}
+
 .success{
   --color-text: var(--color-success, #A2D219);
   --color-principal: var(--color-success, #A2D219);

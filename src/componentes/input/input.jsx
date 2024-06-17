@@ -69,6 +69,7 @@ export default function Input(props){
                 <input type= "text"
                        name={props.name}
                        id={props.id}
+                       maxLength={props.maxLength}
                        onChange={handleInput}
                        required={props.required}
                        placeholder={props.placeholder}
