@@ -3,7 +3,7 @@ import FooterApp from "../../modelos/footer/FooterApp";
 import Card from "../../modelos/card/card";
 import {Link, useNavigate} from 'react-router-dom';
 import axios from "axios";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function PagInicioP() {
 
@@ -164,6 +164,15 @@ export default function PagInicioP() {
             text: "Textooooooooooooooo oo  o oo  oooooooooo ooo o o o o  o o ooooooasdasdsadsad"
         }
     ];
+
+    useEffect(() => {
+        if (localStorage.getItem("sessionId") === null && localStorage.getItem("sessionType") === null) {
+            navigate('/login/alumno');
+        } else {
+            validarSesion();
+        }
+    }, []);
+
     return (
 
         <>

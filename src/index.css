@@ -308,6 +308,7 @@ div{
 
 ::-webkit-scrollbar {
   width: var(--US, 12px);
+  height: var(--US, 12px);
 }
 
 ::-webkit-scrollbar-track {
